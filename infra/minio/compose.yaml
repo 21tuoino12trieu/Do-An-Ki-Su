@@ -1,0 +1,24 @@
+name: doan-documents
+services:
+  minio:
+    # Mirror do Milvus cung cấp; cùng bản MinIO đang dùng cho Milvus.
+    image: milvusdb/minio:RELEASE.2024-12-18T13-15-44Z
+    container_name: doan-documents-minio
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER:?Thiếu MINIO_ROOT_USER trong .env}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD:?Thiếu MINIO_ROOT_PASSWORD trong .env}
+    ports:
+      - "127.0.0.1:9000:9000"
+      - "127.0.0.1:9001:9001"
+    volumes:
+      - documents-data:/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+      start_period: 15s
+    restart: unless-stopped
+volumes:
+  documents-data:

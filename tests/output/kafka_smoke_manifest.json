@@ -1,0 +1,15 @@
+{
+  "topic": "doan.infra.smoke.v1",
+  "partition": 1,
+  "offset": 0,
+  "key": "DEMO-0001",
+  "event": {
+    "schema_version": 1,
+    "event_id": "cfd789f9-7dab-4e91-b8b9-40069d81a9b2",
+    "event_type": "infra.smoke",
+    "occurred_at": "2026-11-03T04:11:42.113014+00:00",
+    "page_id": "DEMO-0001",
+    "message": "Kiểm tra Kafka cho đồ án — dữ liệu giả lập"
+  },
+  "group_id": "doan-infra-smoke-cfd789f9-7dab-4e91-b8b9-40069d81a9b2"
+}

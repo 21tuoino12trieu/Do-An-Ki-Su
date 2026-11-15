@@ -1,0 +1,340 @@
+{
+  "stage": "selected_source_for_review_not_runtime_ready",
+  "files": [
+    {
+      "path": "__init__.py",
+      "source": "beeflow/beeflow/beeflow/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "replica_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changes": []
+    },
+    {
+      "path": "configs/__init__.py",
+      "source": "beeflow/beeflow/beeflow/configs/__init__.py",
+      "source_sha256": "4befbadcf6db44d9147e27b6eb94afb842c85fcd5b9222ab990151ca5f927f93",
+      "replica_sha256": "b3be6f9a3a3f7909f3e79dfb5dd34e49d5f47b2dff6f830bf57e2fa15b882242",
+      "changes": []
+    },
+    {
+      "path": "configs/edge_config.py",
+      "source": "beeflow/beeflow/beeflow/configs/edge_config.py",
+      "source_sha256": "bd97dbabd5fdb896aa0971f3127818998de8ea4b651bd78414416877521f1ffd",
+      "replica_sha256": "234f3959970d3874aeaca7f34d2921ced1bfb27a120820806f6f7974f0026a07",
+      "changes": [
+        "removed_demo_functions_and_main_blocks"
+      ]
+    },
+    {
+      "path": "configs/graph_config.py",
+      "source": "beeflow/beeflow/beeflow/configs/graph_config.py",
+      "source_sha256": "3612d831ee60bf7606bce13e5641298ba7ceccae491efd7927e29cbfeb4de13c",
+      "replica_sha256": "d2527418be15eaa72b7dd7d9bc51870ec720c5d86d29f2ce20e446cff1a9e84a",
+      "changes": []
+    },
+    {
+      "path": "configs/node_config.py",
+      "source": "beeflow/beeflow/beeflow/configs/node_config.py",
+      "source_sha256": "8eaec44fe3d17a2897ea48b2160825b12a8844f1479ff6026c9c8b8ed67070af",
+      "replica_sha256": "3a661ba7d6bfa4b096957699260b3c6c85c8cb2f2167926c6e3ecaa3a874b486",
+      "changes": [
+        "removed_demo_functions_and_main_blocks"
+      ]
+    },
+    {
+      "path": "nodes/__init__.py",
+      "source": "beeflow/beeflow/beeflow/nodes/__init__.py",
+      "source_sha256": "85c1216d06200cf42022660aef1dea405e71ddda56d477ba9398186b39c37f0e",
+      "replica_sha256": "d09c0d9dbd639563560cb21c59d54ec6ce0e44cf77db65a7d2ce0772efe57440",
+      "changes": [
+        "lazy_exports_limited_to_selected_source_files"
+      ]
+    },
+    {
+      "path": "nodes/base_node.py",
+      "source": "beeflow/beeflow/beeflow/nodes/base_node.py",
+      "source_sha256": "37c17058e873a2b3c335bbd097bb3e50fd724e35c0f8d4c98c706024deb30d75",
+      "replica_sha256": "3fc3bc3406a30ceda40a6b2461af04f01f60ca96bf25a08caefeef16abe5d3a1",
+      "changes": []
+    },
+    {
+      "path": "nodes/flow/__init__.py",
+      "source": "beeflow/beeflow/beeflow/nodes/flow/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "replica_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changes": []
+    },
+    {
+      "path": "nodes/flow/branch_node.py",
+      "source": "beeflow/beeflow/beeflow/nodes/flow/branch_node.py",
+      "source_sha256": "b37fddf573dadd558b13759ec838c6bb47d028d320f307fc8b3080d24fdba11e",
+      "replica_sha256": "ba3d96898066b55b733671b017ee293c4a207848d21e87addef6d2d7a56652cb",
+      "changes": [
+        "removed_demo_functions_and_main_blocks"
+      ]
+    },
+    {
+      "path": "nodes/flow/for_loop_node.py",
+      "source": "beeflow/beeflow/beeflow/nodes/flow/for_loop_node.py",
+      "source_sha256": "0c105d66f22ccb46fb760a98e69211ff7cb764dce46505b2b0413990c97373b8",
+      "replica_sha256": "93beb7b0526a073edebfceba24c858aea854f75e92e4a4cfefbee0648ddd20a4",
+      "changes": [
+        "removed_demo_functions_and_main_blocks"
+      ]
+    },
+    {
+      "path": "nodes/flow/while_loop_node.py",
+      "source": "beeflow/beeflow/beeflow/nodes/flow/while_loop_node.py",
+      "source_sha256": "ebde384b1dd95086f5fc1ae662e91b19bc98dcb2edd3c88f6fb33b0f640ea251",
+      "replica_sha256": "af4a2976624c2e2ba447b8de9f7f88aa1243ab74b8d6479ebdee955cb9d3110a",
+      "changes": [
+        "removed_demo_functions_and_main_blocks"
+      ]
+    },
+    {
+      "path": "nodes/graph/graph_node.py",
+      "source": "beeflow/beeflow/beeflow/nodes/graph/graph_node.py",
+      "source_sha256": "78f37258dc59011c1efe175e10cc303774ca2420aa468d501abd83b7ec32c3b1",
+      "replica_sha256": "3e4f044ac5b96bf49d1c4dad472a5c4aa894a3e69ab96c30abecd7f6692c6205",
+      "changes": [
+        "removed_demo_functions_and_main_blocks"
+      ]
+    },
+    {
+      "path": "nodes/node_factory.py",
+      "source": "beeflow/beeflow/beeflow/nodes/node_factory.py",
+      "source_sha256": "b528981501fe47516968a582924c30e9ceea2d6d2c095389e5b9c1b4fdfe1062",
+      "replica_sha256": "d02659f9c113574c44e060a528a82e3076acba35b30215d399b92c1cc488cac9",
+      "changes": [
+        "removed_demo_functions_and_main_blocks",
+        "limited_default_registry_to_selected_nodes_and_retriever_v2"
+      ]
+    },
+    {
+      "path": "nodes/primitives/__init__.py",
+      "source": "beeflow/beeflow/beeflow/nodes/primitives/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "replica_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changes": []
+    },
+    {
+      "path": "nodes/primitives/ai/__init__.py",
+      "source": "beeflow/beeflow/beeflow/nodes/primitives/ai/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "replica_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changes": []
+    },
+    {
+      "path": "nodes/primitives/ai/embedding_node.py",
+      "source": "beeflow/beeflow/beeflow/nodes/primitives/ai/embedding_node.py",
+      "source_sha256": "535adc90df0e980154c4899bcc25719f38e1e33ef9b8bd80ca85edf2ed7041bf",
+      "replica_sha256": "b0f0697a6c96bcd8117ee958e2613e245b1751ec0e8242d5b30e94227f7d64ce",
+      "changes": [
+        "removed_demo_functions_and_main_blocks"
+      ]
+    },
+    {
+      "path": "nodes/primitives/ai/llm_node.py",
+      "source": "beeflow/beeflow/beeflow/nodes/primitives/ai/llm_node.py",
+      "source_sha256": "6bcd5a248b2fcf53ef5b817dc96357e835cf2f79fdc524539be337cdae2077b4",
+      "replica_sha256": "8c8e930d588ab9002dcad0e4a7e6aa2669c9a018862a7b32d3d50bd3898ba6db",
+      "changes": [
+        "removed_demo_functions_and_main_blocks"
+      ]
+    },
+    {
+      "path": "nodes/primitives/data/__init__.py",
+      "source": "beeflow/beeflow/beeflow/nodes/primitives/data/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "replica_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changes": []
+    },
+    {
+      "path": "nodes/primitives/data/kafka_node.py",
+      "source": "beeflow/beeflow/beeflow/nodes/primitives/data/kafka_node.py",
+      "source_sha256": "6e5d7b60071ec3fbebd1eefe2c8c8d289c18e766464b3649731238671b2b29a7",
+      "replica_sha256": "3c213eb99b2571c36f00c29a7a115f020a71eaf02340c239df1dba409b3de5a9",
+      "changes": [
+        "removed_demo_functions_and_main_blocks"
+      ]
+    },
+    {
+      "path": "nodes/primitives/data/milvus_node.py",
+      "source": "beeflow/beeflow/beeflow/nodes/primitives/data/milvus_node.py",
+      "source_sha256": "8562226fafc1b76dc8266ee000583093a259faa7781e91c9eae49e232687152c",
+      "replica_sha256": "f0b757aa92b5cf5605adc20dd14036a60a469cad6b538c140decd393bfda6898",
+      "changes": [
+        "removed_demo_functions_and_main_blocks"
+      ]
+    },
+    {
+      "path": "nodes/primitives/data/mongo_node.py",
+      "source": "beeflow/beeflow/beeflow/nodes/primitives/data/mongo_node.py",
+      "source_sha256": "0b6e19e25333db7685fea34c8c66f7063ab97a7db83539e3aa2c29a09e8b1430",
+      "replica_sha256": "44bab0fe167b45e25f67ae277f503137682b34ac55e70804f504ba5b197b469a",
+      "changes": [
+        "removed_demo_functions_and_main_blocks"
+      ]
+    },
+    {
+      "path": "nodes/primitives/data/s3_node.py",
+      "source": "beeflow/beeflow/beeflow/nodes/primitives/data/s3_node.py",
+      "source_sha256": "2f959469734db496af8e4a258b1f4a9ef79bbbcf4379d3d6a455545273090b1d",
+      "replica_sha256": "8eff71b0e6d8149c87abb1d8f10d894f0c0177a4b879f75ea41378b6cf99b1ae",
+      "changes": [
+        "removed_demo_functions_and_main_blocks"
+      ]
+    },
+    {
+      "path": "nodes/primitives/data_node.py",
+      "source": "beeflow/beeflow/beeflow/nodes/primitives/data_node.py",
+      "source_sha256": "09e245052ec0c6f3ae45e45de6d713d1a046aed7b92c3fd1c985e94ee07b9b1c",
+      "replica_sha256": "02d2485ed55fafb333b4ec38abafd32bb5b58be0da0539eae49cf4704817e47f",
+      "changes": [
+        "removed_demo_functions_and_main_blocks"
+      ]
+    },
+    {
+      "path": "nodes/primitives/transform/__init__.py",
+      "source": "beeflow/beeflow/beeflow/nodes/primitives/transform/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "replica_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changes": []
+    },
+    {
+      "path": "nodes/primitives/transform/code_node.py",
+      "source": "beeflow/beeflow/beeflow/nodes/primitives/transform/code_node.py",
+      "source_sha256": "11bba8a035f1e42776b5e79b83457020d01580a847a0e9b7ef82bdaf85aeefc4",
+      "replica_sha256": "b134e1ef7da93290941acf6b21b95bb24ca5dc056612f21365cc6e36cd195b48",
+      "changes": [
+        "removed_demo_functions_and_main_blocks"
+      ]
+    },
+    {
+      "path": "nodes/primitives/transform/parser_node.py",
+      "source": "beeflow/beeflow/beeflow/nodes/primitives/transform/parser_node.py",
+      "source_sha256": "64fb9a5e93747f1448736ac10e57556633f8ff8afe3308255bdd80b0dad008f7",
+      "replica_sha256": "52ccb932e539ea2cf73a6dc5f889d0b9b4d4e3e113e6f4aceceb36f024ecfead",
+      "changes": [
+        "removed_demo_functions_and_main_blocks"
+      ]
+    },
+    {
+      "path": "nodes/primitives/transform/prompt_node.py",
+      "source": "beeflow/beeflow/beeflow/nodes/primitives/transform/prompt_node.py",
+      "source_sha256": "693bab7efb5bb070d2c882e476ce8be52bf6898d5e37598654a99aa028c8788e",
+      "replica_sha256": "579434b3d360934181ded213ca13d0345e199a0daadfcadb9fab47d8d2911d6e",
+      "changes": [
+        "removed_demo_functions_and_main_blocks"
+      ]
+    },
+    {
+      "path": "nodes/templates/__init__.py",
+      "source": "beeflow/beeflow/beeflow/nodes/templates/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "replica_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changes": []
+    },
+    {
+      "path": "nodes/templates/basic_chain_node.py",
+      "source": "beeflow/beeflow/beeflow/nodes/templates/basic_chain_node.py",
+      "source_sha256": "b9cfc68a61affd700cb7d20edf3bd1b11a88d781bb2ae989f7550a86fac758d2",
+      "replica_sha256": "ccf5313ed13720f4a2a22fd177c8549f486e6eb9159b71b82fa797cd707503bb",
+      "changes": [
+        "removed_demo_functions_and_main_blocks"
+      ]
+    },
+    {
+      "path": "nodes/templates/retriever_node_v2.py",
+      "source": "beeflow/beeflow/beeflow/nodes/templates/retriever_node_v2.py",
+      "source_sha256": "cb8a130061627829c2e52674a71ff84cb387fc18633144d47dd48072d0b5891f",
+      "replica_sha256": "fc0ed62f38b60fad8d0a9745967cb3809c100798c3dab1a4cb6fdabcc4795a56",
+      "changes": [
+        "removed_demo_functions_and_main_blocks",
+        "kept_dense_branch_disabled_unsupported_modes_removed_rerank_dependency"
+      ]
+    },
+    {
+      "path": "states/__init__.py",
+      "source": "beeflow/beeflow/beeflow/states/__init__.py",
+      "source_sha256": "1927aea3d433835c04d31a0b8f61ebb6b50f71aef320f6d795576c0e434302b4",
+      "replica_sha256": "e1f4c1331fc4f629a287db2383840779f2447e65680867c7efdebcea585eeff8",
+      "changes": []
+    },
+    {
+      "path": "states/state_manager.py",
+      "source": "beeflow/beeflow/beeflow/states/state_manager.py",
+      "source_sha256": "ad8ffe1129d8222cfc50c09a034160a19e74ca4837f7a38d49903f479dc76ec2",
+      "replica_sha256": "b1f95956711625f342a232bca5a5c0ae464b27c0facc723687c5bc364cf81b26",
+      "changes": []
+    },
+    {
+      "path": "states/state_value.py",
+      "source": "beeflow/beeflow/beeflow/states/state_value.py",
+      "source_sha256": "fb1de1d68d5294fb7e269115464b703e27eedbc900ee68d7141eaa948dc0aa5b",
+      "replica_sha256": "11a05431dfea3df42db084856e4749afc1768b5595bad1c4541713ff9703e663",
+      "changes": [
+        "removed_demo_functions_and_main_blocks"
+      ]
+    },
+    {
+      "path": "states/workflow_indexer.py",
+      "source": "beeflow/beeflow/beeflow/states/workflow_indexer.py",
+      "source_sha256": "d467bc88486328ead0c304e408ca245573c4c7fd7916a92a14e4c90455c8cde2",
+      "replica_sha256": "a47e4e3e3dd67d617ecf3244464c76284ea7c04d02b7cfbc135870b6616fd565",
+      "changes": [
+        "removed_demo_functions_and_main_blocks"
+      ]
+    },
+    {
+      "path": "states/workflow_state.py",
+      "source": "beeflow/beeflow/beeflow/states/workflow_state.py",
+      "source_sha256": "39f219b6cef961c958cafb3653fc80cc764b711ea6613aca621fc0cbf7db7fff",
+      "replica_sha256": "51a8494cd48e616166ad78ce8b121cdc9ef70903b054f5ae530fbc3c47773846",
+      "changes": [
+        "removed_demo_functions_and_main_blocks"
+      ]
+    },
+    {
+      "path": "utils/__init__.py",
+      "source": "beeflow/beeflow/beeflow/utils/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "replica_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changes": []
+    },
+    {
+      "path": "utils/bimap.py",
+      "source": "beeflow/beeflow/beeflow/utils/bimap.py",
+      "source_sha256": "f0f163dcb9a7232eed2ad6408a95488855503f6b8ee245e523950e7232a79a6d",
+      "replica_sha256": "f01f02073ef51b4fbc896afa4416c9289b9be863f51137fbe6d9597d586b3925",
+      "changes": [
+        "removed_demo_functions_and_main_blocks"
+      ]
+    },
+    {
+      "path": "utils/context.py",
+      "source": "beeflow/beeflow/beeflow/utils/context.py",
+      "source_sha256": "c7b23f64062624af8b343eceb36e628aa721382d36af8f33347b43c190599b2b",
+      "replica_sha256": "2fa58d2ad8b56225556e0833c8831dbf65e8c1d885df2ae60712a964aff45fc9",
+      "changes": []
+    },
+    {
+      "path": "utils/streaming.py",
+      "source": "beeflow/beeflow/beeflow/utils/streaming.py",
+      "source_sha256": "25dc19283bd6462dd4cd8e08588d57c11e53ea49fe0d849d037525684890bf73",
+      "replica_sha256": "5bf7451f766d298555e8cb5b7fec62ad4f24859e9486d9ff26fbcc38dacb0814",
+      "changes": [
+        "removed_demo_functions_and_main_blocks",
+        "removed_publisher_demo"
+      ]
+    },
+    {
+      "path": "workflow.py",
+      "source": "beeflow/beeflow/beeflow/workflow.py",
+      "source_sha256": "598a4919802be6f5961d931399caf54ad292c8a68ccfe1c88c6e4c25131b6b6e",
+      "replica_sha256": "a20ba0e30bceb12a196ae447211037de56d58d25dc6d2e1ef0ca239b93e7426c",
+      "changes": [
+        "removed_demo_functions_and_main_blocks"
+      ]
+    }
+  ]
+}

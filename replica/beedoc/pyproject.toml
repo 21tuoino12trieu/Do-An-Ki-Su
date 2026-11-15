@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "replica-beedoc"
+version = "0.1.0"
+description = "Chuyển HTML Confluence sang Markdown cho đồ án kho tri thức"
+requires-python = ">=3.10"
+dependencies = ["beautifulsoup4>=4.12,<5"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

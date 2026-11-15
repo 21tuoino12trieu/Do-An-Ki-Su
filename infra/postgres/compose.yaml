@@ -1,0 +1,24 @@
+name: doan-ingestion
+services:
+  postgres:
+    image: postgres:16.11-alpine
+    container_name: doan-ingestion-postgres
+    environment:
+      POSTGRES_DB: ingestion
+      POSTGRES_USER: ingestion
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Missing POSTGRES_PASSWORD in .env}
+      POSTGRES_INITDB_ARGS: --encoding=UTF8
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ingestion -d ingestion"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+      start_period: 15s
+    restart: unless-stopped
+volumes:
+  postgres-data:

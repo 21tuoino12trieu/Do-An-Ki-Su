@@ -1,0 +1,30 @@
+@startuml 02-usecase-nhan-vien
+
+left to right direction
+skinparam shadowing false
+skinparam linetype polyline
+skinparam nodesep 45
+skinparam ranksep 95
+skinparam defaultFontName Arial
+skinparam defaultFontSize 17
+skinparam actorStyle stickman
+skinparam BackgroundColor white
+skinparam ArrowColor #253746
+skinparam usecaseBackgroundColor #F7FAFC
+skinparam usecaseBorderColor #253746
+skinparam rectangleBorderColor #253746
+skinparam actorBorderColor #253746
+actor "Nhân viên nội bộ" as NV
+rectangle "Phạm vi nhân viên · Cả hai Space" as INTERNAL {
+  usecase "UC10\nĐăng nhập và kết thúc phiên" as N10
+  usecase "UC01\nTìm kiếm tài liệu ở cả hai Space" as N01
+  usecase "UC02\nHỏi đáp chính sách công ty" as N02
+  usecase "UC11\nHỏi đáp khuyến mãi" as N11
+  usecase "UC03\nXem nguồn ở cả hai Space" as N03
+}
+NV --> N10
+NV --> N01
+NV --> N02
+NV --> N11
+NV --> N03
+@enduml

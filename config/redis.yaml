@@ -1,0 +1,18 @@
+# Redis chạy trong Docker, Python chạy trong Conda trên Windows.
+host: "127.0.0.1"
+port: 6379
+db: 0
+username: null
+password: null
+ssl: false
+
+decode_responses: true
+connect_timeout: 5.0
+socket_timeout: 5.0
+socket_keepalive: true
+connection_pool_size: 10
+client_name: "doan-beeflow"
+retry_on_timeout: true
+
+# Kết nối trực tiếp, không dùng Redis Sentinel.
+sentinels: []

@@ -1,0 +1,26 @@
+{
+  "prefix": "smoke/65924a421b3b4496bda05b1a8537075f",
+  "objects": [
+    {
+      "bucket": "knowledge-raw",
+      "key": "smoke/65924a421b3b4496bda05b1a8537075f/source.html",
+      "version_id": "c058d339-c8b3-4d4b-90b6-155cf14c1edf",
+      "sha256": "1aa56b8e95be07caf9f2f4f71a9e4d15cadbf8b89469dc8cbaf76e7927f954d3",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "bucket": "knowledge-raw",
+      "key": "smoke/65924a421b3b4496bda05b1a8537075f/source.html",
+      "version_id": "05e1dbce-20e1-48ab-b7ba-8789350f0123",
+      "sha256": "d9dc97cec68d9998315a6eda215fa7d8527f36b665ba59d56b89c7bf643ba97f",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "bucket": "knowledge-processed",
+      "key": "smoke/65924a421b3b4496bda05b1a8537075f/document.md",
+      "version_id": "0264c08f-f5e4-44af-8eae-4227e86857e9",
+      "sha256": "a4d88f968135681d1dc55c6565dd1f1e5202a3e90bc8900d576b31102affcff5",
+      "content_type": "text/markdown; charset=utf-8"
+    }
+  ]
+}

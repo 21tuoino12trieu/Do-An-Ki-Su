@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Tài liệu kiểm thử Beedoc</title>
+  <style>body {max-width: 960px; margin: 32px auto; font-family: sans-serif; line-height: 1.6} table {border-collapse: collapse} td, th {border: 1px solid #aaa; padding: 8px}</style>
+</head>
+<body>
+<div class="confluence-page">
+  <h1>Quy trình tiếp nhận yêu cầu chuyển khoản</h1>
+  <p><strong>Dữ liệu giả lập phục vụ kiểm thử đồ án.</strong> Nội dung này không phải quy định nghiệp vụ của ngân hàng thực tế.</p>
+  <p>Mã tài liệu: <code>KB-DEMO-001</code> — Phiên bản: <strong>1.2</strong><br>Ngày cập nhật giả lập: 03/11/2026.</p>
+  <!-- COMMENT_SHOULD_NOT_APPEAR -->
+  <h2>1. Mục đích và phạm vi</h2>
+  <p>Kiểm tra khả năng giữ nguyên tiếng Việt, dấu câu và cấu trúc khi chuyển HTML sang Markdown. Ví dụ số tiền: <strong>1.250.000 VNĐ</strong>; ký tự đặc biệt: A &amp; B, 5 &lt; 10.</p>
+  <div class="info-panel"><p><em>Lưu ý:</em> Chỉ dùng khách hàng và giao dịch giả lập; không đưa thông tin khách hàng thật vào bộ kiểm thử.</p></div>
+  <h2>2. Các bước thực hiện</h2>
+  <ol>
+    <li>Tiếp nhận yêu cầu từ khách hàng giả lập.
+      <ul>
+        <li>Kiểm tra mã yêu cầu <code>DEMO-0001</code>.</li>
+        <li>Đối chiếu thông tin:
+          <ul><li>Người gửi: Nguyễn Văn Mẫu.</li><li>Người nhận: Trần Thị Thử.</li></ul>
+        </li>
+      </ul>
+    </li>
+    <li>Kiểm tra dữ liệu đầu vào.
+      <ol><li>Đọc số tiền và nội dung.</li><li>Ghi nhận kết quả kiểm tra.</li></ol>
+    </li>
+    <li>Chuyển yêu cầu sang bước xử lý tiếp theo.</li>
+  </ol>
+  <h3>2.1. Danh sách kiểm tra</h3>
+  <table>
+    <thead><tr><th>Trường</th><th>Ví dụ</th><th>Ghi chú</th></tr></thead>
+    <tbody>
+      <tr><td>Mã yêu cầu</td><td><code>DEMO-0001</code></td><td>Không được trống</td></tr>
+      <tr><td>Trạng thái</td><td>Chờ | Đang xử lý</td><td>Kiểm tra ký tự phân cách bảng</td></tr>
+      <tr><td>Nội dung</td><td>Thanh toán mẫu<br>Đợt 1</td><td><strong>Chỉ dữ liệu giả</strong></td></tr>
+    </tbody>
+  </table>
+  <h4>2.1.1. Trường hợp cần bổ sung</h4>
+  <blockquote><p>Nếu thiếu thông tin, yêu cầu bổ sung trước khi chuyển tiếp.</p></blockquote>
+  <h3>2.2. Bảng không có tiêu đề</h3>
+  <table><tr><td>Kênh tiếp nhận</td><td>Cổng nội bộ giả lập</td></tr><tr><td>Người xử lý</td><td>Nhân viên demo</td></tr></table>
+  <h2>3. Nguồn tham khảo và hình ảnh</h2>
+  <ul>
+    <li><a href="/wiki/spaces/DEMO/pages/12345">Trang Confluence nội bộ</a></li>
+    <li><a href="https://example.invalid/policy?type=demo&amp;version=1">Chính sách mẫu</a></li>
+    <li><a href="mailto:demo@example.invalid">Hộp thư hỗ trợ giả lập</a></li>
+  </ul>
+  <p>Hình minh họa giữ nguyên thẻ ảnh, không OCR hoặc mô tả bằng AI:</p>
+  <p><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='60'%3E%3Crect width='360' height='60' fill='%23dbeafe'/%3E%3Ctext x='20' y='38' font-size='20'%3EDEMO: Input - Check - Output%3C/text%3E%3C/svg%3E" alt="Sơ đồ xử lý giả lập" width="360" height="60" data-attachment-id="demo-img-01"></p>
+  <p>Ảnh tham chiếu từ Confluence (đường dẫn giả, không tải ảnh): <img src="/wiki/download/attachments/12345/demo.png" alt="Ảnh đính kèm mẫu" data-image-id="demo-img-02" /></p>
+  <h2>4. Mẫu dữ liệu kỹ thuật</h2>
+  <pre><code>{
+  "request_id": "DEMO-0001",
+  "amount": 1250000,
+  "status": "pending"
+}</code></pre>
+  <p>Kết thúc tài liệu kiểm thử.</p>
+</div>
+<script>const marker = "SCRIPT_SHOULD_NOT_APPEAR";</script>
+</body>
+</html>

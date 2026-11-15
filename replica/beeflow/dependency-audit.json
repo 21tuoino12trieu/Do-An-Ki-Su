@@ -1,0 +1,32 @@
+{
+  "method": "AST_absolute_imports_including_examples_and_optional_branches",
+  "missing_local_modules": [],
+  "external_import_roots": [
+    "aioboto3",
+    "aiohttp",
+    "aiokafka",
+    "asyncpg",
+    "botocore",
+    "bson",
+    "colorama",
+    "cryptography",
+    "google",
+    "haikunator",
+    "httpx",
+    "kafka",
+    "langfuse",
+    "mem0",
+    "motor",
+    "numpy",
+    "openai",
+    "oracledb",
+    "pydantic",
+    "pymilvus",
+    "pymongo",
+    "redis",
+    "requests",
+    "typeguard",
+    "vertexai",
+    "yaml"
+  ]
+}

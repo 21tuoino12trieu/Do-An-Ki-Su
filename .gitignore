@@ -1,0 +1,8 @@
+/config/langfuse.yaml
+__pycache__/
+*.py[cod]
+/infra/minio/.env
+/infra/airflow/.env
+/infra/airflow/secrets/
+/infra/airflow/build.log
+/infra/postgres/.env

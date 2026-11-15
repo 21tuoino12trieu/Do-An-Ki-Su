@@ -1,0 +1,11 @@
+{
+    "python.defaultInterpreterPath": "C:\\Users\\Nam Cuong\\miniconda3\\envs\\namcuong\\python.exe",
+    "python-envs.defaultEnvManager": "ms-python.python:conda",
+    "python-envs.defaultPackageManager": "ms-python.python:conda",
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}/beeflow/beeflow"
+    ],
+    "python.analysis.diagnosticSeverityOverrides": {
+        "reportUnusedExpression": "none"
+    }
+}

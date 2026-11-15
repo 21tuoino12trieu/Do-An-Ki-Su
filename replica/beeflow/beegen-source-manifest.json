@@ -1,0 +1,700 @@
+{
+  "copy_mode": "byte_for_byte",
+  "files": [
+    {
+      "path": "__init__.py",
+      "source": "beeflow/beeflow/beegen/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "cache/__init__.py",
+      "source": "beeflow/beeflow/beegen/cache/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "cache/redis_engine.py",
+      "source": "beeflow/beeflow/beegen/cache/redis_engine.py",
+      "sha256": "b89c665ffdb92fcd5b0f87db07e8cd1f45f0cf4f9e79cd327b23185780564f5a"
+    },
+    {
+      "path": "configs/__init__.py",
+      "source": "beeflow/beeflow/beegen/configs/__init__.py",
+      "sha256": "ca0a66e515df6034b23bb1ffdcf2ee4aea89a4e5a0448e88d07df1a9de370780"
+    },
+    {
+      "path": "configs/authen/__init__.py",
+      "source": "beeflow/beeflow/beegen/configs/authen/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "configs/authen/keycloak_config.py",
+      "source": "beeflow/beeflow/beegen/configs/authen/keycloak_config.py",
+      "sha256": "cb09edbe2747ae23ee86492bfd9e7cf80b40afa57e21091a2f7d465edc109887"
+    },
+    {
+      "path": "configs/cache/__init__.py",
+      "source": "beeflow/beeflow/beegen/configs/cache/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "configs/cache/redis_config.py",
+      "source": "beeflow/beeflow/beegen/configs/cache/redis_config.py",
+      "sha256": "840185bde81eb8ecf1f159bf1bee75d106fd94749cc777f5933200c1b2665197"
+    },
+    {
+      "path": "configs/event_streaming/kafka_config.py",
+      "source": "beeflow/beeflow/beegen/configs/event_streaming/kafka_config.py",
+      "sha256": "99a9cb156605ac58c5b8342553f838404382b2ddd51bbdb06909c6ac356c4cb2"
+    },
+    {
+      "path": "configs/logging/__init__.py",
+      "source": "beeflow/beeflow/beegen/configs/logging/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "configs/logging/log_config.py",
+      "source": "beeflow/beeflow/beegen/configs/logging/log_config.py",
+      "sha256": "8e058a25260670b795c92794289c5216612cb5aab365034ea716656b023da3b9"
+    },
+    {
+      "path": "configs/mcp/mcp_config.py",
+      "source": "beeflow/beeflow/beegen/configs/mcp/mcp_config.py",
+      "sha256": "f786b71b6bac459f9f989922a9a5066e32d37849c0ad26f3bab9b2ace33c8c25"
+    },
+    {
+      "path": "configs/memory/__init__.py",
+      "source": "beeflow/beeflow/beegen/configs/memory/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "configs/memory/mem0_config.py",
+      "source": "beeflow/beeflow/beegen/configs/memory/mem0_config.py",
+      "sha256": "d274916a253a3790840fdc1b85a45c18f77b4e291c4ee0c1bddbbbfff9646e30"
+    },
+    {
+      "path": "configs/memory/memory_config.py",
+      "source": "beeflow/beeflow/beegen/configs/memory/memory_config.py",
+      "sha256": "8a31974657f77b7865d434b58ee861ac1d16fb9c01489a39c9f438390cd26660"
+    },
+    {
+      "path": "configs/models/__init__.py",
+      "source": "beeflow/beeflow/beegen/configs/models/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "configs/models/embedding_config.py",
+      "source": "beeflow/beeflow/beegen/configs/models/embedding_config.py",
+      "sha256": "079d0b00d2a6ad9275b24aea9cc7e57b59c68c1605484e053ad03a8d79430167"
+    },
+    {
+      "path": "configs/models/llm_config.py",
+      "source": "beeflow/beeflow/beegen/configs/models/llm_config.py",
+      "sha256": "496d2c5681e25859f5fc01342a56404508a4e581e0e55df3c179d3dd63a42a8c"
+    },
+    {
+      "path": "configs/models/reranking_config.py",
+      "source": "beeflow/beeflow/beegen/configs/models/reranking_config.py",
+      "sha256": "9964fe1934b34cc920909c54eca721f1d0257c764ada650870546e59c32ebeef"
+    },
+    {
+      "path": "configs/models/retrieval_config.py",
+      "source": "beeflow/beeflow/beegen/configs/models/retrieval_config.py",
+      "sha256": "79b33750c36be2c29b839ebd47c2aeff8299d025d93d7621184a97b9adc8919b"
+    },
+    {
+      "path": "configs/monitor/__init__.py",
+      "source": "beeflow/beeflow/beegen/configs/monitor/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "configs/monitor/langfuse_config.py",
+      "source": "beeflow/beeflow/beegen/configs/monitor/langfuse_config.py",
+      "sha256": "b2d6710a64d197c0c6c909ece8e972b7b4d7ed72e965bd22b584b260b1363c8a"
+    },
+    {
+      "path": "configs/parser/__init__.py",
+      "source": "beeflow/beeflow/beegen/configs/parser/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "configs/parser/parser_config.py",
+      "source": "beeflow/beeflow/beegen/configs/parser/parser_config.py",
+      "sha256": "b93ccb4d23c0033a23938d1f7f6fd1a304d81059153054aadf7b29e66d06d02b"
+    },
+    {
+      "path": "configs/storage/__init__.py",
+      "source": "beeflow/beeflow/beegen/configs/storage/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "configs/storage/mongo_config.py",
+      "source": "beeflow/beeflow/beegen/configs/storage/mongo_config.py",
+      "sha256": "c438380136c1fb81c65ec5d75eb1b0a7117471f8a125dc9c96e750ae20c0a3bd"
+    },
+    {
+      "path": "configs/storage/s3_config.py",
+      "source": "beeflow/beeflow/beegen/configs/storage/s3_config.py",
+      "sha256": "27bf1576f928a8886eca7bcbc84fb665964ba7606ec1c239bbb5bfba5799bd2f"
+    },
+    {
+      "path": "configs/storage/sql_config.py",
+      "source": "beeflow/beeflow/beegen/configs/storage/sql_config.py",
+      "sha256": "83fd6e9f8922636bd60c52b67ca6913029d6a1eeae79c4f04e50777b86612941"
+    },
+    {
+      "path": "configs/storage/vectordb/__init__.py",
+      "source": "beeflow/beeflow/beegen/configs/storage/vectordb/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "configs/storage/vectordb/base.py",
+      "source": "beeflow/beeflow/beegen/configs/storage/vectordb/base.py",
+      "sha256": "d912f979b021ee9513a4edfce5a12d7c1d55e124357cbefb24d9da25b5f065a9"
+    },
+    {
+      "path": "configs/storage/vectordb/milvus_config.py",
+      "source": "beeflow/beeflow/beegen/configs/storage/vectordb/milvus_config.py",
+      "sha256": "5be14ba6d0bcac722bf1b12116dc609942abdd1a33f231ed01ef8506fc83e3c0"
+    },
+    {
+      "path": "configs/yaml_model.py",
+      "source": "beeflow/beeflow/beegen/configs/yaml_model.py",
+      "sha256": "8eae1e56d8da442e8c8411c11c5bdb0704f431c91874d06da01b8273e617cb39"
+    },
+    {
+      "path": "const.py",
+      "source": "beeflow/beeflow/beegen/const.py",
+      "sha256": "81bfde7386f5faedb60861ae163a224e6719a5c6b736cca05e4af01229037e73"
+    },
+    {
+      "path": "embeddings/__init__.py",
+      "source": "beeflow/beeflow/beegen/embeddings/__init__.py",
+      "sha256": "3827c6ee33d3b5fa2ecd6da106886015a7ff4ad48ba4e09ba7e289f1e4f8ee09"
+    },
+    {
+      "path": "embeddings/base_embedding.py",
+      "source": "beeflow/beeflow/beegen/embeddings/base_embedding.py",
+      "sha256": "2c45d45656b52e3aeca11d94a892ddb2136f22a95abe76a06724f4a6da86c401"
+    },
+    {
+      "path": "embeddings/emb_factory.py",
+      "source": "beeflow/beeflow/beegen/embeddings/emb_factory.py",
+      "sha256": "3599a44e7c82e5ebb8b1c9a2a53b52e7244e641a63cfb2193f0bbbea0c95a8a2"
+    },
+    {
+      "path": "embeddings/tei_embedding.py",
+      "source": "beeflow/beeflow/beegen/embeddings/tei_embedding.py",
+      "sha256": "cac6b249f577639adeb00b75629fb0b4cfcea293c4be3f96dcb2dd720169b0ca"
+    },
+    {
+      "path": "embeddings/vllm_embedding.py",
+      "source": "beeflow/beeflow/beegen/embeddings/vllm_embedding.py",
+      "sha256": "742905cd0f30b25f5571a749dca456604ab40ee2519b8989ba1a2d63d512fefb"
+    },
+    {
+      "path": "event_streaming/kafka_engine.py",
+      "source": "beeflow/beeflow/beegen/event_streaming/kafka_engine.py",
+      "sha256": "482150608f2b73282faab96c2f13ea7cc23391ba39d9f2d95646766dac4483c4"
+    },
+    {
+      "path": "interpreters/__init__.py",
+      "source": "beeflow/beeflow/beegen/interpreters/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "interpreters/base_interpreter.py",
+      "source": "beeflow/beeflow/beegen/interpreters/base_interpreter.py",
+      "sha256": "79fa63012f670ece651ce045ce7441fd32fa8e1acba9f817dc146beba2782c64"
+    },
+    {
+      "path": "interpreters/internal_python_interpreter.py",
+      "source": "beeflow/beeflow/beegen/interpreters/internal_python_interpreter.py",
+      "sha256": "100f979120a32508b19e6a7ddd23e95ba636fa7c710648d46dabe1719d3a74f1"
+    },
+    {
+      "path": "interpreters/interpreter_error.py",
+      "source": "beeflow/beeflow/beegen/interpreters/interpreter_error.py",
+      "sha256": "f5daa32d759fd164aad8934d48633d2a762c7d222fc8f57c976d775916cb52ff"
+    },
+    {
+      "path": "interpreters/subprocess_interpreter.py",
+      "source": "beeflow/beeflow/beegen/interpreters/subprocess_interpreter.py",
+      "sha256": "c5971d5f97007656bd2fb499d4065e508594cc988c207397955b44777e8c125d"
+    },
+    {
+      "path": "llms/__init__.py",
+      "source": "beeflow/beeflow/beegen/llms/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "llms/azure_model.py",
+      "source": "beeflow/beeflow/beegen/llms/azure_model.py",
+      "sha256": "453f05bc2b9add09dda0f1e67dc329971034ee60d3a4160d7887dddfc6567250"
+    },
+    {
+      "path": "llms/azure_sdk_model.py",
+      "source": "beeflow/beeflow/beegen/llms/azure_sdk_model.py",
+      "sha256": "424f638c60a9f48e3568b89dbfefc109f1830d42e0ac88bec219f9e62de7d9f5"
+    },
+    {
+      "path": "llms/base_llm.py",
+      "source": "beeflow/beeflow/beegen/llms/base_llm.py",
+      "sha256": "11279ed53a4f5b06f89874d9c28079e617da70294b013f3b85e1bcebcde72019"
+    },
+    {
+      "path": "llms/factory.py",
+      "source": "beeflow/beeflow/beegen/llms/factory.py",
+      "sha256": "1395cf206cef1fef146ecc196fa4f949e93b7eb8bfa744e281a020406f349f4c"
+    },
+    {
+      "path": "llms/gemini_model.py",
+      "source": "beeflow/beeflow/beegen/llms/gemini_model.py",
+      "sha256": "833b879220044ae61770b9c52aa2d7b5fb50a205e3256f36f7437070464c0dad"
+    },
+    {
+      "path": "llms/gemini_sdk_model.py",
+      "source": "beeflow/beeflow/beegen/llms/gemini_sdk_model.py",
+      "sha256": "fc880f3e093dc23d2a86830dc0919ac71320fac246fe165822b501c40b7cb59f"
+    },
+    {
+      "path": "llms/openai_model.py",
+      "source": "beeflow/beeflow/beegen/llms/openai_model.py",
+      "sha256": "886f1b7fc531a13fc97cd902ea0d83d79ee06ee9c7f8044622d69a1e569b6667"
+    },
+    {
+      "path": "llms/openai_sdk_model.py",
+      "source": "beeflow/beeflow/beegen/llms/openai_sdk_model.py",
+      "sha256": "68d92039553204dd9b561dfba41c8ccc54e81d0d03495a6eb2e01721a33f968d"
+    },
+    {
+      "path": "llms/response.py",
+      "source": "beeflow/beeflow/beegen/llms/response.py",
+      "sha256": "06f0bfcfd51e3694c3c324d25a0c5ac22dfbf9bf0938adff941db21a6faa61c9"
+    },
+    {
+      "path": "loggings/__init__.py",
+      "source": "beeflow/beeflow/beegen/loggings/__init__.py",
+      "sha256": "6fcf4847598f49a701d1b7805b2c0349654372802b7aba81db897ac444ac57e1"
+    },
+    {
+      "path": "loggings/loggers.py",
+      "source": "beeflow/beeflow/beegen/loggings/loggers.py",
+      "sha256": "9d88e5188a6f4189772a0ae88a9de2ac79f1de14e407b02d94db426e72ab4be3"
+    },
+    {
+      "path": "mcp/__init__.py",
+      "source": "beeflow/beeflow/beegen/mcp/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "mcp/base_server.py",
+      "source": "beeflow/beeflow/beegen/mcp/base_server.py",
+      "sha256": "9c2e4969027522e84896f627bc1dcfcdb2f55d1919564b53e6f1046c53fc0433"
+    },
+    {
+      "path": "mcp/factory.py",
+      "source": "beeflow/beeflow/beegen/mcp/factory.py",
+      "sha256": "d2a86449a7d0ec1c64cd71e2224c570de8d3fe7d2f42b125676cd61ed31907af"
+    },
+    {
+      "path": "mcp/servers/confluence.py",
+      "source": "beeflow/beeflow/beegen/mcp/servers/confluence.py",
+      "sha256": "59816b6480df22cc728533f792e77e9ee811070034097868e238ab201dc3867d"
+    },
+    {
+      "path": "mcp/servers/jira.py",
+      "source": "beeflow/beeflow/beegen/mcp/servers/jira.py",
+      "sha256": "db7a6efdac19820bf4923d491afd4eeae7837496dca8dbac5a2ca81910343c31"
+    },
+    {
+      "path": "mcp/servers/openmetadata.py",
+      "source": "beeflow/beeflow/beegen/mcp/servers/openmetadata.py",
+      "sha256": "70b8db2bf33f9a8fd494479f957cdd80ad7f5cebb968f7a694c2c484161e8ce8"
+    },
+    {
+      "path": "memory/__init__.py",
+      "source": "beeflow/beeflow/beegen/memory/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "memory/base.py",
+      "source": "beeflow/beeflow/beegen/memory/base.py",
+      "sha256": "b213115851eaace1e54121fc3b753f71ef66382a773c70686b9a84d96d2512ba"
+    },
+    {
+      "path": "memory/factory.py",
+      "source": "beeflow/beeflow/beegen/memory/factory.py",
+      "sha256": "719ecaf40df3827f497c7c5219ca22cafd8ce27c65a30d2fece81e0a9eee738e"
+    },
+    {
+      "path": "memory/mem0_memory.py",
+      "source": "beeflow/beeflow/beegen/memory/mem0_memory.py",
+      "sha256": "de78fced7ce3ef5d01242321def656c5c21ac4824139c4bffd053c8d11c24b7f"
+    },
+    {
+      "path": "observations/__init__.py",
+      "source": "beeflow/beeflow/beegen/observations/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "observations/bee_langfuse.py",
+      "source": "beeflow/beeflow/beegen/observations/bee_langfuse.py",
+      "sha256": "a20740bb02715439361cf25f786963f4afd8227828d767f860e45deeb30dd216"
+    },
+    {
+      "path": "observations/langfuse_adapter.py",
+      "source": "beeflow/beeflow/beegen/observations/langfuse_adapter.py",
+      "sha256": "bbb2e7c2da9b4bb75c174e03d75287bd0f03b137a24256927a357292a9bb98d0"
+    },
+    {
+      "path": "observations/trace_buffer.py",
+      "source": "beeflow/beeflow/beegen/observations/trace_buffer.py",
+      "sha256": "291846894ad8df3a88d4a57ffa269cf6a726988eafb6048bbbe43727e01a948a"
+    },
+    {
+      "path": "observations/trace_models.py",
+      "source": "beeflow/beeflow/beegen/observations/trace_models.py",
+      "sha256": "22190b5b517c67b21e5f60ef6be01861044a24ee2ef37d21b1f238479bdad956"
+    },
+    {
+      "path": "parser/__init__.py",
+      "source": "beeflow/beeflow/beegen/parser/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "parser/base_parser.py",
+      "source": "beeflow/beeflow/beegen/parser/base_parser.py",
+      "sha256": "ad902add6472d2a63d1448f9f21dc09cd356f78e4d723d35ba57c4c3776770d3"
+    },
+    {
+      "path": "parser/exceptions.py",
+      "source": "beeflow/beeflow/beegen/parser/exceptions.py",
+      "sha256": "d2ab43da372b12b556557fb657c0c051827c03c1a8c2e7ddbd4137c28b524717"
+    },
+    {
+      "path": "parser/implementations/__init__.py",
+      "source": "beeflow/beeflow/beegen/parser/implementations/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "parser/implementations/json.py",
+      "source": "beeflow/beeflow/beegen/parser/implementations/json.py",
+      "sha256": "a7ca43af8418570ada2e1ac407eb55ea8ad562b4107c0737fcba4c9e29f69eb9"
+    },
+    {
+      "path": "parser/implementations/key_value.py",
+      "source": "beeflow/beeflow/beegen/parser/implementations/key_value.py",
+      "sha256": "2eb7dd23ffe79f5d86721b137a23ed32637763cbdabba736e7d1f61ee6d5d18c"
+    },
+    {
+      "path": "parser/implementations/regex.py",
+      "source": "beeflow/beeflow/beegen/parser/implementations/regex.py",
+      "sha256": "4e386ad32c5ec7fbe6045e34048a9e75a419e7f119559183b6a974e69c658189"
+    },
+    {
+      "path": "parser/implementations/structured.py",
+      "source": "beeflow/beeflow/beegen/parser/implementations/structured.py",
+      "sha256": "4dbb7f718b13a016d8a479293651bc8e977d308d758b9cc195e13a2ad85a6977"
+    },
+    {
+      "path": "parser/implementations/xml.py",
+      "source": "beeflow/beeflow/beegen/parser/implementations/xml.py",
+      "sha256": "c21d6855f0631fdcabcce871130f60fd71d58dcf3b9c7ead816560ba975be7c0"
+    },
+    {
+      "path": "parser/implementations/yaml.py",
+      "source": "beeflow/beeflow/beegen/parser/implementations/yaml.py",
+      "sha256": "9118d3ce0889ea076fc3b39c12bf9009305aa366e0d7bfcb11b768aca9348d14"
+    },
+    {
+      "path": "parser/parser_factory.py",
+      "source": "beeflow/beeflow/beegen/parser/parser_factory.py",
+      "sha256": "07986f1b7097ac290a9ad31321628182781be800ad8f649f4e02236ec0821575"
+    },
+    {
+      "path": "prompts/__init__.py",
+      "source": "beeflow/beeflow/beegen/prompts/__init__.py",
+      "sha256": "14bdba89c03fb09b5a680aad7d25bb8df5e9cb068db7d83e4a0654e259d83fb2"
+    },
+    {
+      "path": "prompts/base.py",
+      "source": "beeflow/beeflow/beegen/prompts/base.py",
+      "sha256": "4275edcaf247cdfe70111c0b170c8bd798ae605c85fc465321bef85b1e1d3405"
+    },
+    {
+      "path": "prompts/bee247.py",
+      "source": "beeflow/beeflow/beegen/prompts/bee247.py",
+      "sha256": "857f9bc77189a577dae87784912b0420bfa599c3c8e190a4bd6cabfffbee6405"
+    },
+    {
+      "path": "prompts/bee247_v2.py",
+      "source": "beeflow/beeflow/beegen/prompts/bee247_v2.py",
+      "sha256": "71345b24221e7d22eeea2009161a17051473deb67178d04bb5d42ff564288133"
+    },
+    {
+      "path": "prompts/beeapp.py",
+      "source": "beeflow/beeflow/beegen/prompts/beeapp.py",
+      "sha256": "fcb16828595e6c6e0d3146fda41682fe08630d195ce59f18e347be4fc47282e5"
+    },
+    {
+      "path": "prompts/beegen_common.py",
+      "source": "beeflow/beeflow/beegen/prompts/beegen_common.py",
+      "sha256": "9bf88b99e782c5c63a17a7071692ff99744f3dbc1f006e42f73398df084c8df5"
+    },
+    {
+      "path": "prompts/beektnb.py",
+      "source": "beeflow/beeflow/beegen/prompts/beektnb.py",
+      "sha256": "7a21966a6c8fc9a40d6343cd53975d0f8d73981e5b55973f9489c355cf419e1d"
+    },
+    {
+      "path": "prompts/botKT.py",
+      "source": "beeflow/beeflow/beegen/prompts/botKT.py",
+      "sha256": "5a848ce73bac67b0654e52fbdad5f12db18a1ccc77cc6f8220f0d1fbf769c3ed"
+    },
+    {
+      "path": "prompts/botPC.py",
+      "source": "beeflow/beeflow/beegen/prompts/botPC.py",
+      "sha256": "1b42e1dddfc701484f6c4ca6bf79cd66001b1cbb29a485a906cf3c3ce8dcad39"
+    },
+    {
+      "path": "prompts/credit_bo.py",
+      "source": "beeflow/beeflow/beegen/prompts/credit_bo.py",
+      "sha256": "79463c8da5a5f79b390794a4082de5c4e0710f27c0a1690d7c9a2b3af08c0e4c"
+    },
+    {
+      "path": "prompts/happy_hub.py",
+      "source": "beeflow/beeflow/beegen/prompts/happy_hub.py",
+      "sha256": "e2af245f8054e9fe3c4addbe05dcfdbcd813212c90c2f589a3a9aad5d0ba5a13"
+    },
+    {
+      "path": "prompts/prompt_manager.py",
+      "source": "beeflow/beeflow/beegen/prompts/prompt_manager.py",
+      "sha256": "920739cc43a7f40c44396c4efe9e60f33e7c54fff654664a823cdbea062838d9"
+    },
+    {
+      "path": "prompts/semantic_search.py",
+      "source": "beeflow/beeflow/beegen/prompts/semantic_search.py",
+      "sha256": "1539d2d2486263b13747ff8b3e231fd50e1739c80db7090a608fa9556cb05c08"
+    },
+    {
+      "path": "prompts/semantic_search_v2.py",
+      "source": "beeflow/beeflow/beegen/prompts/semantic_search_v2.py",
+      "sha256": "5e77bba484946f234721f13de5b49ef6a1200a9387db9358fcd030f63b297311"
+    },
+    {
+      "path": "registry/__init__.py",
+      "source": "beeflow/beeflow/beegen/registry/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "registry/resource_factory.py",
+      "source": "beeflow/beeflow/beegen/registry/resource_factory.py",
+      "sha256": "4709fc814c4af7d70e6dcc2762a0b69dea5f15b631ba7142412408dc8574ab84"
+    },
+    {
+      "path": "registry/resource_hub.py",
+      "source": "beeflow/beeflow/beegen/registry/resource_hub.py",
+      "sha256": "842dfd1334fc1d00df4d09f04b7f655b9c0858531581bee4a926488a78f170de"
+    },
+    {
+      "path": "reranks/__init__.py",
+      "source": "beeflow/beeflow/beegen/reranks/__init__.py",
+      "sha256": "a6d4226609b8807af6b7c10e20de434639dfffa9d4a6c46dc4b8c87249f2d7ba"
+    },
+    {
+      "path": "reranks/base_reranker.py",
+      "source": "beeflow/beeflow/beegen/reranks/base_reranker.py",
+      "sha256": "3d873e53cc2587491c958f1f0b9b702d42a90145884eddbda938b34f2da9cb18"
+    },
+    {
+      "path": "reranks/rerank_factory.py",
+      "source": "beeflow/beeflow/beegen/reranks/rerank_factory.py",
+      "sha256": "96e776eb214d82b632c639e9d56cd8d99e3ea9417c5d6b7a32a194979e7006f1"
+    },
+    {
+      "path": "reranks/tei_reranker.py",
+      "source": "beeflow/beeflow/beegen/reranks/tei_reranker.py",
+      "sha256": "db94a3dfee48dbcd706d4b8fad719da54b73afc578a3e153120f8a2849811a8d"
+    },
+    {
+      "path": "reranks/vllm_reranker.py",
+      "source": "beeflow/beeflow/beegen/reranks/vllm_reranker.py",
+      "sha256": "d13d735b91ee4f79e6a349002e020334a1fe8b96953dc28a1aeeb0e371cf3c49"
+    },
+    {
+      "path": "storage/__init__.py",
+      "source": "beeflow/beeflow/beegen/storage/__init__.py",
+      "sha256": "fc74ec28e3595be02e79c5c8abcc7c577213b1b97ce9d448a93efc419f1d087f"
+    },
+    {
+      "path": "storage/mongo/__init__.py",
+      "source": "beeflow/beeflow/beegen/storage/mongo/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "storage/mongo/mongo_engine.py",
+      "source": "beeflow/beeflow/beegen/storage/mongo/mongo_engine.py",
+      "sha256": "8132e9bba43c5d5eb048b751d6f1195da1fb5749fda27a365b0b69fb5de89f90"
+    },
+    {
+      "path": "storage/s3/__init__.py",
+      "source": "beeflow/beeflow/beegen/storage/s3/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "storage/s3/s3_engine.py",
+      "source": "beeflow/beeflow/beegen/storage/s3/s3_engine.py",
+      "sha256": "200bad0d1b81d93337ae98eff1836310d26e2a0235983ffbc3577f904b5f4aa6"
+    },
+    {
+      "path": "storage/sql/__init__.py",
+      "source": "beeflow/beeflow/beegen/storage/sql/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "storage/sql/adapters/__init__.py",
+      "source": "beeflow/beeflow/beegen/storage/sql/adapters/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "storage/sql/adapters/oracle.py",
+      "source": "beeflow/beeflow/beegen/storage/sql/adapters/oracle.py",
+      "sha256": "7bbd0bf62f1677ccec1385bbbd11d7c1402dc9905973e2fc7cc401c7d3d8dc05"
+    },
+    {
+      "path": "storage/sql/adapters/postgres.py",
+      "source": "beeflow/beeflow/beegen/storage/sql/adapters/postgres.py",
+      "sha256": "b68f8228f7f7e4f40b4f6054f16caa5d833e2f9ba27a707351e9f343d573bebe"
+    },
+    {
+      "path": "storage/sql/base_adapter.py",
+      "source": "beeflow/beeflow/beegen/storage/sql/base_adapter.py",
+      "sha256": "7fe44a1d185530486995a5d813ffaa3bd942636e72d21e75db028e3c61122680"
+    },
+    {
+      "path": "storage/sql/factory.py",
+      "source": "beeflow/beeflow/beegen/storage/sql/factory.py",
+      "sha256": "4b8a950af0f5fcd76a1054585982428ab9d4f5ea55837bbea2142b9390e74086"
+    },
+    {
+      "path": "tools/__init__.py",
+      "source": "beeflow/beeflow/beegen/tools/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tools/exporters/__init__.py",
+      "source": "beeflow/beeflow/beegen/tools/exporters/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tools/exporters/schema_exporter.py",
+      "source": "beeflow/beeflow/beegen/tools/exporters/schema_exporter.py",
+      "sha256": "3503217e4ffb755da99cc9ce05a29771bc5673b0d28dbbe7ca840e88b857b9b2"
+    },
+    {
+      "path": "tools/exporters/source_exporter.py",
+      "source": "beeflow/beeflow/beegen/tools/exporters/source_exporter.py",
+      "sha256": "f4acea8cb7c498623d277037182b6bbda661c1d4162017929ed25a983ce0e2b3"
+    },
+    {
+      "path": "tools/parsers/__init__.py",
+      "source": "beeflow/beeflow/beegen/tools/parsers/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tools/parsers/callable_parser.py",
+      "source": "beeflow/beeflow/beegen/tools/parsers/callable_parser.py",
+      "sha256": "4f7592c78e4e17d71cd5784be24c97f901c8c567088bf1aba200772fc26b13d2"
+    },
+    {
+      "path": "tools/parsers/docstring_parser.py",
+      "source": "beeflow/beeflow/beegen/tools/parsers/docstring_parser.py",
+      "sha256": "bb0ba9df3ebe17bcab8f2c2cd4d9c29a7ef00c9632a5abe10ab7c0ec51a92687"
+    },
+    {
+      "path": "tools/parsers/func_parser.py",
+      "source": "beeflow/beeflow/beegen/tools/parsers/func_parser.py",
+      "sha256": "9bc6cc0c7ffbbc4e1fa68380ad8d11e715bccba61455368971fda6dae9ec53eb"
+    },
+    {
+      "path": "tools/schema/__init__.py",
+      "source": "beeflow/beeflow/beegen/tools/schema/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tools/schema/function_info.py",
+      "source": "beeflow/beeflow/beegen/tools/schema/function_info.py",
+      "sha256": "4546a663803407a5f1d803e07ff57566b7d60dcf1054d89dbadaa0b7194d562a"
+    },
+    {
+      "path": "tools/schema/param.py",
+      "source": "beeflow/beeflow/beegen/tools/schema/param.py",
+      "sha256": "69255828f6a2e39573dbdf0397f0c4da15f294f6a328674e135a5fab058b2f74"
+    },
+    {
+      "path": "tools/services/__init__.py",
+      "source": "beeflow/beeflow/beegen/tools/services/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tools/services/callable_analyzer.py",
+      "source": "beeflow/beeflow/beegen/tools/services/callable_analyzer.py",
+      "sha256": "68b990ae62e164e432456afe27bdb5aeb17b4f3ed4660a7c7f7cb25a377e902c"
+    },
+    {
+      "path": "tools/services/function_analyzer.py",
+      "source": "beeflow/beeflow/beegen/tools/services/function_analyzer.py",
+      "sha256": "27b5edb0677f0fdead3d8ffca9569d6d4f0abdd1c9e11870534e44889f2f2f9a"
+    },
+    {
+      "path": "utils/__init__.py",
+      "source": "beeflow/beeflow/beegen/utils/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "utils/abbreviationHandler.py",
+      "source": "beeflow/beeflow/beegen/utils/abbreviationHandler.py",
+      "sha256": "5d45f080b9dcf15c84fea35f5f4c57c651994d275cc007670caf2733406a48ac"
+    },
+    {
+      "path": "utils/async_func.py",
+      "source": "beeflow/beeflow/beegen/utils/async_func.py",
+      "sha256": "570034f9a2ec2868813964ab907ea6cc5c8682abee6c2fe78381a0ee1f4ac6c3"
+    },
+    {
+      "path": "utils/common.py",
+      "source": "beeflow/beeflow/beegen/utils/common.py",
+      "sha256": "518250b33a4257240cebacc30d6190e7a96bb1dfbf11ab2d9bc4c195a8659863"
+    },
+    {
+      "path": "utils/cost_manager.py",
+      "source": "beeflow/beeflow/beegen/utils/cost_manager.py",
+      "sha256": "b5b8c02973ccadcbf1b8f0aab760ecfc7fc28b9b02f1c27cb7ae0dcea54bebe5"
+    },
+    {
+      "path": "utils/crypto.py",
+      "source": "beeflow/beeflow/beegen/utils/crypto.py",
+      "sha256": "2baf80bf03eb984c6907bc6d35475abbc926a1eec8e5c49dac5c22c745156f83"
+    },
+    {
+      "path": "vectordb/__init__.py",
+      "source": "beeflow/beeflow/beegen/vectordb/__init__.py",
+      "sha256": "6d7fe54fc2bdb235dfce72fa6546f8d38d1100ec53b9d366ec71af73b8e4b56e"
+    },
+    {
+      "path": "vectordb/base_vectordb.py",
+      "source": "beeflow/beeflow/beegen/vectordb/base_vectordb.py",
+      "sha256": "82337983c6c652f371e11123b82cbfa91e871cf9439894a56a96f11e1cdf7bb0"
+    },
+    {
+      "path": "vectordb/milvus_collection_factory.py",
+      "source": "beeflow/beeflow/beegen/vectordb/milvus_collection_factory.py",
+      "sha256": "8c2d2cfc2ddf0abca02c45b618b3a4c8f8cfe3773728571725ae3c9c95ba4f44"
+    },
+    {
+      "path": "vectordb/milvus_engine.py",
+      "source": "beeflow/beeflow/beegen/vectordb/milvus_engine.py",
+      "sha256": "629487ca3d73c4ada95f264c52858e856824e17c71d9e2666e73c834f4289b53"
+    }
+  ]
+}
