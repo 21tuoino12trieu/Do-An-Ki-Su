@@ -1,0 +1,877 @@
+[
+    {
+        "day_transaction": "2025-07-25",
+        "time_transaction": "Friday 22:58:59",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den the tin dung MB 4141XXXXXX5678",
+        "amount": 5775000.0
+    },
+    {
+        "day_transaction": "2025-07-29",
+        "time_transaction": "Tuesday 22:58:43",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den the tin dung NH ngoai 4012XXXXXX8765",
+        "amount": 3417000.0
+    },
+    {
+        "day_transaction": "2025-07-16",
+        "time_transaction": "Wednesday 07:59:30",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den nickname MB hoamb",
+        "amount": 6544000.0
+    },
+    {
+        "day_transaction": "2025-07-02",
+        "time_transaction": "Wednesday 19:08:38",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den nickname ngoai MB thanhnt",
+        "amount": 2705000.0
+    },
+    {
+        "day_transaction": "2025-07-17",
+        "time_transaction": "Thursday 10:57:18",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den STK thanh toan MB 0778761148",
+        "amount": 9336000.0
+    },
+    {
+        "day_transaction": "2025-07-12",
+        "time_transaction": "Saturday 10:46:18",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den STK thanh toan ngoai MB 1002003999",
+        "amount": 7230000.0
+    },
+    {
+        "day_transaction": "2025-07-07",
+        "time_transaction": "Monday 11:50:48",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den TK luong MB 3400112233",
+        "amount": 558000.0
+    },
+    {
+        "day_transaction": "2025-07-15",
+        "time_transaction": "Tuesday 20:28:33",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den TK luong ngoai MB 8700456721",
+        "amount": 8034000.0
+    },
+    {
+        "day_transaction": "2025-07-26",
+        "time_transaction": "Saturday 00:39:51",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den TK thau chi MB 8800112233",
+        "amount": 7178000.0
+    },
+    {
+        "day_transaction": "2025-07-01",
+        "time_transaction": "Tuesday 13:55:34",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den TK thau chi ngoai MB 7700998877",
+        "amount": 5569000.0
+    },
+    {
+        "day_transaction": "2025-07-29",
+        "time_transaction": "Tuesday 10:20:31",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den Hoa mua qua tang",
+        "amount": 1580000.0
+    },
+    {
+        "day_transaction": "2025-07-24",
+        "time_transaction": "Thursday 03:17:02",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien mua sam cuoi thang",
+        "amount": 8322583
+    },
+    {
+        "day_transaction": "2025-07-04",
+        "time_transaction": "Friday 23:19:32",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien tra tien nho",
+        "amount": 507604
+    },
+    {
+        "day_transaction": "2025-07-05",
+        "time_transaction": "Saturday 20:41:13",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den Hoa",
+        "amount": 3883662
+    },
+    {
+        "day_transaction": "2025-07-01",
+        "time_transaction": "Tuesday 01:46:18",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien Taxi Mai Linh STK 0778761148",
+        "amount": 5296000.0
+    },
+    {
+        "day_transaction": "2025-07-04",
+        "time_transaction": "Friday 19:24:50",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien Shoppe Mall STK 1223110001",
+        "amount": 2304000.0
+    },
+    {
+        "day_transaction": "2025-07-15",
+        "time_transaction": "Tuesday 22:25:41",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien Thanh toán mua căn hộ STK 0778761148",
+        "amount": 7362000.0
+    },
+    {
+        "day_transaction": "2025-07-09",
+        "time_transaction": "Wednesday 05:44:55",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Thanh toan Grab cho chuyen di",
+        "amount": 2558000.0
+    },
+    {
+        "day_transaction": "2025-07-02",
+        "time_transaction": "Wednesday 12:44:23",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien ngay le",
+        "amount": 8863000.0
+    },
+    {
+        "day_transaction": "2025-07-12",
+        "time_transaction": "Saturday 20:52:22",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien ngoai gio han muc",
+        "amount": 6794000.0
+    },
+    {
+        "day_transaction": "2025-07-05",
+        "time_transaction": "Saturday 10:25:49",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Thanh toán tiền điện EVN",
+        "amount": 4449000.0
+    },
+    {
+        "day_transaction": "2025-07-13",
+        "time_transaction": "Sunday 22:08:55",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Thanh toán tiền nước",
+        "amount": 4700000.0
+    },
+    {
+        "day_transaction": "2025-07-29",
+        "time_transaction": "Tuesday 07:05:40",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Nộp thuế thu nhập cá nhân",
+        "amount": 1066000.0
+    },
+    {
+        "day_transaction": "2025-07-01",
+        "time_transaction": "Tuesday 20:52:40",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Thanh toán Internet VNPT",
+        "amount": 9534000.0
+    },
+    {
+        "day_transaction": "2025-07-07",
+        "time_transaction": "Monday 13:13:04",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Thanh toán truyền hình SCTV",
+        "amount": 1361000.0
+    },
+    {
+        "day_transaction": "2025-07-25",
+        "time_transaction": "Friday 01:48:36",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Thanh toán học phí ĐH Bách Khoa",
+        "amount": 6196000.0
+    },
+    {
+        "day_transaction": "2025-07-15",
+        "time_transaction": "Tuesday 11:04:21",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Thanh toán VinaPhone trả sau",
+        "amount": 2311000.0
+    },
+    {
+        "day_transaction": "2025-07-27",
+        "time_transaction": "Sunday 04:16:19",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den the tin dung MB 5241XXXXXX1234",
+        "amount": 5020000.0
+    },
+    {
+        "day_transaction": "2025-07-11",
+        "time_transaction": "Friday 19:50:13",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den the tin dung NH ngoai 4012XXXXXX8765",
+        "amount": 1215000.0
+    },
+    {
+        "day_transaction": "2025-07-24",
+        "time_transaction": "Thursday 11:08:10",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den nickname MB hoamb",
+        "amount": 5338000.0
+    },
+    {
+        "day_transaction": "2025-07-22",
+        "time_transaction": "Tuesday 01:46:53",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den nickname ngoai MB linhoutmb",
+        "amount": 8654000.0
+    },
+    {
+        "day_transaction": "2025-07-13",
+        "time_transaction": "Sunday 15:30:15",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den STK thanh toan MB 1223110001",
+        "amount": 9743000.0
+    },
+    {
+        "day_transaction": "2025-07-30",
+        "time_transaction": "Wednesday 17:47:05",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den STK thanh toan ngoai MB 3556677889",
+        "amount": 9574000.0
+    },
+    {
+        "day_transaction": "2025-07-10",
+        "time_transaction": "Thursday 17:04:45",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den TK luong MB 3600112244",
+        "amount": 5849000.0
+    },
+    {
+        "day_transaction": "2025-07-26",
+        "time_transaction": "Saturday 17:05:32",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den TK luong ngoai MB 9900887766",
+        "amount": 7804000.0
+    },
+    {
+        "day_transaction": "2025-07-22",
+        "time_transaction": "Tuesday 19:57:31",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den TK thau chi MB 8800112233",
+        "amount": 5431000.0
+    },
+    {
+        "day_transaction": "2025-07-03",
+        "time_transaction": "Thursday 04:56:23",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den TK thau chi ngoai MB 7700665544",
+        "amount": 2254000.0
+    },
+    {
+        "day_transaction": "2025-07-15",
+        "time_transaction": "Tuesday 01:03:24",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den Lan mua qua tang",
+        "amount": 8372000.0
+    },
+    {
+        "day_transaction": "2025-07-08",
+        "time_transaction": "Tuesday 22:21:19",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien mua sam cuoi thang",
+        "amount": 5037998
+    },
+    {
+        "day_transaction": "2025-07-15",
+        "time_transaction": "Tuesday 06:29:41",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien tra tien nho",
+        "amount": 113985
+    },
+    {
+        "day_transaction": "2025-07-12",
+        "time_transaction": "Saturday 19:13:00",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den Lan",
+        "amount": 3043542
+    },
+    {
+        "day_transaction": "2025-07-05",
+        "time_transaction": "Saturday 22:14:56",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien Taxi Mai Linh STK 0778761148",
+        "amount": 3849000.0
+    },
+    {
+        "day_transaction": "2025-07-15",
+        "time_transaction": "Tuesday 16:35:46",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien Shoppe Mall STK 0778761148",
+        "amount": 721000.0
+    },
+    {
+        "day_transaction": "2025-07-02",
+        "time_transaction": "Wednesday 21:59:05",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien Thanh toán mua căn hộ STK 0778761148",
+        "amount": 8887000.0
+    },
+    {
+        "day_transaction": "2025-07-07",
+        "time_transaction": "Monday 03:49:39",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Thanh toan Grab cho chuyen di",
+        "amount": 7136000.0
+    },
+    {
+        "day_transaction": "2025-07-02",
+        "time_transaction": "Wednesday 03:40:31",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien ngay le",
+        "amount": 4439000.0
+    },
+    {
+        "day_transaction": "2025-07-19",
+        "time_transaction": "Saturday 20:40:07",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien ngoai gio han muc",
+        "amount": 8567000.0
+    },
+    {
+        "day_transaction": "2025-07-05",
+        "time_transaction": "Saturday 05:52:45",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Thanh toán tiền điện EVN",
+        "amount": 8702000.0
+    },
+    {
+        "day_transaction": "2025-07-06",
+        "time_transaction": "Sunday 21:23:10",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Thanh toán tiền nước",
+        "amount": 3087000.0
+    },
+    {
+        "day_transaction": "2025-07-27",
+        "time_transaction": "Sunday 14:41:35",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Nộp thuế thu nhập cá nhân",
+        "amount": 7253000.0
+    },
+    {
+        "day_transaction": "2025-07-14",
+        "time_transaction": "Monday 13:24:04",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Thanh toán Internet VNPT",
+        "amount": 1248000.0
+    },
+    {
+        "day_transaction": "2025-07-27",
+        "time_transaction": "Sunday 08:24:10",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Thanh toán truyền hình SCTV",
+        "amount": 6207000.0
+    },
+    {
+        "day_transaction": "2025-07-16",
+        "time_transaction": "Wednesday 10:32:34",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Thanh toán học phí ĐH Bách Khoa",
+        "amount": 2345000.0
+    },
+    {
+        "day_transaction": "2025-07-30",
+        "time_transaction": "Wednesday 11:35:55",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Thanh toán VinaPhone trả sau",
+        "amount": 4711000.0
+    },
+    {
+        "day_transaction": "2025-07-02",
+        "time_transaction": "Wednesday 10:40:00",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den the tin dung MB 5241XXXXXX1234",
+        "amount": 6969000.0
+    },
+    {
+        "day_transaction": "2025-07-02",
+        "time_transaction": "Wednesday 07:12:18",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den the tin dung NH ngoai 5310XXXXXX4321",
+        "amount": 4217000.0
+    },
+    {
+        "day_transaction": "2025-07-08",
+        "time_transaction": "Tuesday 03:49:32",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den nickname MB hoamb",
+        "amount": 8638000.0
+    },
+    {
+        "day_transaction": "2025-07-05",
+        "time_transaction": "Saturday 22:28:55",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den nickname ngoai MB linhoutmb",
+        "amount": 6331000.0
+    },
+    {
+        "day_transaction": "2025-07-10",
+        "time_transaction": "Thursday 15:16:14",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den STK thanh toan MB 1223110001",
+        "amount": 9573000.0
+    },
+    {
+        "day_transaction": "2025-07-14",
+        "time_transaction": "Monday 12:40:35",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den STK thanh toan ngoai MB 1002003999",
+        "amount": 2838000.0
+    },
+    {
+        "day_transaction": "2025-07-13",
+        "time_transaction": "Sunday 13:52:25",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den TK luong MB 3600112244",
+        "amount": 7231000.0
+    },
+    {
+        "day_transaction": "2025-07-01",
+        "time_transaction": "Tuesday 03:06:57",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den TK luong ngoai MB 8700456721",
+        "amount": 2025000.0
+    },
+    {
+        "day_transaction": "2025-07-20",
+        "time_transaction": "Sunday 19:09:46",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den TK thau chi MB 8800223344",
+        "amount": 4646000.0
+    },
+    {
+        "day_transaction": "2025-07-22",
+        "time_transaction": "Tuesday 05:55:13",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den TK thau chi ngoai MB 7700998877",
+        "amount": 7917000.0
+    },
+    {
+        "day_transaction": "2025-07-31",
+        "time_transaction": "Thursday 20:07:29",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den Hùng mua qua tang",
+        "amount": 5127000.0
+    },
+    {
+        "day_transaction": "2025-07-13",
+        "time_transaction": "Sunday 18:04:28",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien mua sam cuoi thang",
+        "amount": 7616800
+    },
+    {
+        "day_transaction": "2025-07-14",
+        "time_transaction": "Monday 14:44:59",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien tra tien nho",
+        "amount": 541521
+    },
+    {
+        "day_transaction": "2025-07-07",
+        "time_transaction": "Monday 04:58:02",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den Hùng",
+        "amount": 3679737
+    },
+    {
+        "day_transaction": "2025-07-06",
+        "time_transaction": "Sunday 03:35:36",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien Taxi Mai Linh STK 0778761148",
+        "amount": 7471000.0
+    },
+    {
+        "day_transaction": "2025-07-26",
+        "time_transaction": "Saturday 09:15:02",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien Shoppe Mall STK 0778761148",
+        "amount": 6213000.0
+    },
+    {
+        "day_transaction": "2025-07-17",
+        "time_transaction": "Thursday 22:57:28",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien Thanh toán mua căn hộ STK 1223110001",
+        "amount": 494000.0
+    },
+    {
+        "day_transaction": "2025-07-24",
+        "time_transaction": "Thursday 15:28:06",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Thanh toan Grab cho chuyen di",
+        "amount": 6944000.0
+    },
+    {
+        "day_transaction": "2025-07-19",
+        "time_transaction": "Saturday 06:10:28",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien ngay le",
+        "amount": 7796000.0
+    },
+    {
+        "day_transaction": "2025-07-31",
+        "time_transaction": "Thursday 20:51:58",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien ngoai gio han muc",
+        "amount": 2170000.0
+    },
+    {
+        "day_transaction": "2025-07-22",
+        "time_transaction": "Tuesday 00:46:40",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Thanh toán tiền điện EVN",
+        "amount": 2336000.0
+    },
+    {
+        "day_transaction": "2025-07-30",
+        "time_transaction": "Wednesday 22:42:44",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Thanh toán tiền nước",
+        "amount": 713000.0
+    },
+    {
+        "day_transaction": "2025-07-27",
+        "time_transaction": "Sunday 19:29:36",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Nộp thuế thu nhập cá nhân",
+        "amount": 7170000.0
+    },
+    {
+        "day_transaction": "2025-07-10",
+        "time_transaction": "Thursday 10:36:06",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Thanh toán Internet VNPT",
+        "amount": 7091000.0
+    },
+    {
+        "day_transaction": "2025-07-24",
+        "time_transaction": "Thursday 07:30:13",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Thanh toán truyền hình SCTV",
+        "amount": 8732000.0
+    },
+    {
+        "day_transaction": "2025-07-22",
+        "time_transaction": "Tuesday 17:05:19",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Thanh toán học phí ĐH Bách Khoa",
+        "amount": 9335000.0
+    },
+    {
+        "day_transaction": "2025-07-26",
+        "time_transaction": "Saturday 13:31:18",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Thanh toán VinaPhone trả sau",
+        "amount": 193000.0
+    },
+    {
+        "day_transaction": "2025-07-01",
+        "time_transaction": "Tuesday 05:22:58",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den the tin dung MB 5241XXXXXX1234",
+        "amount": 165000.0
+    },
+    {
+        "day_transaction": "2025-07-22",
+        "time_transaction": "Tuesday 04:31:34",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den the tin dung NH ngoai 5310XXXXXX4321",
+        "amount": 8125000.0
+    },
+    {
+        "day_transaction": "2025-07-11",
+        "time_transaction": "Friday 02:31:01",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den nickname MB hoamb",
+        "amount": 2300000.0
+    },
+    {
+        "day_transaction": "2025-07-19",
+        "time_transaction": "Saturday 17:45:26",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den nickname ngoai MB thanhnt",
+        "amount": 5905000.0
+    },
+    {
+        "day_transaction": "2025-07-25",
+        "time_transaction": "Friday 16:01:14",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den STK thanh toan MB 1223110001",
+        "amount": 3759000.0
+    },
+    {
+        "day_transaction": "2025-07-26",
+        "time_transaction": "Saturday 09:10:59",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den STK thanh toan ngoai MB 3556677889",
+        "amount": 7134000.0
+    },
+    {
+        "day_transaction": "2025-07-17",
+        "time_transaction": "Thursday 00:50:57",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den TK luong MB 3600112244",
+        "amount": 2005000.0
+    },
+    {
+        "day_transaction": "2025-07-24",
+        "time_transaction": "Thursday 20:20:32",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den TK luong ngoai MB 8700456721",
+        "amount": 4901000.0
+    },
+    {
+        "day_transaction": "2025-07-22",
+        "time_transaction": "Tuesday 11:41:45",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den TK thau chi MB 8800112233",
+        "amount": 4989000.0
+    },
+    {
+        "day_transaction": "2025-07-02",
+        "time_transaction": "Wednesday 14:14:43",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den TK thau chi ngoai MB 7700998877",
+        "amount": 6542000.0
+    },
+    {
+        "day_transaction": "2025-07-07",
+        "time_transaction": "Monday 03:44:23",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den Linh mua qua tang",
+        "amount": 8701000.0
+    },
+    {
+        "day_transaction": "2025-07-05",
+        "time_transaction": "Saturday 10:00:09",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien mua sam cuoi thang",
+        "amount": 9284712
+    },
+    {
+        "day_transaction": "2025-07-07",
+        "time_transaction": "Monday 14:26:08",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien tra tien nho",
+        "amount": 794957
+    },
+    {
+        "day_transaction": "2025-07-11",
+        "time_transaction": "Friday 14:36:02",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den Lan",
+        "amount": 3878361
+    },
+    {
+        "day_transaction": "2025-07-25",
+        "time_transaction": "Friday 12:04:35",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien Taxi Mai Linh STK 1223110001",
+        "amount": 8836000.0
+    },
+    {
+        "day_transaction": "2025-07-07",
+        "time_transaction": "Monday 14:08:39",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien Shoppe Mall STK 1223110001",
+        "amount": 1988000.0
+    },
+    {
+        "day_transaction": "2025-07-23",
+        "time_transaction": "Wednesday 01:39:51",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien Thanh toán mua căn hộ STK 0778761148",
+        "amount": 9245000.0
+    },
+    {
+        "day_transaction": "2025-07-06",
+        "time_transaction": "Sunday 07:14:54",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Thanh toan Grab cho chuyen di",
+        "amount": 9585000.0
+    },
+    {
+        "day_transaction": "2025-07-13",
+        "time_transaction": "Sunday 19:12:05",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien ngay le",
+        "amount": 9640000.0
+    },
+    {
+        "day_transaction": "2025-07-06",
+        "time_transaction": "Sunday 20:49:41",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien ngoai gio han muc",
+        "amount": 5372000.0
+    },
+    {
+        "day_transaction": "2025-07-29",
+        "time_transaction": "Tuesday 20:31:20",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Thanh toán tiền điện EVN",
+        "amount": 9184000.0
+    },
+    {
+        "day_transaction": "2025-07-14",
+        "time_transaction": "Monday 14:49:47",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Thanh toán tiền nước",
+        "amount": 3708000.0
+    },
+    {
+        "day_transaction": "2025-07-29",
+        "time_transaction": "Tuesday 03:39:16",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Nộp thuế thu nhập cá nhân",
+        "amount": 7112000.0
+    },
+    {
+        "day_transaction": "2025-07-08",
+        "time_transaction": "Tuesday 10:10:30",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Thanh toán Internet VNPT",
+        "amount": 8959000.0
+    },
+    {
+        "day_transaction": "2025-07-22",
+        "time_transaction": "Tuesday 19:55:01",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Thanh toán truyền hình SCTV",
+        "amount": 1474000.0
+    },
+    {
+        "day_transaction": "2025-07-14",
+        "time_transaction": "Monday 07:07:55",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Thanh toán học phí ĐH Bách Khoa",
+        "amount": 7693000.0
+    },
+    {
+        "day_transaction": "2025-07-03",
+        "time_transaction": "Thursday 21:23:10",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Thanh toán VinaPhone trả sau",
+        "amount": 9928000.0
+    },
+    {
+        "day_transaction": "2025-07-07",
+        "time_transaction": "Monday 20:18:27",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den the tin dung MB 4141XXXXXX5678",
+        "amount": 682000.0
+    },
+    {
+        "day_transaction": "2025-07-04",
+        "time_transaction": "Friday 08:31:12",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den the tin dung NH ngoai 4012XXXXXX8765",
+        "amount": 1684000.0
+    },
+    {
+        "day_transaction": "2025-07-12",
+        "time_transaction": "Saturday 18:30:47",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den nickname MB lanhmb",
+        "amount": 7327000.0
+    },
+    {
+        "day_transaction": "2025-07-15",
+        "time_transaction": "Tuesday 12:19:34",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den nickname ngoai MB thanhnt",
+        "amount": 8398000.0
+    },
+    {
+        "day_transaction": "2025-07-28",
+        "time_transaction": "Monday 11:32:58",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den STK thanh toan MB 1223110001",
+        "amount": 7662000.0
+    },
+    {
+        "day_transaction": "2025-07-29",
+        "time_transaction": "Tuesday 13:53:33",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den STK thanh toan ngoai MB 3556677889",
+        "amount": 5267000.0
+    },
+    {
+        "day_transaction": "2025-07-23",
+        "time_transaction": "Wednesday 10:28:58",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den TK luong MB 3600112244",
+        "amount": 3938000.0
+    },
+    {
+        "day_transaction": "2025-07-13",
+        "time_transaction": "Sunday 08:15:14",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den TK luong ngoai MB 9900887766",
+        "amount": 489000.0
+    },
+    {
+        "day_transaction": "2025-07-05",
+        "time_transaction": "Saturday 23:38:52",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den TK thau chi MB 8800223344",
+        "amount": 8844000.0
+    },
+    {
+        "day_transaction": "2025-07-17",
+        "time_transaction": "Thursday 20:39:56",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den TK thau chi ngoai MB 7700998877",
+        "amount": 8587000.0
+    },
+    {
+        "day_transaction": "2025-07-14",
+        "time_transaction": "Monday 04:26:43",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den Hoa mua qua tang",
+        "amount": 432000.0
+    },
+    {
+        "day_transaction": "2025-07-27",
+        "time_transaction": "Sunday 01:37:45",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien mua sam cuoi thang",
+        "amount": 9638411
+    },
+    {
+        "day_transaction": "2025-07-21",
+        "time_transaction": "Monday 15:23:02",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien tra tien nho",
+        "amount": 700764
+    },
+    {
+        "day_transaction": "2025-07-08",
+        "time_transaction": "Tuesday 17:09:39",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien den Hùng",
+        "amount": 3165043
+    },
+    {
+        "day_transaction": "2025-07-06",
+        "time_transaction": "Sunday 21:12:07",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien Taxi Mai Linh STK 1223110001",
+        "amount": 3680000.0
+    },
+    {
+        "day_transaction": "2025-07-09",
+        "time_transaction": "Wednesday 15:09:25",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien Shoppe Mall STK 0778761148",
+        "amount": 6680000.0
+    },
+    {
+        "day_transaction": "2025-07-15",
+        "time_transaction": "Tuesday 04:09:28",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyen tien Thanh toán mua căn hộ STK 0778761148",
+        "amount": 8251000.0
+    }
+]

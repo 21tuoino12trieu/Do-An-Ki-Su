@@ -1,0 +1,4 @@
+--extra-index-url http://beegen-core_dev:LOCAL_PASSWORD@10.1.12.177:8445/repository/repo-pypi-host-beegen-core/simple
+--trusted-host 10.1.12.177
+
+beeflow==1.0.5.dev20260706172444

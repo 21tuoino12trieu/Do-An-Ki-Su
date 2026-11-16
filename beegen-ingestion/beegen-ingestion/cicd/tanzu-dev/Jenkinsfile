@@ -1,0 +1,64 @@
+#!/usr/bin/env groovy
+library('cicd-shared-lib-dev@tanzu') _
+
+import java.text.SimpleDateFormat
+
+node("${NODE_INTEGRATION_TEAM_MGT}") {
+    // =================================================================================
+    /**
+     * TODO: Chi thay doi 2 thong tin tren tuong ung voi project
+     *
+     * project_name: Name of project
+     * kubernetes_namespace: namespace of K8S
+     */
+    def project_name = "beegen-sync-job"
+    def kubernetes_namespace = "aicenter"
+
+    // ===================================================================================
+    def image_version = "v1.0.0"
+    def harbor_host = vault path: 'cicd/harbor', key: 'harbor_tanzu_dev', credentialsId: 'vault-token-dev', engineVersion: "2"
+    def docker_prefix = "${harbor_host}/${kubernetes_namespace}"
+    // ===================================================================================
+
+    /**
+     * TODO: Chon luong deploy
+     * Deploy theo luong argocd : CICD-ARGOCD
+     * Deploy theo luong helm : CICD-HELM
+     */
+    def sub_path = "tanzu-dev"
+
+    // ===================================================================================
+
+    ci_common(project_name, docker_prefix, image_version, harbor_host, sub_path)
+}
+
+def ci_common(def project_name, def docker_prefix, def image_version, def harbor_host, def sub_path) {
+    stage('Git clone') {
+        script { ci_common_java () }
+    }
+
+    stage('Build image') {
+        def nexus_python_index_url = "${nexus_python_index_url_12_177}"
+        def nexus_python_trusted_host = "${nexus_python_trusted_host_12_177}"
+
+        withCredentials([usernamePassword(credentialsId: 'nexus_ocr', usernameVariable: 'username', passwordVariable: 'password')]) {
+            app = docker.build("${docker_prefix}/${project_name}:${image_version}", "-f ./cicd/${sub_path}/Dockerfile \
+                --build-arg NEXUS_USER=$username \
+                --build-arg NEXUS_PASSWORD=$password \
+                --build-arg NEXUS_PYTHON_INDEX_URL=$nexus_python_index_url \
+                --build-arg NEXUS_PYTHON_TRUSTED_HOST=$nexus_python_trusted_host .")
+        }
+    }
+
+    stage('Push image') {
+        retry(5) {
+            try {
+                sh "docker push ${docker_prefix}/${project_name}:${image_version}"
+            } catch (Exception e) {
+                sleep 5
+                throw e
+            }
+        }
+        // // sh "docker image rm ${docker_prefix}/${project_name}:${image_version}"
+    }
+}

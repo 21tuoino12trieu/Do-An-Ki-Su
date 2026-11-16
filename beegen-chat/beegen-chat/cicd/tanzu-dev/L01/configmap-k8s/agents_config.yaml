@@ -1,0 +1,406 @@
+agents:
+  - bot_id: "347f7a6e-83d2-4cfa-9e85-6bc080c234c4"
+    name_reconition: "huydong"
+    name: "Huy động"
+    description: |
+      Agent trả lời câu hỏi về huy động vốn liên quan đến:
+      - Sản phẩm tiền gửi
+      - Chương trình huy động: Bao gồm chương trình kinh doanh và chương trình ưu đãi khách hàng
+    keywords:
+      # chung
+      - huy động
+      - huy động vốn
+      - nghiệp vụ huy động
+      - sản phẩm huy động
+      - chính sách huy động
+      - quy định huy động
+
+      # sản phẩm tiền gửi
+      - sản phẩm tiền gửi
+      - tiền gửi
+      - tiền gửi tiết kiệm
+      - gửi tiết kiệm
+      - tiết kiệm online
+      - tiết kiệm tại quầy
+      - chứng chỉ tiền gửi
+      - cctg
+      - tài khoản tiền gửi
+      - sổ tiết kiệm
+      - tái tục tiết kiệm
+      - tất toán tiết kiệm
+      - phong tỏa tiết kiệm
+      - cầm cố sổ tiết kiệm
+
+      # sản phẩm tích lũy
+      - tích lũy
+      - tiết kiệm tích lũy
+      - tích lũy thông minh
+      - sản phẩm tích lũy
+      - tài khoản tích lũy
+      - chuyển quyền sở hữu tích lũy
+      - chuyển tiền sở hữu tích lũy
+      - tất toán tích lũy
+      - lãi suất tích lũy
+      - mở tài khoản tích lũy
+      - tích lũy định kỳ
+
+      # lãi suất / kỳ hạn
+      - lãi suất tiền gửi
+      - lãi suất tiết kiệm
+      - biểu lãi suất
+      - kỳ hạn gửi
+      - kỳ hạn tiết kiệm
+      - lãi cuối kỳ
+      - lãi hàng tháng
+      - tiền gửi có kỳ hạn
+      - tiền gửi không kỳ hạn
+
+      # chương trình
+      - chương trình huy động
+      - chương trình kinh doanh
+      - ct kinh doanh
+      - chương trình ưu đãi khách hàng
+      - ctud kh
+      - ưu đãi huy động
+      - ưu đãi tiền gửi
+      - chương trình tiết kiệm
+      - khuyến mại tiền gửi
+
+      # campaign / promotion intent
+      - mã dự thưởng
+      - điều kiện nhận mã dự thưởng
+      - chương trình quay số
+      - chương trình tích lũy
+      - ưu đãi tích lũy
+      - mục tiêu chương trình
+      - thể lệ chương trình
+      - điều kiện tham gia chương trình
+
+      # tên chương trình thực tế
+      - tích lũy vững vàng
+      - sống sang thăng hạng
+      - đường đua rực lửa
+
+      # khách hàng
+      - khách hàng cá nhân
+      - khách hàng doanh nghiệp
+      - huy động khcn
+      - huy động khdn
+
+    agent_type: "beeflow"
+
+  - bot_id: "e82087df-7c8d-400c-8254-803588beff84"
+    name_reconition: "credit" 
+    name: "Tín dụng"
+    description: |
+      Agent trả lời câu hỏi về tín dụng liên quan đến:
+      - Sản phẩm vay: bảo lãnh, quy định chung, vay bất động sản, vay cán bộ nhân viên và quân nhân, vay ô tô, vay sản xuất kinh doanh, vay thấu chi, vay tiêu dùng
+      - Chương trình vay: Bao gồm chương trình kinh doanh và chương trình ưu đãi khách hàng
+    keywords:
+      # chung
+      - tín dụng
+      - cấp tín dụng
+      - quy định tín dụng
+      - chính sách tín dụng
+      - quy trình tín dụng
+      - nghiệp vụ tín dụng
+      - hồ sơ tín dụng
+      - thẩm định tín dụng
+      - phê duyệt tín dụng
+      - giải ngân
+      - hạn mức tín dụng
+
+      # chương trình tín dụng
+      - chương trình tín dụng
+      - chương trình kinh doanh
+      - chương trình ưu đãi khách hàng
+      - ct ưu đãi khách hàng
+      - ưu đãi tín dụng
+      - chương trình vay
+      - chính sách vay ưu đãi
+
+      # quy định / quy chế
+      - quy định chung tín dụng
+      - quy chế tín dụng
+      - quy chế tín dụng khcn
+      - quy chế tín dụng khdn
+      - quy trình tín dụng khcn
+      - quy trình tín dụng doanh nghiệp
+      - tb 26tb-khcn
+      - quy định cấp tín dụng
+      - hướng dẫn tín dụng
+
+      # sản phẩm vay
+      - sản phẩm vay
+      - sản phẩm cho vay
+      - khoản vay
+      - cho vay khách hàng cá nhân
+      - cho vay khách hàng doanh nghiệp
+
+      # vay tiêu dùng
+      - vay tiêu dùng
+      - cho vay tiêu dùng
+      - vay tín chấp
+      - vay phục vụ đời sống
+
+      # vay thấu chi
+      - vay thấu chi
+      - thấu chi tài khoản
+      - hạn mức thấu chi
+      - cho vay thấu chi
+
+      # vay sản xuất kinh doanh
+      - vay sản xuất kinh doanh
+      - vay sxkd
+      - cho vay sxkd
+      - vay kinh doanh
+      - vốn lưu động
+
+      # vay ô tô
+      - vay ô tô
+      - vay mua ô tô
+      - cho vay ô tô
+      - vay xe
+
+      # vay bất động sản
+      - vay bất động sản
+      - vay bđs
+      - vay mua nhà
+      - vay mua căn hộ
+      - vay xây sửa nhà
+      - cho vay bất động sản
+
+      # vay cbnv / quân nhân
+      - vay cbnv
+      - vay cán bộ nhân viên
+      - vay quân nhân
+      - cho vay quân nhân
+      - cho vay cán bộ nhân viên
+
+      # vay cầm cố
+      - vay cầm cố
+      - cho vay cầm cố
+      - cầm cố giấy tờ có giá
+      - vay cầm cố sổ tiết kiệm
+      - tài sản bảo đảm
+
+      # bảo lãnh
+      - bảo lãnh
+      - bảo lãnh ngân hàng
+      - thư bảo lãnh
+      - bảo lãnh thực hiện hợp đồng
+      - bảo lãnh thanh toán
+
+      # nguồn thu
+      - hướng dẫn ghi nhận nguồn thu
+      - ghi nhận nguồn thu
+      - xác định nguồn thu
+      - thu nhập khách hàng
+    agent_type: "beeflow"
+
+  - bot_id: "cbc75713-2646-4331-84ad-645664ab86ef"
+    name_reconition: "bee247"
+    name: "Bot 247"
+    description: |
+      Agent chuyên tư vấn, giải đáp và hướng dẫn khách hàng cá nhân sử dụng các sản phẩm, dịch vụ ngân hàng số MB Bank.
+      Hỗ trợ các nghiệp vụ liên quan đến App MB Bank/eMB, tài khoản thanh toán, chuyển tiền, thẻ, vay, tiết kiệm online,
+      lãi suất - biểu phí, chương trình ưu đãi, định danh điện tử (eKYC), tra soát/khiếu nại giao dịch và xử lý sự cố tài khoản/thẻ.
+      Đồng thời hỗ trợ tra cứu thông tin chi nhánh, ATM/CDM/CRM/SmartBank và các hướng dẫn sử dụng dịch vụ ngân hàng điện tử MB.
+
+    keywords:
+      # ngân hàng điện tử
+      - app mb
+      - mb bank
+      - emb
+      - ngân hàng số
+      - đăng nhập app mb
+      - lỗi app mb
+      - sms banking
+      - nickname tài khoản
+      - vietqr
+      - tap to phone
+      - click to pay
+      - nfc
+      - tài khoản chạm
+      - đăng ký dịch vụ online
+
+      # định danh
+      - định danh điện tử
+      - ekcy
+      - ekyc
+      - xác thực sinh trắc học
+      - hướng dẫn định danh
+
+      # tài khoản thanh toán
+      - tài khoản thanh toán
+      - mở tài khoản
+      - đóng tài khoản
+      - tất toán tài khoản
+      - khóa tài khoản
+      - mở khóa tài khoản
+      - tài khoản vietqr
+
+      # chuyển tiền
+      - chuyển khoản
+      - chuyển tiền nhanh
+      - chuyển tiền quốc tế
+      - lỗi chuyển tiền
+
+      # thẻ
+      - thẻ tín dụng
+      - thẻ ghi nợ
+      - mở thẻ
+      - phát hành thẻ
+      - khóa thẻ
+      - mở khóa thẻ
+      - báo mất thẻ
+      - apple pay
+      - trả góp thẻ tín dụng
+      - visa
+      - mastercard
+      - jcb
+
+      # vay
+      - vay online
+      - vay app
+      - vay siêu nhanh
+      - vay tiêu dùng
+      - vay mua nhà
+      - vay mua ô tô
+      - vay tín chấp
+      - vay thế chấp
+      - thấu chi
+
+      # tiết kiệm / tiền gửi
+      - tiết kiệm online
+      - tiền gửi
+      - chứng chỉ tiền gửi
+      - tất toán tiết kiệm
+      - tái tục tiết kiệm
+
+      # phí / lãi suất
+      - lãi suất
+      - biểu phí
+      - phí chuyển khoản
+      - phí thường niên
+
+      # tra soát / khiếu nại / xử lý
+      - tra soát
+      - đối soát
+      - khiếu nại
+      - xử lý sự cố
+      - dispute giao dịch
+      - cấp lại pin
+      - quên mật khẩu
+      - reset mật khẩu
+
+      # ưu đãi
+      - ưu đãi thẻ
+      - khuyến mãi
+      - tích điểm
+      - phòng chờ sân bay
+
+      # địa điểm
+      - chi nhánh mb
+      - phòng giao dịch mb
+      - atm mb
+      - cdm
+      - crm
+      - smart bank
+
+    agent_type: "beeflow"
+
+  # - bot_id: "31b323e9-9946-4e9f-bc4c-84762bae2303"
+  #   name_reconition: "pctt"
+  #   name: "Pháp chế tuân thủ"
+  #   description: |
+  #     Agent chuyên tư vấn, giải đáp và hướng dẫn khách hàng cá nhân sử dụng các sản phẩm, dịch vụ ngân hàng số MB Bank.
+  #     Hỗ trợ các nghiệp vụ liên quan đến App MB Bank/eMB, tài khoản thanh toán, chuyển tiền, thẻ, vay, tiết kiệm online,
+  #     lãi suất - biểu phí, chương trình ưu đãi, định danh điện tử (eKYC), tra soát/khiếu nại giao dịch và xử lý sự cố tài khoản/thẻ.
+  #     Đồng thời hỗ trợ tra cứu thông tin chi nhánh, ATM/CDM/CRM/SmartBank và các hướng dẫn sử dụng dịch vụ ngân hàng điện tử MB.
+
+  #   keywords:
+  #     # pháp luật ngân hàng
+  #     - pháp chế
+  #     - tuân thủ
+  #     - compliance
+  #     - quy định pháp luật
+  #     - luật ngân hàng
+  #     - pháp luật ngân hàng
+  #     - quy định nội bộ
+  #     - quy chế nội bộ
+  #     - kiểm soát tuân thủ
+  #     - rà soát tuân thủ
+  #     - đánh giá tuân thủ
+  #     - vi phạm tuân thủ
+
+  #     # văn bản pháp lý
+  #     - luật
+  #     - nghị định
+  #     - thông tư
+  #     - quyết định
+  #     - văn bản pháp luật
+  #     - căn cứ pháp lý
+  #     - điều khoản pháp luật
+  #     - quy định pháp luật việt nam
+  #     - văn bản quy phạm pháp luật
+  #     - tra cứu văn bản
+  #     - tra cứu pháp luật
+
+  #     # nghiệp vụ pháp lý
+  #     - tư vấn pháp lý
+  #     - pháp lý hợp đồng
+  #     - rà soát hợp đồng
+  #     - thẩm định pháp lý
+  #     - đánh giá rủi ro pháp lý
+  #     - xử lý hồ sơ pháp lý
+  #     - ý kiến pháp lý
+  #     - phân tích pháp lý
+  #     - tham chiếu pháp lý
+  #     - giải thích quy định
+
+  #     # giao dịch dân sự
+  #     - giao dịch dân sự
+  #     - hợp đồng dân sự
+  #     - nghĩa vụ dân sự
+  #     - tranh chấp dân sự
+  #     - bảo đảm thực hiện nghĩa vụ
+  #     - tài sản bảo đảm
+  #     - thế chấp
+  #     - cầm cố
+  #     - bảo lãnh
+  #     - quyền đòi nợ
+
+  #     # hoạt động ngân hàng
+  #     - tín dụng
+  #     - hợp đồng tín dụng
+  #     - giải ngân
+  #     - xử lý nợ
+  #     - thu hồi nợ
+  #     - nợ xấu
+  #     - khách hàng doanh nghiệp
+  #     - khách hàng cá nhân
+  #     - nghiệp vụ ngân hàng
+  #     - quy trình tín dụng
+  #     - hồ sơ tín dụng
+
+  #     # tra cứu nội bộ
+  #     - sổ tay pháp lý
+  #     - sổ tay tư vấn pháp lý
+  #     - tài liệu nội bộ
+  #     - quy trình nội bộ
+  #     - hướng dẫn nội bộ
+  #     - quy định mb
+  #     - quy định mb bank
+
+  #     # mục đích sử dụng
+  #     - tra cứu nhanh
+  #     - hỏi đáp pháp lý
+  #     - kiểm tra căn cứ pháp lý
+  #     - kiểm tra điều luật
+  #     - tổng hợp quy định
+  #     - tìm điều khoản
+  #     - hỗ trợ pháp chế
+  #     - hỗ trợ tuân thủ
+
+  #   agent_type: "beegen"

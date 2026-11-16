@@ -1,0 +1,75 @@
+aiohappyeyeballs==2.5.0
+aiohttp>=3.12.15
+aioboto3==15.1.0
+python-dotenv==1.0.1
+pydantic>=2.12,<3
+pydantic-settings>=2.9.1
+requests>=2.32.4,<3
+fastapi>=0.133,<1
+uvicorn>=0.34,<1
+jsonschema==4.23.0
+docstring-parser~=0.18.0
+bs4==0.0.2
+colorama
+slowapi==0.1.9
+kafka-python-ng==2.2.3
+python-keycloak==5.5.1
+pymongo
+PyYAML
+motor
+openpyxl
+prometheus-client
+backoff==2.2.1
+pymupdf
+# Additional dependencies for optimization
+cachetools==5.5.1
+asyncio==3.4.3
+typing-extensions>=4.0.0
+aiocache==0.12.3
+aiofiles==24.1.0
+Unidecode
+networkx==3.4.2
+vertexai
+jsonpath_ng
+google-auth
+jsonpath-ng==1.7.0
+pillow
+prometheus_client
+lxml>=4.9.2
+langfuse==2.60.8
+openai-agents>=0.3.0
+mcp>=1.19.0,<2
+multidict==6.1.0
+pluggy==1.5.0
+requests-toolbelt==1.0.0
+yarl==1.18.3
+nest_asyncio
+starlette>=1.0.1,<2
+pycryptodome
+opencv-python
+line-profiler>=5.0.0
+pyinstrument>=5.0.0
+scipy>=1.16.1
+sqlglot>=27.6.0
+haikunator>=2.1.0
+psycopg2==2.9.10
+neo4j==5.28.2
+ag-ui-protocol==0.1.8
+asyncpg==0.30.0
+SQLAlchemy>=2.0.43
+httpx>=0.27.0
+pandas>=2.0.0
+numpy>=1.24.0
+tiktoken>=0.7.0
+tqdm>=4.66.0
+merman==0.7.0
+
+###----beegen-----
+# beeflow==1.0.5.dev20260721173154
+
+# ###----adk-----
+# google-adk==2.3.0
+# google-genai>=2.8,<3
+# openinference-instrumentation-google-adk>=0.1.0
+# logfire>=3.0.0
+# mem0ai==2.0.11

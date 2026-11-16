@@ -1,0 +1,23 @@
+traffic.sidecar.istio.io/excludeOutboundPorts: "8200,8203"
+vault.hashicorp.com/service: https://vault-dev.mbbank.com.vn:8203
+vault.hashicorp.com/agent-cache-enable: "true"
+vault.hashicorp.com/agent-revoke-on-shutdown: "true"
+vault.hashicorp.com/agent-limits-mem: "100Mi"
+vault-hashicorp-com-agent-requests-mem: "50Mi"
+vault.hashicorp.com/agent-limits-cpu: "100m"
+vault.hashicorp.com/agent-requests-cpu: "50m"
+vault.hashicorp.com/agent-pre-populate-only: "true"
+vault.hashicorp.com/tls-skip-verify: "true"
+vault.hashicorp.com/agent-inject: 'true'
+vault.hashicorp.com/role: 'r-c0-108'
+vault.hashicorp.com/auth-path: 'auth/tanzu-tkgm-dc02-ttai'
+vault.hashicorp.com/secret-volume-path: /deployment/sc
+vault.hashicorp.com/agent-inject-secret-config-sc-common.env: 'kv/c0/dev-dc01-dc02/i-02-20/common/JVIIlvO0YvQkkz2ZvcBqNzrsJCE5ym_62V0aBjaFuHkn2zlLEf-l8zIe_kqtC-IYmKdSYAW2t8DGe2QNrSv3lTna5mL3MygShXHvXVTMtmeVxOSXIjnnDoaiKauWafkQkjZ4zglQUh3lCeAv3YbLrUyWmmSMruFzjYz_7YrLCZA=/config-sc-common-108'
+vault.hashicorp.com/agent-inject-template-config-sc-common.env: |
+  {{ with secret "kv/c0/dev-dc01-dc02/i-02-20/common/JVIIlvO0YvQkkz2ZvcBqNzrsJCE5ym_62V0aBjaFuHkn2zlLEf-l8zIe_kqtC-IYmKdSYAW2t8DGe2QNrSv3lTna5mL3MygShXHvXVTMtmeVxOSXIjnnDoaiKauWafkQkjZ4zglQUh3lCeAv3YbLrUyWmmSMruFzjYz_7YrLCZA=/config-sc-common-108" -}}
+  AI_MONGODB_CUA_PASSWORD={{ .Data.data.AI_MONGODB_CUA_PASSWORD }}
+  AI_MONGODB_CUA_USERNAME={{ .Data.data.AI_MONGODB_CUA_USERNAME }}
+  AI_AES_KEY={{ .Data.data.AI_AES_SECRET_KEY }}
+  AIRFLOW_AUTH={{ .Data.data.AIRFLOW_AUTH }}
+  KAFKA_PASSWORD={{ .Data.data.KAFKA_PASSWORD }}
+  {{- end }}

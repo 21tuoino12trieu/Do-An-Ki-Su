@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory agent bot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Chat</h2>
+            <div class="user-id-container">
+                <input type="text" id="userIdInput" placeholder="Enter your user ID">
+            </div>
+            <button onclick="chatHistories()" style="margin-top: 10px;">Chat history</button>
+
+            <h2 style="margin-top: 50px;">Setting</h2>
+            <div style="margin-top: 20px;">
+                <button onclick="addNewUser()">Add User</button>
+                <button onclick="clearUser()" style="margin-top: 10px;">Clear User</button>
+            </div>
+            <button onclick="listUsers()" style="margin-top: 10px;">List Users</button>
+            <button onclick="clearChat()" style="margin-top: 10px;">Clear Chat</button>
+            <div id="usersList" style="margin-top: 20px;"></div>
+        </div>
+        
+        <div class="chat-container">
+            <div class="chat-header">
+                <h2>Memory agent bot</h2>
+                <div class="typing-status" id="typingStatus"></div>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot-message">Hello! How can I help you today?</div>
+            </div>
+            <div class="typing-indicator" id="typingIndicator">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="messageInput" placeholder="Type your message...">
+                <button onclick="sendMessage()" id="sendButton">Send</button>
+            </div>
+        </div>
+        <div class="memory-box" id="memoryBox">Loading...</div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+beegen_multimedia:
+  base_url: "https://beegen-portal-dev.mbbank.com.vn"
+  domain: "https://beegen-portal-dev.mbbank.com.vn"
+  upload_path: "/beegen-portal-be/multimedia/upload"
+  download_path: "/beegen-portal-be/multimedia/download"
+
+keycloak:
+  token_url: "https://keycloak-internal-uat.mbbank.com.vn/auth/realms/internal/protocol/openid-connect/token"
+  client_id: "beegen-be"
+  client_secret: "REPLACE_WITH_LOCAL_SECRET"
+  username: "daocongtu"
+  password: "1"

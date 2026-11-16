@@ -1,0 +1,6 @@
+db_info:
+  host: 10.215.107.49
+  port: 5432
+  database: hr_information
+  user: hr_information
+  password: hr_information

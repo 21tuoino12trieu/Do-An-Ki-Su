@@ -1,0 +1,231 @@
+#!/usr/bin/env groovy
+node("${NODE_INTEGRATION_TEAM_MGT}") {
+  def project_name = "beeflow"
+  def repo_url     = "http://10.1.12.177:8445/repository/repo-pypi-host-beegen-core/"
+  def pyImage      = "k8sdev.mbbank.com.vn/common/python:3.12.7"
+  def nexus_python_index_url    = "${nexus_python_index_url_12_177}"     
+  def nexus_python_trusted_host = "${nexus_python_trusted_host_12_177}"
+  
+  // Variables cho versioning
+  def generatedVersion = ""
+  def currentBranch = ""
+  def shouldPublish = true
+
+  try {
+    stage('1. Checkout') {
+      checkout scm
+      
+      // Lấy branch name
+      currentBranch = env.BRANCH_NAME ?: sh(
+        script: 'git rev-parse --abbrev-ref HEAD',
+        returnStdout: true
+      ).trim()
+      
+      echo "📍 Current branch: ${currentBranch}"
+      
+      // Chỉ publish khi merge vào dev hoặc main
+      if (!(currentBranch in ['dev', 'main'])) {
+        shouldPublish = false
+        echo "⚠️  Branch ${currentBranch} - Sẽ build nhưng KHÔNG upload lên Nexus"
+      }
+    }
+
+    stage('1.5. Generate Version') {
+      // Đọc base version từ pyproject.toml
+      def baseVersion = sh(
+        script: '''
+          grep '^version = ' pyproject.toml | sed 's/version = "\\(.*\\)"/\\1/'
+        ''',
+        returnStdout: true
+      ).trim()
+      
+      echo "📦 Base version: ${baseVersion}"
+      
+      // Generate version dựa trên branch
+      if (currentBranch == 'main') {
+        // Main branch: stable release, không có hậu tố
+        generatedVersion = baseVersion
+        echo "✅ Stable release: ${generatedVersion}"
+        
+      } else if (currentBranch == 'dev') {
+        // Dev branch: thêm timestamp để unique
+        // Format: YYYYMMDDHHmmss
+        def timestamp = sh(
+          script: 'date +%Y%m%d%H%M%S',
+          returnStdout: true
+        ).trim()
+        
+        generatedVersion = "${baseVersion}.dev${timestamp}"
+        
+        // Parse timestamp để hiển thị đẹp
+        def year = timestamp.substring(0, 4)
+        def month = timestamp.substring(4, 6)
+        def day = timestamp.substring(6, 8)
+        def hour = timestamp.substring(8, 10)
+        def minute = timestamp.substring(10, 12)
+        def second = timestamp.substring(12, 14)
+        
+        echo "🔧 Development build: ${generatedVersion}"
+        echo "   (Built at ${year}-${month}-${day} ${hour}:${minute}:${second})"
+        
+      } else {
+        // Feature branch - build local, không publish
+        def safeBranch = currentBranch.replaceAll(/[^a-zA-Z0-9]/, '').take(15)
+        def timestamp = sh(
+          script: 'date +%Y%m%d%H%M%S',
+          returnStdout: true
+        ).trim()
+        generatedVersion = "${baseVersion}.dev${safeBranch}.${timestamp}"
+        echo "🌿 Feature branch build: ${generatedVersion}"
+      }
+      
+      // Lưu version để stage sau dùng
+      writeFile file: 'VERSION_GENERATED.txt', text: generatedVersion
+      
+      echo "================================================"
+      echo "🎯 Generated Version: ${generatedVersion}"
+      echo "================================================"
+    }
+
+    stage('2-4. Build & Upload (in container)') {
+      retry(2) { sh "docker pull ${pyImage}" }
+
+      docker.image(pyImage).inside {
+        stage('2. Setup Python') {
+          withCredentials([usernamePassword(
+            credentialsId: 'nexus_ocr',
+            usernameVariable: 'username',
+            passwordVariable: 'password'
+          )]) {
+            sh """
+              set +x
+              python -m venv .venv
+              .venv/bin/python -m pip install --upgrade pip --progress-bar off \
+                -i http://$username:$password@10.1.12.177:8445/repository/pypi-public/simple \
+                --trusted-host 10.1.12.177
+              .venv/bin/pip install --progress-bar off \
+                -i http://$username:$password@10.1.12.177:8445/repository/pypi-public/simple \
+                --trusted-host 10.1.12.177 \
+                build twine
+              set -x
+            """
+          }
+        }
+        
+        stage('2.5. Update Version in pyproject.toml') {
+          sh """
+            echo "📝 Updating version to ${generatedVersion} in pyproject.toml"
+            
+            # Backup original
+            cp pyproject.toml pyproject.toml.bak
+            
+            # Update version trong pyproject.toml
+            sed -i 's/^version = .*/version = "${generatedVersion}"/g' pyproject.toml
+            
+            # Verify
+            echo "Updated version:"
+            grep '^version = ' pyproject.toml
+            
+            echo "✅ Version updated successfully"
+          """
+        }
+        
+        stage('3. Build wheel/sdist') {
+          withCredentials([usernamePassword(
+            credentialsId: 'nexus_ocr',
+            usernameVariable: 'username',
+            passwordVariable: 'password'
+          )]) {
+            sh """
+            set +x
+            export PIP_INDEX_URL="http://$username:$password@10.1.12.177:8445/repository/pypi-public/simple"
+            export PIP_TRUSTED_HOST="10.1.12.177"
+            export PIP_PROGRESS_BAR=off
+            export PIP_DISABLE_PIP_VERSION_CHECK=1
+            export PIP_NO_INPUT=1
+            unset PIP_EXTRA_INDEX_URL || true
+
+            echo "🔨 Building package version ${generatedVersion}..."
+            .venv/bin/python -m build
+
+            set -x
+            """
+          }
+        }
+
+        stage('4. Upload to Nexus (PyPI)') {
+          if (!shouldPublish) {
+            echo "⏭️  Skipping upload - not a dev/main branch"
+            return
+          }
+          
+          withCredentials([usernamePassword(
+            credentialsId: 'nexus_beegen',
+            usernameVariable: 'TWINE_USERNAME',
+            passwordVariable: 'TWINE_PASSWORD'
+          )]) {
+            sh """
+            export RICH_DISABLE=1
+            export RICH_FORCE_TERMINAL=0
+            export TERM=dumb
+            
+            echo "📤 Uploading ${generatedVersion} to Nexus..."
+            .venv/bin/python -m twine upload --disable-progress-bar --non-interactive --repository-url '${repo_url}' dist/*
+            
+            echo "✅ Successfully uploaded ${project_name} version ${generatedVersion}"
+            """
+          }
+        }
+      }
+    }
+    
+    stage('5. Notification') {
+      if (shouldPublish) {
+        def emoji = (currentBranch == 'main') ? '🚀' : '🔧'
+        def releaseType = (currentBranch == 'main') ? 'Stable Release' : 'Dev Build'
+        
+        def message = """
+${emoji} *${releaseType}*
+• Package: ${project_name}
+• Version: ${generatedVersion}
+• Branch: ${currentBranch}
+• Build: #${env.BUILD_NUMBER}
+
+📥 Install:
+pip install ${project_name}==${generatedVersion} \\
+  --index-url http://10.1.12.177:8445/repository/pypi-public/simple \\
+  --trusted-host 10.1.12.177
+        """.trim()
+        
+        echo message
+        
+        // Uncomment để gửi notification qua Slack/Teams
+        // slackSend(
+        //   color: (currentBranch == 'main') ? 'good' : '#439FE0',
+        //   message: message
+        // )
+      }
+    }
+
+  } catch (Exception ex) {
+    currentBuild.result = 'FAILURE'
+    
+    def errorMessage = """
+❌ *Build Failed*
+• Project: ${project_name}
+• Branch: ${currentBranch}
+• Build: #${env.BUILD_NUMBER}
+• Error: ${ex.message}
+    """.trim()
+    
+    echo errorMessage
+    // slackSend(color: 'danger', message: errorMessage)
+    
+    throw ex
+    
+  } finally {
+    stage('6. Cleanup workspace') {
+      sh "rm -rf .venv build dist *.egg-info VERSION_GENERATED.txt pyproject.toml.bak || true"
+    }
+  }
+}

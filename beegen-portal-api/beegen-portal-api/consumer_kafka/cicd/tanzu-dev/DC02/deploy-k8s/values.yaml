@@ -1,0 +1,152 @@
+#Chi sua gia tri, khong thay doi key
+# So luong pod duoc tao
+replicaCount: 1
+
+# Khai bao service
+# Type = NodePort cap nhat cac truong (nodePort,port,targetPort)
+# Type = LoadBalancer cap nhat cac truong (port,targetPort,loadBalancerIP)
+# Type = ClusterIP cap nhat cac truong (port,targetPort)
+service:
+  type: ClusterIP
+  port: 8000
+  targetPort: 8000
+
+# Khai bao gRPC service
+gRPCEnable: false
+gRPCService:
+  nodePortgrpc: 8444
+  portgrpc: 8444
+
+# Khai bao hostnames
+hostAliases:
+  10.216.66.38: ai-platform-airflow.tanzu-dev.mbbank.com.vn
+   
+# Khai bao su dung configmap
+configMaps:
+  - config.env
+
+# Khai bao su dung PVC
+pvc: false
+namePVC: 
+  - pvc-cmv
+  - pvc-crm-next-gen
+   
+# Khai bao volumeMount
+volumeMountsMap:
+  mountPathcommon: /deployment/common
+  mountPathconfig: /deployment/config
+  mountPathpodinfo: /deployment/podinfo   
+  mountPathPVC:
+    pvc-cmv: /data
+    pvc-crm-next-gen: /crmdata
+  
+#Khai bao tai nguyen su dung cho pod
+resources:
+  limits:
+#    cpu: 400m
+    memory: 2Gi
+  requests:
+#    cpu: 100m
+    memory: 1Gi
+
+# Khai bao promethus de gia tri promethus true,nguoc lai de false
+promethus: true
+podAnnotations:
+  prometheus.io/scrape: "true"
+  prometheus.io/path: /actuator/prometheus
+  prometheus.io/port: "8000"
+
+# Khai bao label cho istio
+labels: false
+templateLabels:
+  version: old
+  sidecar.istio.io/inject: "true"
+  
+# Khai bao HealthCheck de gia tri healthCheck true,nguoc lai de false
+healthCheck: true
+startupProbe:
+  initialDelaySeconds: 20
+  failureThreshold: 10
+  httpGet:
+    path: /health
+    port: 8000
+    scheme: HTTP
+  periodSeconds: 15
+  successThreshold: 1
+  timeoutSeconds: 2
+livenessProbe:
+  failureThreshold: 10
+  httpGet:
+    path: /health
+    port: 8000
+    scheme: HTTP
+  periodSeconds: 15
+  successThreshold: 1
+  timeoutSeconds: 2
+readinessProbe:
+  failureThreshold: 10
+  httpGet:
+    path: /health
+    port: 8000
+    scheme: HTTP
+  periodSeconds: 15
+  successThreshold: 1
+  timeoutSeconds: 2
+
+Command:
+  option: manual
+  manual: supervisord -n -c /etc/supervisor/supervisord.conf
+
+# Khai bao bien moi truong 
+ENV_PROFILE: dev
+
+# Chi dinh pod chay tren node co dinh(chi dung tren live: default hoac ecm)
+NodeSelectorEnable: false
+nodeName: default
+
+# Khai bao hpa thi de gia tri hpa true,,nguoc lai de false
+autoscaling:
+  enabled: false
+  minPodsHPA: 2
+  maxPodsHPA: 4
+  cpuHPA: 80
+  memoryHPA: 80
+
+# So lan deploy Helm
+numberHelm: H1
+
+# Thong tin image
+image:
+  repository: image_version
+  pullPolicy: Always
+  tag: "image_tag"
+
+# Khai bao secret-registry harbor
+imagePullSecrets:
+ - name: harbor-secret-registry-tanzu-dev
+
+## Tao Service Account
+serviceAccount:
+  create: true
+  name: k8s_sa
+
+### Cau hinh dung vault tap chung
+VaultInject: true
+
+ConfigCommon: false
+ConfigMapsCommonName: c-configuration
+ConfigMapsCommonData:
+  - application-common.properties
+  - log4j2-common.xml
+  - conf-common
+
+podSecurityContext:
+  enabled: true
+  fsGroup: 10000
+  
+### Configure Container Security Context
+containerSecurityContext:
+  enabled: true
+  runAsUser: 10000
+  runAsNonRoot: true
+  readOnlyRootFilesystem: true

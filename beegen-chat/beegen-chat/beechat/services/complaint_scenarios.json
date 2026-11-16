@@ -1,0 +1,50 @@
+{
+    "scenarios": {
+        "staff_attitude": {
+            "id": "staff_attitude",
+            "title": "Khiếu nại về thái độ nhân viên MB",
+            "response": "Bee chân thành xin lỗi vì sự việc đã xảy ra trong quá trình bạn sử dụng sản phẩm dịch vụ tại MB.  Bạn vui lòng chọn **\"Liên hệ tư vấn viên\"** để được xử lý nhanh chóng."
+        },
+        "card_not_received": {
+            "id": "card_not_received",
+            "title": "Khiếu nại chưa nhận được thẻ",
+            "response": "Bạn cần lưu ý các thông tin sau nếu không nhận được thẻ:\n\n* **Nhận thẻ tại Smartbank MB:** Bạn cần đến bất kỳ Smartbank MB nào và quét mã QR tại máy để hoàn tất việc in và nhận thẻ.\n\n* **Nhận thẻ tại nhà:** Thời gian giao nhận từ **5 - 7 ngày làm việc** (không tính Thứ 7, Chủ nhật và ngày lễ), được tính từ thời điểm bạn hoàn tất thao tác in thẻ vật lý thành công.\n\n Trường hợp đã quá 7 ngày mà bạn chưa nhận được thẻ, vui lòng chọn **\"Liên hệ tư vấn viên\"** để được hỗ trợ."
+        },
+        "card_transaction_issue": {
+            "id": "card_transaction_issue",
+            "title": "Khiếu nại về lỗi giao dịch thẻ",
+            "response": "Bee chân thành xin lỗi vì sự bất tiện bạn đang gặp phải trong quá trình sử dụng dịch vụ tại MB.  Trường hợp giao dịch thẻ không thành công, vui lòng chọn **\"Liên hệ tư vấn viên\"** để được hỗ trợ."
+        },
+        "app_transaction_issue": {
+            "id": "app_transaction_issue",
+            "title": "Khiếu nại về lỗi giao dịch trên ứng dụng",
+            "response": "Bee chân thành xin lỗi vì sự bất tiện bạn đang gặp phải trong quá trình sử dụng dịch vụ tại MB.  Trường hợp giao dịch trên ứng dụng không thành công, vui lòng chọn **\"Liên hệ tư vấn viên\"** để được hỗ trợ."
+        },
+        "atm_withdrawal_issue": {
+            "id": "atm_withdrawal_issue",
+            "title": "Khiếu nại về lỗi rút tiền ATM",
+            "response": "Bee chân thành xin lỗi vì sự bất tiện bạn đang gặp phải trong quá trình sử dụng dịch vụ tại MB.  Trường hợp rút tiền ATM không thành công, vui lòng chọn **\"Liên hệ tư vấn viên\"** để được hỗ trợ."
+        },
+        "transfer_failure": {
+            "id": "transfer_failure",
+            "title": "Khiếu nại về lỗi chuyển tiền",
+            "response": "Bee chân thành xin lỗi vì sự bất tiện bạn đang gặp phải trong quá trình sử dụng dịch vụ tại MB. Bạn vui lòng kiểm tra lại hình thức chuyển khoản:\n\n* **Chuyển tiền trong cùng hệ thống MB:** Sau khi tài khoản người chuyển bị trừ tiền, người nhận sẽ nhận được ngay. Vui lòng kiểm tra:\n   - Thông tin tài khoản người nhận\n   - Hướng dẫn người nhận tra cứu lại lịch sử giao dịch\n\n* **Chuyển khoản liên ngân hàng nhanh 24/7:** Sau khi tài khoản của bạn bị trừ tiền, người nhận sẽ nhận được tiền ngay.  Vui lòng kiểm tra lại thông tin người nhận để đảm bảo chính xác.  Nếu người nhận vẫn chưa nhận được tiền, bạn vui lòng sử dụng tính năng **\"Tra soát giao dịch\"** trên App MBBank để được hỗ trợ.\n\n* **Chuyển khoản liên ngân hàng thông thường:**\n   - Nếu thực hiện **trước 16h30 (từ Thứ 2 đến Thứ 6):** Người nhận sẽ nhận được tiền trong ngày.\n   - Nếu thực hiện **sau 16h30:** Người nhận sẽ nhận được tiền vào ngày làm việc tiếp theo.\n\n Trong trường hợp người nhận vẫn chưa nhận được tiền, vui lòng chọn **\"Liên hệ tư vấn viên\"** để được hỗ trợ."
+        },
+        "general_complaint": {
+            "id": "general_complaint",
+            "title": "Khiếu nại chung",
+            "response": "Bee chân thành xin lỗi vì trải nghiệm chưa tốt của bạn khi sử dụng dịch vụ MB.  Bạn vui lòng chọn **\"Liên hệ tư vấn viên\"** để được hỗ trợ xử lý khiếu nại một cách nhanh chóng."
+        }
+    },
+    "mapping": {
+        "staff_complaint": "staff_attitude",
+        "card_delivery_issue": "card_not_received",
+        "card_transaction_issue": "card_transaction_issue",
+        "app_transaction_issue": "app_transaction_issue",
+        "topup_issue": "app_transaction_issue",
+        "atm_withdrawal_issue": "atm_withdrawal_issue",
+        "transfer_failure": "transfer_failure",
+        "wrong_transfer": "transfer_failure",
+        "other_complaint": "general_complaint"
+    }
+}

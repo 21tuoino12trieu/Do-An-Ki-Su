@@ -1,0 +1,35 @@
+app_name: aicenter-cua
+environment: development
+extra_fields: {}
+kafka:
+  extra_fields: null
+  kafka_bootstrap_servers:
+  - 10.1.54.151:9093
+  - 10.1.54.152:9093
+  - 10.1.54.153:9093
+  - 10.1.54.50:9093
+  - 10.1.54.51:9093
+  - 10.1.54.52:9093
+  kafka_compression_type: null
+  kafka_retries: 3
+  kafka_sasl_mechanism: SCRAM-SHA-512
+  kafka_sasl_password: REPLACE_WITH_LOCAL_SECRET
+  kafka_sasl_username: user24
+  kafka_security_protocol: SASL_PLAINTEXT
+  kafka_ssl_ca_file: null
+  kafka_topic_log: app-beegen-sync-job
+  kafka_group_id: confluence-chunk-service
+  kafka_handler_type: sync
+  # KafkaLogHandler batch settings
+  kafka_batch_size: 10
+  kafka_batch_timeout_ms: 1000
+log_filters: []
+std:
+  backup_count: 7
+  extra_fields: null
+  log_host_name: llm_platform
+  log_dir: system-logs
+  log_filename_prefix: beegen-controller
+  log_format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+  log_level: INFO
+  max_bytes: 10485760

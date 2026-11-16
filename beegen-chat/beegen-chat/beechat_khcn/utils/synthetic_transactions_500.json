@@ -1,0 +1,3502 @@
+[
+    {
+        "day_transaction": "2025-06-17",
+        "time_transaction": "Tuesday 17:45:41",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến thẻ tín dụng trong MB - TK: 07502397606",
+        "amount": 4360057.0
+    },
+    {
+        "day_transaction": "2025-07-08",
+        "time_transaction": "Tuesday 20:08:33",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến thẻ tín dụng ngoài MB - TK: 05604131593",
+        "amount": 1246949.0
+    },
+    {
+        "day_transaction": "2025-06-14",
+        "time_transaction": "Saturday 19:37:48",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến nickname trong MB - TK: 07412612045",
+        "amount": 944776.0
+    },
+    {
+        "day_transaction": "2025-07-06",
+        "time_transaction": "Sunday 15:36:14",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến nickname ngoài MB - TK: 07316424895",
+        "amount": 1299936.0
+    },
+    {
+        "day_transaction": "2025-06-09",
+        "time_transaction": "Monday 21:04:28",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản thanh toán trong MB - TK: 07254505716",
+        "amount": 461036.0
+    },
+    {
+        "day_transaction": "2025-07-30",
+        "time_transaction": "Wednesday 04:45:56",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản thanh toán ngoài MB - TK: 02191867873",
+        "amount": 2691461.0
+    },
+    {
+        "day_transaction": "2025-07-30",
+        "time_transaction": "Wednesday 21:42:04",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản lương trong MB - TK: 05965565719 - Nhận lương",
+        "amount": 691125.0
+    },
+    {
+        "day_transaction": "2025-05-28",
+        "time_transaction": "Wednesday 08:45:57",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản lương ngoài MB - TK: 07424207166 - Nhận lương",
+        "amount": 2767582.0
+    },
+    {
+        "day_transaction": "2025-06-28",
+        "time_transaction": "Saturday 10:36:28",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản thấu chi trong MB - TK: 09055196027",
+        "amount": 1014342.0
+    },
+    {
+        "day_transaction": "2025-05-25",
+        "time_transaction": "Sunday 05:08:54",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản thấu chi ngoài MB - TK: 01861612384",
+        "amount": 1725654.0
+    },
+    {
+        "day_transaction": "2025-06-02",
+        "time_transaction": "Monday 08:36:44",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền có nội dung chuyển tiền đến Hoa - TK: 09546939200 - Gửi Hoa",
+        "amount": 910281.0
+    },
+    {
+        "day_transaction": "2025-05-25",
+        "time_transaction": "Sunday 14:42:33",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền có nội dung chuyển tiền đến Lan - TK: 09133902104 - Gửi Lan",
+        "amount": 1582610.0
+    },
+    {
+        "day_transaction": "2025-05-20",
+        "time_transaction": "Tuesday 10:00:26",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền có nội dung chuyển tiền đến Linh - TK: 05171117948 - Gửi Linh",
+        "amount": 2682063.0
+    },
+    {
+        "day_transaction": "2025-06-16",
+        "time_transaction": "Monday 08:40:28",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền với số tiền > 5tr - TK: 07653349267",
+        "amount": 9270901.0
+    },
+    {
+        "day_transaction": "2025-06-20",
+        "time_transaction": "Friday 09:37:29",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền với số tiền < 1tr - TK: 04147146761",
+        "amount": 422397.0
+    },
+    {
+        "day_transaction": "2025-05-21",
+        "time_transaction": "Wednesday 11:28:32",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến hoa số tiền hơn 3tr - TK: 04315243332",
+        "amount": 3765733.0
+    },
+    {
+        "day_transaction": "2025-05-13",
+        "time_transaction": "Tuesday 14:42:36",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản có tag Đi lại - TK: 02296777558 - Tag: Đi lại",
+        "amount": 3014975.0
+    },
+    {
+        "day_transaction": "2025-05-28",
+        "time_transaction": "Wednesday 08:40:01",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản có tag là Mua sắm - TK: 06049366777 - Tag: Mua sắm",
+        "amount": 4041278.0
+    },
+    {
+        "day_transaction": "2025-07-20",
+        "time_transaction": "Sunday 15:34:35",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản có tag là Mua nhà - TK: 05778985843 - Tag: Mua nhà",
+        "amount": 4654089.0
+    },
+    {
+        "day_transaction": "2025-05-10",
+        "time_transaction": "Saturday 23:06:11",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản có nội dung là thanh toán Grab - TK: 07058546657 - Thanh toán Grab",
+        "amount": 4679959.0
+    },
+    {
+        "day_transaction": "2025-06-11",
+        "time_transaction": "Wednesday 04:43:10",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Chuyển Tiền vào ngày holiday - TK: 08761512406",
+        "amount": 2605338.0
+    },
+    {
+        "day_transaction": "2025-06-17",
+        "time_transaction": "Tuesday 23:34:42",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền ngoài giờ COB - TK: 08236559348",
+        "amount": 514246.0
+    },
+    {
+        "day_transaction": "2025-06-07",
+        "time_transaction": "Saturday 05:00:33",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán điện - TK: 06540916293",
+        "amount": 767688.0
+    },
+    {
+        "day_transaction": "2025-07-26",
+        "time_transaction": "Saturday 04:53:59",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán nước - TK: 01466783753",
+        "amount": 2428929.0
+    },
+    {
+        "day_transaction": "2025-05-26",
+        "time_transaction": "Monday 14:52:03",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán thuế - TK: 09697363264",
+        "amount": 4924642.0
+    },
+    {
+        "day_transaction": "2025-06-15",
+        "time_transaction": "Sunday 21:32:12",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Internet - TK: 05137057442",
+        "amount": 349276.0
+    },
+    {
+        "day_transaction": "2025-07-04",
+        "time_transaction": "Friday 15:51:38",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Truyền hình cap - TK: 01297380952",
+        "amount": 166951.0
+    },
+    {
+        "day_transaction": "2025-05-13",
+        "time_transaction": "Tuesday 16:29:07",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Học phí - TK: 04059494901",
+        "amount": 671022.0
+    },
+    {
+        "day_transaction": "2025-05-04",
+        "time_transaction": "Sunday 01:29:47",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Di động trả sau - TK: 06542891259",
+        "amount": 572531.0
+    },
+    {
+        "day_transaction": "2025-06-06",
+        "time_transaction": "Friday 03:07:56",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền từ bank MB - TK: 03120810319",
+        "amount": 2047036.0
+    },
+    {
+        "day_transaction": "2025-07-24",
+        "time_transaction": "Thursday 07:16:50",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền từ bank khác - TK: 09530859240",
+        "amount": 1184056.0
+    },
+    {
+        "day_transaction": "2025-05-27",
+        "time_transaction": "Tuesday 16:11:09",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền từ ví điện tử - TK: 02605272784",
+        "amount": 4749437.0
+    },
+    {
+        "day_transaction": "2025-06-08",
+        "time_transaction": "Sunday 02:36:11",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển tiền đến ví điện tử - TK: 04391127988",
+        "amount": 743826.0
+    },
+    {
+        "day_transaction": "2025-06-26",
+        "time_transaction": "Thursday 13:35:24",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Thanh toán VietQR - TK: 08033016183",
+        "amount": 4086461.0
+    },
+    {
+        "day_transaction": "2025-05-04",
+        "time_transaction": "Sunday 18:03:43",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền lương - TK: 04813623700 - Nhận lương",
+        "amount": 4214372.0
+    },
+    {
+        "day_transaction": "2025-05-22",
+        "time_transaction": "Thursday 02:51:54",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền gửi tiết kiệm - TK: 09707388332",
+        "amount": 2617111.0
+    },
+    {
+        "day_transaction": "2025-07-24",
+        "time_transaction": "Thursday 19:57:04",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán nước - TK: 03949749134",
+        "amount": 2926987.0
+    },
+    {
+        "day_transaction": "2025-05-28",
+        "time_transaction": "Wednesday 02:44:56",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán điện - TK: 06547237329",
+        "amount": 782650.0
+    },
+    {
+        "day_transaction": "2025-06-29",
+        "time_transaction": "Sunday 22:57:39",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền ngoài giờ COB - TK: 02893672581",
+        "amount": 3889472.0
+    },
+    {
+        "day_transaction": "2025-05-24",
+        "time_transaction": "Saturday 04:57:07",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền từ bank MB - TK: 02979452230",
+        "amount": 2760602.0
+    },
+    {
+        "day_transaction": "2025-07-15",
+        "time_transaction": "Tuesday 10:49:15",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Thanh toán VietQR - TK: 09736012465",
+        "amount": 1979958.0
+    },
+    {
+        "day_transaction": "2025-05-13",
+        "time_transaction": "Tuesday 20:04:46",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền có nội dung chuyển tiền đến Hoa - TK: 01407041455 - Gửi Hoa",
+        "amount": 859367.0
+    },
+    {
+        "day_transaction": "2025-06-26",
+        "time_transaction": "Thursday 07:20:16",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến thẻ tín dụng trong MB - TK: 04463274704",
+        "amount": 1495392.0
+    },
+    {
+        "day_transaction": "2025-05-16",
+        "time_transaction": "Friday 08:07:39",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền với số tiền > 5tr - TK: 05888320857",
+        "amount": 8349004.0
+    },
+    {
+        "day_transaction": "2025-05-24",
+        "time_transaction": "Saturday 09:10:26",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản lương ngoài MB - TK: 05647977485 - Nhận lương",
+        "amount": 3366331.0
+    },
+    {
+        "day_transaction": "2025-07-05",
+        "time_transaction": "Saturday 07:43:38",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền có nội dung chuyển tiền đến Lan - TK: 01389943910 - Gửi Lan",
+        "amount": 2685885.0
+    },
+    {
+        "day_transaction": "2025-07-29",
+        "time_transaction": "Tuesday 05:49:42",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản lương ngoài MB - TK: 04283613160 - Nhận lương",
+        "amount": 449043.0
+    },
+    {
+        "day_transaction": "2025-07-02",
+        "time_transaction": "Wednesday 02:50:08",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến thẻ tín dụng ngoài MB - TK: 09489563637",
+        "amount": 1418379.0
+    },
+    {
+        "day_transaction": "2025-05-29",
+        "time_transaction": "Thursday 10:47:06",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền ngoài giờ COB - TK: 07386051912",
+        "amount": 4379297.0
+    },
+    {
+        "day_transaction": "2025-06-03",
+        "time_transaction": "Tuesday 11:23:46",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển tiền đến ví điện tử - TK: 08080983814",
+        "amount": 537769.0
+    },
+    {
+        "day_transaction": "2025-07-18",
+        "time_transaction": "Friday 13:58:20",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản thấu chi ngoài MB - TK: 08433686339",
+        "amount": 2671224.0
+    },
+    {
+        "day_transaction": "2025-06-08",
+        "time_transaction": "Sunday 06:47:15",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản thấu chi trong MB - TK: 09871594942",
+        "amount": 1079821.0
+    },
+    {
+        "day_transaction": "2025-06-03",
+        "time_transaction": "Tuesday 06:37:06",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền từ bank khác - TK: 04323160371",
+        "amount": 4707281.0
+    },
+    {
+        "day_transaction": "2025-07-13",
+        "time_transaction": "Sunday 13:09:57",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Di động trả sau - TK: 05473878216",
+        "amount": 4529468.0
+    },
+    {
+        "day_transaction": "2025-05-21",
+        "time_transaction": "Wednesday 02:58:44",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến thẻ tín dụng ngoài MB - TK: 04975775518",
+        "amount": 727639.0
+    },
+    {
+        "day_transaction": "2025-07-30",
+        "time_transaction": "Wednesday 07:30:31",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến thẻ tín dụng ngoài MB - TK: 08437424340",
+        "amount": 3611261.0
+    },
+    {
+        "day_transaction": "2025-05-07",
+        "time_transaction": "Wednesday 23:33:52",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản lương ngoài MB - TK: 07251736584 - Nhận lương",
+        "amount": 3783524.0
+    },
+    {
+        "day_transaction": "2025-06-30",
+        "time_transaction": "Monday 01:02:46",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền với số tiền > 5tr - TK: 03005154282",
+        "amount": 7640952.0
+    },
+    {
+        "day_transaction": "2025-07-28",
+        "time_transaction": "Monday 02:19:01",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền gửi tiết kiệm - TK: 09444561727",
+        "amount": 3872195.0
+    },
+    {
+        "day_transaction": "2025-07-28",
+        "time_transaction": "Monday 11:26:19",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản thấu chi trong MB - TK: 06465369761",
+        "amount": 554416.0
+    },
+    {
+        "day_transaction": "2025-05-06",
+        "time_transaction": "Tuesday 02:56:08",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến thẻ tín dụng ngoài MB - TK: 05538306037",
+        "amount": 4527019.0
+    },
+    {
+        "day_transaction": "2025-05-09",
+        "time_transaction": "Friday 01:00:35",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền có nội dung chuyển tiền đến Linh - TK: 09376521774 - Gửi Linh",
+        "amount": 4144104.0
+    },
+    {
+        "day_transaction": "2025-05-12",
+        "time_transaction": "Monday 01:03:02",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền có nội dung chuyển tiền đến Lan - TK: 05166681459 - Gửi Lan",
+        "amount": 682831.0
+    },
+    {
+        "day_transaction": "2025-05-02",
+        "time_transaction": "Friday 19:12:21",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản có tag là Mua nhà - TK: 03641434484 - Tag: Mua nhà",
+        "amount": 2663361.0
+    },
+    {
+        "day_transaction": "2025-07-06",
+        "time_transaction": "Sunday 09:11:11",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến thẻ tín dụng ngoài MB - TK: 06251837941",
+        "amount": 2712024.0
+    },
+    {
+        "day_transaction": "2025-05-01",
+        "time_transaction": "Thursday 15:27:35",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền ngoài giờ COB - TK: 04233786652",
+        "amount": 1247246.0
+    },
+    {
+        "day_transaction": "2025-07-25",
+        "time_transaction": "Friday 23:47:53",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Truyền hình cap - TK: 07155381913",
+        "amount": 2725378.0
+    },
+    {
+        "day_transaction": "2025-05-19",
+        "time_transaction": "Monday 00:09:17",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền với số tiền > 5tr - TK: 02540464041",
+        "amount": 5451178.0
+    },
+    {
+        "day_transaction": "2025-07-25",
+        "time_transaction": "Friday 22:01:26",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến nickname ngoài MB - TK: 07603873119",
+        "amount": 3829040.0
+    },
+    {
+        "day_transaction": "2025-06-14",
+        "time_transaction": "Saturday 02:45:42",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến hoa số tiền hơn 3tr - TK: 06111625594",
+        "amount": 4672723.0
+    },
+    {
+        "day_transaction": "2025-06-21",
+        "time_transaction": "Saturday 07:28:43",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền từ bank MB - TK: 04729916256",
+        "amount": 3540381.0
+    },
+    {
+        "day_transaction": "2025-05-25",
+        "time_transaction": "Sunday 08:18:07",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Internet - TK: 04187521032",
+        "amount": 3372004.0
+    },
+    {
+        "day_transaction": "2025-06-16",
+        "time_transaction": "Monday 09:58:03",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền với số tiền > 5tr - TK: 04094842382",
+        "amount": 5907197.0
+    },
+    {
+        "day_transaction": "2025-06-20",
+        "time_transaction": "Friday 22:48:17",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến nickname ngoài MB - TK: 05011956802",
+        "amount": 3567783.0
+    },
+    {
+        "day_transaction": "2025-07-02",
+        "time_transaction": "Wednesday 13:09:49",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản thanh toán trong MB - TK: 01884574096",
+        "amount": 4532499.0
+    },
+    {
+        "day_transaction": "2025-07-25",
+        "time_transaction": "Friday 19:32:20",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán điện - TK: 07859411212",
+        "amount": 4355639.0
+    },
+    {
+        "day_transaction": "2025-06-28",
+        "time_transaction": "Saturday 05:30:45",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Thanh toán VietQR - TK: 04034012320",
+        "amount": 2242570.0
+    },
+    {
+        "day_transaction": "2025-05-24",
+        "time_transaction": "Saturday 20:02:23",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán thuế - TK: 05465988013",
+        "amount": 3327971.0
+    },
+    {
+        "day_transaction": "2025-06-23",
+        "time_transaction": "Monday 01:09:36",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến hoa số tiền hơn 3tr - TK: 08679528324",
+        "amount": 3351393.0
+    },
+    {
+        "day_transaction": "2025-05-16",
+        "time_transaction": "Friday 03:35:23",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản có tag là Mua nhà - TK: 01189697644 - Tag: Mua nhà",
+        "amount": 654863.0
+    },
+    {
+        "day_transaction": "2025-05-09",
+        "time_transaction": "Friday 18:50:29",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Thanh toán VietQR - TK: 09658247104",
+        "amount": 1591655.0
+    },
+    {
+        "day_transaction": "2025-05-21",
+        "time_transaction": "Wednesday 16:13:56",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền có nội dung chuyển tiền đến Linh - TK: 03051443572 - Gửi Linh",
+        "amount": 3814161.0
+    },
+    {
+        "day_transaction": "2025-07-21",
+        "time_transaction": "Monday 20:58:04",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản có tag là Mua nhà - TK: 06840242951 - Tag: Mua nhà",
+        "amount": 2743737.0
+    },
+    {
+        "day_transaction": "2025-07-31",
+        "time_transaction": "Thursday 03:50:47",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền từ bank khác - TK: 06988253851",
+        "amount": 4462296.0
+    },
+    {
+        "day_transaction": "2025-05-28",
+        "time_transaction": "Wednesday 00:39:11",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền ngoài giờ COB - TK: 07412758993",
+        "amount": 4511090.0
+    },
+    {
+        "day_transaction": "2025-05-05",
+        "time_transaction": "Monday 23:10:12",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền ngoài giờ COB - TK: 09551595228",
+        "amount": 3966227.0
+    },
+    {
+        "day_transaction": "2025-07-19",
+        "time_transaction": "Saturday 18:07:09",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản có nội dung là thanh toán Grab - TK: 04787642889 - Thanh toán Grab",
+        "amount": 2327166.0
+    },
+    {
+        "day_transaction": "2025-06-30",
+        "time_transaction": "Monday 18:21:57",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến hoa số tiền hơn 3tr - TK: 05365879742",
+        "amount": 3306294.0
+    },
+    {
+        "day_transaction": "2025-06-22",
+        "time_transaction": "Sunday 07:36:35",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền lương - TK: 07503601790 - Nhận lương",
+        "amount": 4089066.0
+    },
+    {
+        "day_transaction": "2025-06-22",
+        "time_transaction": "Sunday 04:43:12",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến thẻ tín dụng ngoài MB - TK: 03858936406",
+        "amount": 3094782.0
+    },
+    {
+        "day_transaction": "2025-06-16",
+        "time_transaction": "Monday 04:01:07",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến thẻ tín dụng ngoài MB - TK: 02787187329",
+        "amount": 2402976.0
+    },
+    {
+        "day_transaction": "2025-05-01",
+        "time_transaction": "Thursday 17:29:26",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền từ ví điện tử - TK: 03252196711",
+        "amount": 4146253.0
+    },
+    {
+        "day_transaction": "2025-05-23",
+        "time_transaction": "Friday 12:33:42",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản thanh toán trong MB - TK: 07224212339",
+        "amount": 4603355.0
+    },
+    {
+        "day_transaction": "2025-07-28",
+        "time_transaction": "Monday 19:30:20",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản lương ngoài MB - TK: 07824445520 - Nhận lương",
+        "amount": 2804765.0
+    },
+    {
+        "day_transaction": "2025-05-14",
+        "time_transaction": "Wednesday 12:47:35",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán nước - TK: 03837774111",
+        "amount": 1634200.0
+    },
+    {
+        "day_transaction": "2025-06-21",
+        "time_transaction": "Saturday 04:50:13",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền ngoài giờ COB - TK: 02932198102",
+        "amount": 3190809.0
+    },
+    {
+        "day_transaction": "2025-06-24",
+        "time_transaction": "Tuesday 09:26:05",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Internet - TK: 04368440426",
+        "amount": 1975458.0
+    },
+    {
+        "day_transaction": "2025-07-24",
+        "time_transaction": "Thursday 05:47:51",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản lương ngoài MB - TK: 01143081678 - Nhận lương",
+        "amount": 4724578.0
+    },
+    {
+        "day_transaction": "2025-07-08",
+        "time_transaction": "Tuesday 03:31:02",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền từ ví điện tử - TK: 09674459371",
+        "amount": 3195035.0
+    },
+    {
+        "day_transaction": "2025-05-25",
+        "time_transaction": "Sunday 23:45:19",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến nickname ngoài MB - TK: 04146833875",
+        "amount": 4485916.0
+    },
+    {
+        "day_transaction": "2025-06-10",
+        "time_transaction": "Tuesday 01:45:56",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền với số tiền > 5tr - TK: 09768828018",
+        "amount": 7960247.0
+    },
+    {
+        "day_transaction": "2025-06-08",
+        "time_transaction": "Sunday 14:58:37",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Truyền hình cap - TK: 06999415982",
+        "amount": 265333.0
+    },
+    {
+        "day_transaction": "2025-07-19",
+        "time_transaction": "Saturday 03:34:34",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền ngoài giờ COB - TK: 04973780280",
+        "amount": 4756633.0
+    },
+    {
+        "day_transaction": "2025-07-21",
+        "time_transaction": "Monday 13:14:40",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền có nội dung chuyển tiền đến Hoa - TK: 09281048684 - Gửi Hoa",
+        "amount": 2708047.0
+    },
+    {
+        "day_transaction": "2025-07-20",
+        "time_transaction": "Sunday 13:55:12",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán nước - TK: 06168604405",
+        "amount": 1791374.0
+    },
+    {
+        "day_transaction": "2025-05-15",
+        "time_transaction": "Thursday 16:01:53",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán thuế - TK: 09158038618",
+        "amount": 809294.0
+    },
+    {
+        "day_transaction": "2025-05-06",
+        "time_transaction": "Tuesday 11:57:19",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán nước - TK: 08862710131",
+        "amount": 1029023.0
+    },
+    {
+        "day_transaction": "2025-06-15",
+        "time_transaction": "Sunday 06:02:48",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản có tag là Mua sắm - TK: 08650849483 - Tag: Mua sắm",
+        "amount": 844616.0
+    },
+    {
+        "day_transaction": "2025-06-27",
+        "time_transaction": "Friday 08:41:35",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán thuế - TK: 03246905075",
+        "amount": 2377795.0
+    },
+    {
+        "day_transaction": "2025-05-31",
+        "time_transaction": "Saturday 01:53:52",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản có tag là Mua nhà - TK: 01591658815 - Tag: Mua nhà",
+        "amount": 195044.0
+    },
+    {
+        "day_transaction": "2025-06-29",
+        "time_transaction": "Sunday 00:11:21",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền từ bank MB - TK: 01629853702",
+        "amount": 3067604.0
+    },
+    {
+        "day_transaction": "2025-05-16",
+        "time_transaction": "Friday 06:54:33",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Chuyển Tiền vào ngày holiday - TK: 04062482226",
+        "amount": 126862.0
+    },
+    {
+        "day_transaction": "2025-06-19",
+        "time_transaction": "Thursday 04:37:29",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Di động trả sau - TK: 09326119451",
+        "amount": 1012147.0
+    },
+    {
+        "day_transaction": "2025-07-16",
+        "time_transaction": "Wednesday 15:05:50",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản thanh toán trong MB - TK: 09650090402",
+        "amount": 3467922.0
+    },
+    {
+        "day_transaction": "2025-07-27",
+        "time_transaction": "Sunday 15:38:07",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán thuế - TK: 05008206983",
+        "amount": 1461367.0
+    },
+    {
+        "day_transaction": "2025-05-16",
+        "time_transaction": "Friday 19:50:24",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Chuyển Tiền vào ngày holiday - TK: 09209783944",
+        "amount": 2814525.0
+    },
+    {
+        "day_transaction": "2025-05-29",
+        "time_transaction": "Thursday 01:49:15",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Chuyển Tiền vào ngày holiday - TK: 06558745313",
+        "amount": 996161.0
+    },
+    {
+        "day_transaction": "2025-05-22",
+        "time_transaction": "Thursday 09:54:31",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền có nội dung chuyển tiền đến Lan - TK: 09199373986 - Gửi Lan",
+        "amount": 1300974.0
+    },
+    {
+        "day_transaction": "2025-07-23",
+        "time_transaction": "Wednesday 05:07:46",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản lương ngoài MB - TK: 04152178507 - Nhận lương",
+        "amount": 3519831.0
+    },
+    {
+        "day_transaction": "2025-07-05",
+        "time_transaction": "Saturday 16:41:53",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền lương - TK: 01191376076 - Nhận lương",
+        "amount": 4116242.0
+    },
+    {
+        "day_transaction": "2025-06-15",
+        "time_transaction": "Sunday 15:39:30",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền từ bank MB - TK: 02635554835",
+        "amount": 4064845.0
+    },
+    {
+        "day_transaction": "2025-05-16",
+        "time_transaction": "Friday 22:56:37",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến nickname ngoài MB - TK: 04250522013",
+        "amount": 3281406.0
+    },
+    {
+        "day_transaction": "2025-07-25",
+        "time_transaction": "Friday 13:23:48",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản thấu chi trong MB - TK: 08976853996",
+        "amount": 4918408.0
+    },
+    {
+        "day_transaction": "2025-05-18",
+        "time_transaction": "Sunday 21:57:13",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền có nội dung chuyển tiền đến Lan - TK: 08214866716 - Gửi Lan",
+        "amount": 4299016.0
+    },
+    {
+        "day_transaction": "2025-06-20",
+        "time_transaction": "Friday 04:31:56",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản có tag là Mua sắm - TK: 03443330105 - Tag: Mua sắm",
+        "amount": 2434454.0
+    },
+    {
+        "day_transaction": "2025-06-02",
+        "time_transaction": "Monday 19:26:11",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến thẻ tín dụng ngoài MB - TK: 06698504599",
+        "amount": 2559429.0
+    },
+    {
+        "day_transaction": "2025-06-03",
+        "time_transaction": "Tuesday 22:12:25",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền ngoài giờ COB - TK: 03380474096",
+        "amount": 3760296.0
+    },
+    {
+        "day_transaction": "2025-05-26",
+        "time_transaction": "Monday 00:12:55",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến nickname ngoài MB - TK: 08111351246",
+        "amount": 381327.0
+    },
+    {
+        "day_transaction": "2025-07-13",
+        "time_transaction": "Sunday 03:12:06",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền từ bank MB - TK: 07349306513",
+        "amount": 1757241.0
+    },
+    {
+        "day_transaction": "2025-07-05",
+        "time_transaction": "Saturday 18:14:47",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến thẻ tín dụng trong MB - TK: 01058594838",
+        "amount": 3455813.0
+    },
+    {
+        "day_transaction": "2025-05-24",
+        "time_transaction": "Saturday 04:14:59",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền từ bank MB - TK: 08903385567",
+        "amount": 800492.0
+    },
+    {
+        "day_transaction": "2025-05-26",
+        "time_transaction": "Monday 18:00:14",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển tiền đến ví điện tử - TK: 06103983835",
+        "amount": 198347.0
+    },
+    {
+        "day_transaction": "2025-05-15",
+        "time_transaction": "Thursday 17:47:46",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản có nội dung là thanh toán Grab - TK: 05752207126 - Thanh toán Grab",
+        "amount": 3450233.0
+    },
+    {
+        "day_transaction": "2025-05-10",
+        "time_transaction": "Saturday 23:23:39",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán điện - TK: 03211513703",
+        "amount": 2836552.0
+    },
+    {
+        "day_transaction": "2025-06-23",
+        "time_transaction": "Monday 03:12:02",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền có nội dung chuyển tiền đến Lan - TK: 02844912846 - Gửi Lan",
+        "amount": 2564735.0
+    },
+    {
+        "day_transaction": "2025-05-25",
+        "time_transaction": "Sunday 07:48:13",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền có nội dung chuyển tiền đến Lan - TK: 03561390175 - Gửi Lan",
+        "amount": 3994462.0
+    },
+    {
+        "day_transaction": "2025-07-23",
+        "time_transaction": "Wednesday 16:45:24",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán thuế - TK: 09550099717",
+        "amount": 2762785.0
+    },
+    {
+        "day_transaction": "2025-06-09",
+        "time_transaction": "Monday 00:37:30",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Di động trả sau - TK: 09891105486",
+        "amount": 3611707.0
+    },
+    {
+        "day_transaction": "2025-07-18",
+        "time_transaction": "Friday 14:44:57",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Thanh toán VietQR - TK: 05853270536",
+        "amount": 217387.0
+    },
+    {
+        "day_transaction": "2025-07-08",
+        "time_transaction": "Tuesday 22:49:26",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền từ bank khác - TK: 03543407288",
+        "amount": 1728537.0
+    },
+    {
+        "day_transaction": "2025-05-05",
+        "time_transaction": "Monday 14:30:57",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Truyền hình cap - TK: 03910291403",
+        "amount": 2532310.0
+    },
+    {
+        "day_transaction": "2025-05-08",
+        "time_transaction": "Thursday 21:54:59",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản thanh toán ngoài MB - TK: 05907727835",
+        "amount": 4934222.0
+    },
+    {
+        "day_transaction": "2025-06-12",
+        "time_transaction": "Thursday 00:54:39",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản thấu chi ngoài MB - TK: 05814728624",
+        "amount": 4723523.0
+    },
+    {
+        "day_transaction": "2025-06-19",
+        "time_transaction": "Thursday 11:07:59",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền từ bank khác - TK: 07498686486",
+        "amount": 3924737.0
+    },
+    {
+        "day_transaction": "2025-07-28",
+        "time_transaction": "Monday 07:43:59",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền ngoài giờ COB - TK: 05618835369",
+        "amount": 4413020.0
+    },
+    {
+        "day_transaction": "2025-07-14",
+        "time_transaction": "Monday 21:12:11",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến hoa số tiền hơn 3tr - TK: 06915412263",
+        "amount": 3100702.0
+    },
+    {
+        "day_transaction": "2025-06-11",
+        "time_transaction": "Wednesday 09:35:24",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản lương trong MB - TK: 09932121470 - Nhận lương",
+        "amount": 4224033.0
+    },
+    {
+        "day_transaction": "2025-07-30",
+        "time_transaction": "Wednesday 15:43:05",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Truyền hình cap - TK: 09072157924",
+        "amount": 4330190.0
+    },
+    {
+        "day_transaction": "2025-05-09",
+        "time_transaction": "Friday 10:05:03",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản thanh toán ngoài MB - TK: 03634234026",
+        "amount": 2667682.0
+    },
+    {
+        "day_transaction": "2025-07-31",
+        "time_transaction": "Thursday 11:35:09",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Chuyển Tiền vào ngày holiday - TK: 04413465138",
+        "amount": 4265937.0
+    },
+    {
+        "day_transaction": "2025-07-29",
+        "time_transaction": "Tuesday 13:24:18",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Thanh toán VietQR - TK: 02872579312",
+        "amount": 4770255.0
+    },
+    {
+        "day_transaction": "2025-05-04",
+        "time_transaction": "Sunday 17:05:09",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Truyền hình cap - TK: 05646860422",
+        "amount": 536521.0
+    },
+    {
+        "day_transaction": "2025-06-10",
+        "time_transaction": "Tuesday 00:07:26",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản thanh toán ngoài MB - TK: 05391371710",
+        "amount": 2401784.0
+    },
+    {
+        "day_transaction": "2025-07-21",
+        "time_transaction": "Monday 20:46:44",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Chuyển Tiền vào ngày holiday - TK: 03538880888",
+        "amount": 3044250.0
+    },
+    {
+        "day_transaction": "2025-05-31",
+        "time_transaction": "Saturday 21:32:36",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Chuyển Tiền vào ngày holiday - TK: 09879378817",
+        "amount": 519175.0
+    },
+    {
+        "day_transaction": "2025-06-01",
+        "time_transaction": "Sunday 20:32:04",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền từ ví điện tử - TK: 09912366254",
+        "amount": 4088062.0
+    },
+    {
+        "day_transaction": "2025-06-21",
+        "time_transaction": "Saturday 05:25:29",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Học phí - TK: 08870808801",
+        "amount": 1022627.0
+    },
+    {
+        "day_transaction": "2025-05-29",
+        "time_transaction": "Thursday 04:35:18",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền với số tiền < 1tr - TK: 07154718269",
+        "amount": 900783.0
+    },
+    {
+        "day_transaction": "2025-07-10",
+        "time_transaction": "Thursday 13:42:47",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền từ ví điện tử - TK: 07252044468",
+        "amount": 455219.0
+    },
+    {
+        "day_transaction": "2025-05-18",
+        "time_transaction": "Sunday 19:49:09",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản lương trong MB - TK: 09552687518 - Nhận lương",
+        "amount": 3333668.0
+    },
+    {
+        "day_transaction": "2025-06-02",
+        "time_transaction": "Monday 14:12:26",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản lương trong MB - TK: 02425684885 - Nhận lương",
+        "amount": 4889453.0
+    },
+    {
+        "day_transaction": "2025-05-02",
+        "time_transaction": "Friday 23:14:14",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Di động trả sau - TK: 09988429926",
+        "amount": 1195681.0
+    },
+    {
+        "day_transaction": "2025-07-08",
+        "time_transaction": "Tuesday 00:56:01",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền có nội dung chuyển tiền đến Lan - TK: 04143948193 - Gửi Lan",
+        "amount": 3425341.0
+    },
+    {
+        "day_transaction": "2025-05-29",
+        "time_transaction": "Thursday 10:24:30",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển tiền đến ví điện tử - TK: 07749318086",
+        "amount": 3639034.0
+    },
+    {
+        "day_transaction": "2025-07-16",
+        "time_transaction": "Wednesday 21:18:07",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán nước - TK: 09510911664",
+        "amount": 4373360.0
+    },
+    {
+        "day_transaction": "2025-07-03",
+        "time_transaction": "Thursday 05:06:27",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến nickname ngoài MB - TK: 08122523975",
+        "amount": 2787251.0
+    },
+    {
+        "day_transaction": "2025-07-13",
+        "time_transaction": "Sunday 23:52:32",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Thanh toán VietQR - TK: 04344609175",
+        "amount": 2398327.0
+    },
+    {
+        "day_transaction": "2025-05-18",
+        "time_transaction": "Sunday 12:06:13",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền có nội dung chuyển tiền đến Hoa - TK: 04647928497 - Gửi Hoa",
+        "amount": 3670120.0
+    },
+    {
+        "day_transaction": "2025-05-06",
+        "time_transaction": "Tuesday 20:23:02",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến thẻ tín dụng ngoài MB - TK: 01676313740",
+        "amount": 4592586.0
+    },
+    {
+        "day_transaction": "2025-06-10",
+        "time_transaction": "Tuesday 08:26:10",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán thuế - TK: 08732469854",
+        "amount": 3252453.0
+    },
+    {
+        "day_transaction": "2025-07-24",
+        "time_transaction": "Thursday 12:47:20",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến thẻ tín dụng trong MB - TK: 07869410631",
+        "amount": 431387.0
+    },
+    {
+        "day_transaction": "2025-07-14",
+        "time_transaction": "Monday 12:16:14",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến nickname trong MB - TK: 05811062729",
+        "amount": 3022211.0
+    },
+    {
+        "day_transaction": "2025-07-03",
+        "time_transaction": "Thursday 22:11:30",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến thẻ tín dụng trong MB - TK: 07697464261",
+        "amount": 2440037.0
+    },
+    {
+        "day_transaction": "2025-07-12",
+        "time_transaction": "Saturday 05:33:18",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền có nội dung chuyển tiền đến Lan - TK: 03574917696 - Gửi Lan",
+        "amount": 2062690.0
+    },
+    {
+        "day_transaction": "2025-05-02",
+        "time_transaction": "Friday 19:12:18",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền từ bank khác - TK: 02939560290",
+        "amount": 913236.0
+    },
+    {
+        "day_transaction": "2025-05-05",
+        "time_transaction": "Monday 00:48:18",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Internet - TK: 03338482645",
+        "amount": 3985816.0
+    },
+    {
+        "day_transaction": "2025-05-24",
+        "time_transaction": "Saturday 02:17:17",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Thanh toán VietQR - TK: 01846694343",
+        "amount": 3892193.0
+    },
+    {
+        "day_transaction": "2025-07-03",
+        "time_transaction": "Thursday 03:19:02",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền từ bank MB - TK: 06235651765",
+        "amount": 812970.0
+    },
+    {
+        "day_transaction": "2025-06-21",
+        "time_transaction": "Saturday 08:04:12",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Truyền hình cap - TK: 01500103297",
+        "amount": 1929038.0
+    },
+    {
+        "day_transaction": "2025-06-14",
+        "time_transaction": "Saturday 04:20:12",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền với số tiền < 1tr - TK: 08110893746",
+        "amount": 989392.0
+    },
+    {
+        "day_transaction": "2025-06-06",
+        "time_transaction": "Friday 02:50:36",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán nước - TK: 09720857321",
+        "amount": 1653560.0
+    },
+    {
+        "day_transaction": "2025-07-08",
+        "time_transaction": "Tuesday 09:02:00",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Truyền hình cap - TK: 05048616247",
+        "amount": 1272654.0
+    },
+    {
+        "day_transaction": "2025-06-20",
+        "time_transaction": "Friday 02:01:43",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản có tag Đi lại - TK: 02364592173 - Tag: Đi lại",
+        "amount": 3879012.0
+    },
+    {
+        "day_transaction": "2025-06-14",
+        "time_transaction": "Saturday 15:26:56",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản có tag Đi lại - TK: 08457100627 - Tag: Đi lại",
+        "amount": 3357290.0
+    },
+    {
+        "day_transaction": "2025-06-01",
+        "time_transaction": "Sunday 05:34:23",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản lương ngoài MB - TK: 04062996285 - Nhận lương",
+        "amount": 364527.0
+    },
+    {
+        "day_transaction": "2025-07-18",
+        "time_transaction": "Friday 05:29:58",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Internet - TK: 03505914708",
+        "amount": 4879209.0
+    },
+    {
+        "day_transaction": "2025-07-07",
+        "time_transaction": "Monday 19:56:11",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán nước - TK: 06405530233",
+        "amount": 2059664.0
+    },
+    {
+        "day_transaction": "2025-05-31",
+        "time_transaction": "Saturday 03:58:19",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Truyền hình cap - TK: 02299547839",
+        "amount": 2514021.0
+    },
+    {
+        "day_transaction": "2025-06-15",
+        "time_transaction": "Sunday 04:45:58",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền lương - TK: 07215339242 - Nhận lương",
+        "amount": 412073.0
+    },
+    {
+        "day_transaction": "2025-05-27",
+        "time_transaction": "Tuesday 22:22:57",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản có tag Đi lại - TK: 05248925768 - Tag: Đi lại",
+        "amount": 2201100.0
+    },
+    {
+        "day_transaction": "2025-05-13",
+        "time_transaction": "Tuesday 21:46:58",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản có tag Đi lại - TK: 03837627009 - Tag: Đi lại",
+        "amount": 2978736.0
+    },
+    {
+        "day_transaction": "2025-06-04",
+        "time_transaction": "Wednesday 14:20:25",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền từ ví điện tử - TK: 06203903545",
+        "amount": 3341367.0
+    },
+    {
+        "day_transaction": "2025-06-11",
+        "time_transaction": "Wednesday 14:39:51",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền từ ví điện tử - TK: 01111261499",
+        "amount": 4557264.0
+    },
+    {
+        "day_transaction": "2025-06-03",
+        "time_transaction": "Tuesday 17:51:14",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Thanh toán VietQR - TK: 03066554301",
+        "amount": 550904.0
+    },
+    {
+        "day_transaction": "2025-06-02",
+        "time_transaction": "Monday 21:19:50",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán điện - TK: 08462550231",
+        "amount": 1585929.0
+    },
+    {
+        "day_transaction": "2025-06-19",
+        "time_transaction": "Thursday 04:12:20",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Internet - TK: 04591790773",
+        "amount": 4797638.0
+    },
+    {
+        "day_transaction": "2025-07-31",
+        "time_transaction": "Thursday 22:59:34",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến nickname ngoài MB - TK: 03989208086",
+        "amount": 572584.0
+    },
+    {
+        "day_transaction": "2025-05-15",
+        "time_transaction": "Thursday 12:31:28",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển tiền đến ví điện tử - TK: 04177911870",
+        "amount": 1814006.0
+    },
+    {
+        "day_transaction": "2025-06-28",
+        "time_transaction": "Saturday 05:38:16",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Chuyển Tiền vào ngày holiday - TK: 04964036147",
+        "amount": 2466329.0
+    },
+    {
+        "day_transaction": "2025-06-23",
+        "time_transaction": "Monday 19:38:02",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền từ ví điện tử - TK: 05554319411",
+        "amount": 2914335.0
+    },
+    {
+        "day_transaction": "2025-07-04",
+        "time_transaction": "Friday 19:42:44",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến thẻ tín dụng trong MB - TK: 03191280656",
+        "amount": 1448424.0
+    },
+    {
+        "day_transaction": "2025-05-11",
+        "time_transaction": "Sunday 04:00:30",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán nước - TK: 04848956762",
+        "amount": 2352849.0
+    },
+    {
+        "day_transaction": "2025-06-23",
+        "time_transaction": "Monday 21:34:51",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Thanh toán VietQR - TK: 05358806513",
+        "amount": 4170476.0
+    },
+    {
+        "day_transaction": "2025-05-12",
+        "time_transaction": "Monday 11:27:39",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Truyền hình cap - TK: 08194924897",
+        "amount": 969417.0
+    },
+    {
+        "day_transaction": "2025-07-18",
+        "time_transaction": "Friday 09:46:27",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản thanh toán ngoài MB - TK: 01387869608",
+        "amount": 1740764.0
+    },
+    {
+        "day_transaction": "2025-05-11",
+        "time_transaction": "Sunday 02:57:13",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản lương trong MB - TK: 09576168242 - Nhận lương",
+        "amount": 2188255.0
+    },
+    {
+        "day_transaction": "2025-07-20",
+        "time_transaction": "Sunday 22:59:24",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán thuế - TK: 08127563254",
+        "amount": 3232298.0
+    },
+    {
+        "day_transaction": "2025-05-19",
+        "time_transaction": "Monday 04:54:33",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền với số tiền > 5tr - TK: 05422707262",
+        "amount": 9683491.0
+    },
+    {
+        "day_transaction": "2025-05-13",
+        "time_transaction": "Tuesday 03:46:10",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Internet - TK: 06956674635",
+        "amount": 1503052.0
+    },
+    {
+        "day_transaction": "2025-07-13",
+        "time_transaction": "Sunday 14:40:32",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản có nội dung là thanh toán Grab - TK: 06390784309 - Thanh toán Grab",
+        "amount": 2235903.0
+    },
+    {
+        "day_transaction": "2025-07-03",
+        "time_transaction": "Thursday 00:27:29",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến thẻ tín dụng ngoài MB - TK: 05269299359",
+        "amount": 813708.0
+    },
+    {
+        "day_transaction": "2025-07-01",
+        "time_transaction": "Tuesday 17:21:56",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến nickname ngoài MB - TK: 08610988011",
+        "amount": 4163087.0
+    },
+    {
+        "day_transaction": "2025-05-22",
+        "time_transaction": "Thursday 13:05:12",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản thanh toán trong MB - TK: 05559754307",
+        "amount": 1822862.0
+    },
+    {
+        "day_transaction": "2025-05-01",
+        "time_transaction": "Thursday 23:50:19",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Di động trả sau - TK: 04682431193",
+        "amount": 4029268.0
+    },
+    {
+        "day_transaction": "2025-05-14",
+        "time_transaction": "Wednesday 04:33:37",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền với số tiền < 1tr - TK: 07908805685",
+        "amount": 610826.0
+    },
+    {
+        "day_transaction": "2025-07-30",
+        "time_transaction": "Wednesday 15:54:10",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền gửi tiết kiệm - TK: 04626440469",
+        "amount": 3515776.0
+    },
+    {
+        "day_transaction": "2025-07-06",
+        "time_transaction": "Sunday 06:04:06",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền từ bank MB - TK: 05147612124",
+        "amount": 2200520.0
+    },
+    {
+        "day_transaction": "2025-06-30",
+        "time_transaction": "Monday 03:49:36",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Học phí - TK: 07410421456",
+        "amount": 1841406.0
+    },
+    {
+        "day_transaction": "2025-06-21",
+        "time_transaction": "Saturday 12:56:22",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền từ bank MB - TK: 09279038351",
+        "amount": 3045972.0
+    },
+    {
+        "day_transaction": "2025-06-22",
+        "time_transaction": "Sunday 06:38:54",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền ngoài giờ COB - TK: 05730197664",
+        "amount": 2491657.0
+    },
+    {
+        "day_transaction": "2025-06-08",
+        "time_transaction": "Sunday 23:09:15",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản có nội dung là thanh toán Grab - TK: 03427982496 - Thanh toán Grab",
+        "amount": 1725769.0
+    },
+    {
+        "day_transaction": "2025-06-23",
+        "time_transaction": "Monday 00:44:48",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản có tag là Mua nhà - TK: 08005716976 - Tag: Mua nhà",
+        "amount": 3872833.0
+    },
+    {
+        "day_transaction": "2025-07-25",
+        "time_transaction": "Friday 17:29:34",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán nước - TK: 02795168829",
+        "amount": 896849.0
+    },
+    {
+        "day_transaction": "2025-07-01",
+        "time_transaction": "Tuesday 08:47:32",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản có tag Đi lại - TK: 05117531495 - Tag: Đi lại",
+        "amount": 1902359.0
+    },
+    {
+        "day_transaction": "2025-06-10",
+        "time_transaction": "Tuesday 21:11:42",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản thấu chi trong MB - TK: 02296166407",
+        "amount": 3203380.0
+    },
+    {
+        "day_transaction": "2025-06-15",
+        "time_transaction": "Sunday 06:00:49",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản có tag là Mua nhà - TK: 01936134553 - Tag: Mua nhà",
+        "amount": 4257372.0
+    },
+    {
+        "day_transaction": "2025-07-15",
+        "time_transaction": "Tuesday 07:40:48",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Di động trả sau - TK: 03285242048",
+        "amount": 1309633.0
+    },
+    {
+        "day_transaction": "2025-05-07",
+        "time_transaction": "Wednesday 07:51:20",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Học phí - TK: 01933841868",
+        "amount": 2660819.0
+    },
+    {
+        "day_transaction": "2025-06-30",
+        "time_transaction": "Monday 14:40:38",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản thanh toán ngoài MB - TK: 04241764212",
+        "amount": 1648587.0
+    },
+    {
+        "day_transaction": "2025-07-04",
+        "time_transaction": "Friday 07:46:03",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản lương ngoài MB - TK: 04928012329 - Nhận lương",
+        "amount": 1414713.0
+    },
+    {
+        "day_transaction": "2025-06-25",
+        "time_transaction": "Wednesday 14:33:42",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền có nội dung chuyển tiền đến Hoa - TK: 02542823039 - Gửi Hoa",
+        "amount": 513484.0
+    },
+    {
+        "day_transaction": "2025-07-14",
+        "time_transaction": "Monday 18:02:52",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền có nội dung chuyển tiền đến Hoa - TK: 08184602613 - Gửi Hoa",
+        "amount": 1287039.0
+    },
+    {
+        "day_transaction": "2025-06-18",
+        "time_transaction": "Wednesday 12:07:59",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến thẻ tín dụng trong MB - TK: 02116686729",
+        "amount": 1206245.0
+    },
+    {
+        "day_transaction": "2025-05-10",
+        "time_transaction": "Saturday 11:01:21",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản thanh toán trong MB - TK: 04968487047",
+        "amount": 4703678.0
+    },
+    {
+        "day_transaction": "2025-05-31",
+        "time_transaction": "Saturday 11:07:54",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản có nội dung là thanh toán Grab - TK: 09362513746 - Thanh toán Grab",
+        "amount": 4532309.0
+    },
+    {
+        "day_transaction": "2025-05-30",
+        "time_transaction": "Friday 01:23:51",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Truyền hình cap - TK: 05135690127",
+        "amount": 451731.0
+    },
+    {
+        "day_transaction": "2025-07-18",
+        "time_transaction": "Friday 07:48:48",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền ngoài giờ COB - TK: 01656673588",
+        "amount": 4121594.0
+    },
+    {
+        "day_transaction": "2025-07-19",
+        "time_transaction": "Saturday 06:07:43",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản có nội dung là thanh toán Grab - TK: 02852652233 - Thanh toán Grab",
+        "amount": 1328428.0
+    },
+    {
+        "day_transaction": "2025-06-30",
+        "time_transaction": "Monday 01:41:32",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản thấu chi ngoài MB - TK: 09966176456",
+        "amount": 4224052.0
+    },
+    {
+        "day_transaction": "2025-05-29",
+        "time_transaction": "Thursday 13:04:14",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán thuế - TK: 05050466165",
+        "amount": 942010.0
+    },
+    {
+        "day_transaction": "2025-06-11",
+        "time_transaction": "Wednesday 17:48:19",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền có nội dung chuyển tiền đến Hoa - TK: 05989956807 - Gửi Hoa",
+        "amount": 2230778.0
+    },
+    {
+        "day_transaction": "2025-05-03",
+        "time_transaction": "Saturday 17:38:47",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến nickname ngoài MB - TK: 01193932255",
+        "amount": 1691853.0
+    },
+    {
+        "day_transaction": "2025-06-17",
+        "time_transaction": "Tuesday 15:47:04",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến nickname trong MB - TK: 03806040495",
+        "amount": 2447408.0
+    },
+    {
+        "day_transaction": "2025-07-23",
+        "time_transaction": "Wednesday 10:05:15",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền có nội dung chuyển tiền đến Hoa - TK: 04591198157 - Gửi Hoa",
+        "amount": 4393465.0
+    },
+    {
+        "day_transaction": "2025-05-07",
+        "time_transaction": "Wednesday 02:44:51",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền từ bank MB - TK: 01970899082",
+        "amount": 2949980.0
+    },
+    {
+        "day_transaction": "2025-05-01",
+        "time_transaction": "Thursday 04:53:01",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền với số tiền < 1tr - TK: 09798198823",
+        "amount": 561071.0
+    },
+    {
+        "day_transaction": "2025-06-05",
+        "time_transaction": "Thursday 23:07:30",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Chuyển Tiền vào ngày holiday - TK: 06819446698",
+        "amount": 103653.0
+    },
+    {
+        "day_transaction": "2025-07-09",
+        "time_transaction": "Wednesday 17:41:14",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản lương ngoài MB - TK: 03896574182 - Nhận lương",
+        "amount": 2202696.0
+    },
+    {
+        "day_transaction": "2025-06-17",
+        "time_transaction": "Tuesday 19:45:15",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền lương - TK: 09942475158 - Nhận lương",
+        "amount": 3326676.0
+    },
+    {
+        "day_transaction": "2025-07-15",
+        "time_transaction": "Tuesday 09:51:33",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán thuế - TK: 04666810590",
+        "amount": 1268493.0
+    },
+    {
+        "day_transaction": "2025-05-24",
+        "time_transaction": "Saturday 18:09:21",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Học phí - TK: 05221328311",
+        "amount": 1510239.0
+    },
+    {
+        "day_transaction": "2025-06-18",
+        "time_transaction": "Wednesday 22:21:47",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Chuyển Tiền vào ngày holiday - TK: 03926552608",
+        "amount": 2659326.0
+    },
+    {
+        "day_transaction": "2025-05-31",
+        "time_transaction": "Saturday 18:31:39",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền lương - TK: 08308974362 - Nhận lương",
+        "amount": 2090786.0
+    },
+    {
+        "day_transaction": "2025-07-29",
+        "time_transaction": "Tuesday 19:37:27",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Chuyển Tiền vào ngày holiday - TK: 09972226527",
+        "amount": 3479087.0
+    },
+    {
+        "day_transaction": "2025-05-06",
+        "time_transaction": "Tuesday 12:35:48",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền từ bank MB - TK: 02404471381",
+        "amount": 1076538.0
+    },
+    {
+        "day_transaction": "2025-06-28",
+        "time_transaction": "Saturday 08:08:15",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền gửi tiết kiệm - TK: 01718254458",
+        "amount": 827983.0
+    },
+    {
+        "day_transaction": "2025-05-05",
+        "time_transaction": "Monday 02:40:32",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán nước - TK: 07944629405",
+        "amount": 2406236.0
+    },
+    {
+        "day_transaction": "2025-05-17",
+        "time_transaction": "Saturday 00:58:45",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến nickname trong MB - TK: 05385935822",
+        "amount": 4496251.0
+    },
+    {
+        "day_transaction": "2025-07-15",
+        "time_transaction": "Tuesday 08:59:37",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán thuế - TK: 01989134009",
+        "amount": 4708372.0
+    },
+    {
+        "day_transaction": "2025-06-03",
+        "time_transaction": "Tuesday 17:37:15",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền có nội dung chuyển tiền đến Hoa - TK: 01846295315 - Gửi Hoa",
+        "amount": 2576203.0
+    },
+    {
+        "day_transaction": "2025-07-22",
+        "time_transaction": "Tuesday 03:37:57",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán nước - TK: 06032083478",
+        "amount": 857514.0
+    },
+    {
+        "day_transaction": "2025-07-07",
+        "time_transaction": "Monday 08:34:43",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền từ ví điện tử - TK: 05262302841",
+        "amount": 656586.0
+    },
+    {
+        "day_transaction": "2025-07-05",
+        "time_transaction": "Saturday 18:26:23",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền lương - TK: 09001110868 - Nhận lương",
+        "amount": 840048.0
+    },
+    {
+        "day_transaction": "2025-07-12",
+        "time_transaction": "Saturday 00:42:50",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán điện - TK: 08166261872",
+        "amount": 1336783.0
+    },
+    {
+        "day_transaction": "2025-07-24",
+        "time_transaction": "Thursday 08:03:54",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền gửi tiết kiệm - TK: 01849425082",
+        "amount": 1613891.0
+    },
+    {
+        "day_transaction": "2025-05-08",
+        "time_transaction": "Thursday 23:50:06",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Chuyển Tiền vào ngày holiday - TK: 03423008938",
+        "amount": 2440851.0
+    },
+    {
+        "day_transaction": "2025-05-05",
+        "time_transaction": "Monday 18:25:55",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Thanh toán VietQR - TK: 03308426751",
+        "amount": 3703185.0
+    },
+    {
+        "day_transaction": "2025-06-01",
+        "time_transaction": "Sunday 20:31:21",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản có tag Đi lại - TK: 02412866798 - Tag: Đi lại",
+        "amount": 3214938.0
+    },
+    {
+        "day_transaction": "2025-06-25",
+        "time_transaction": "Wednesday 10:12:01",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền có nội dung chuyển tiền đến Lan - TK: 06151107392 - Gửi Lan",
+        "amount": 4195331.0
+    },
+    {
+        "day_transaction": "2025-05-15",
+        "time_transaction": "Thursday 14:47:38",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến thẻ tín dụng trong MB - TK: 08300577950",
+        "amount": 4014106.0
+    },
+    {
+        "day_transaction": "2025-05-24",
+        "time_transaction": "Saturday 09:58:21",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Di động trả sau - TK: 09550146126",
+        "amount": 1515612.0
+    },
+    {
+        "day_transaction": "2025-05-05",
+        "time_transaction": "Monday 13:08:27",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền có nội dung chuyển tiền đến Lan - TK: 04001505703 - Gửi Lan",
+        "amount": 1708474.0
+    },
+    {
+        "day_transaction": "2025-05-09",
+        "time_transaction": "Friday 12:59:08",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển tiền đến ví điện tử - TK: 01736181286",
+        "amount": 3495696.0
+    },
+    {
+        "day_transaction": "2025-07-04",
+        "time_transaction": "Friday 19:56:30",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến nickname ngoài MB - TK: 01464384907",
+        "amount": 942368.0
+    },
+    {
+        "day_transaction": "2025-06-07",
+        "time_transaction": "Saturday 03:43:42",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến hoa số tiền hơn 3tr - TK: 04233555114",
+        "amount": 3358972.0
+    },
+    {
+        "day_transaction": "2025-06-11",
+        "time_transaction": "Wednesday 02:06:56",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền có nội dung chuyển tiền đến Lan - TK: 09151505587 - Gửi Lan",
+        "amount": 433257.0
+    },
+    {
+        "day_transaction": "2025-05-07",
+        "time_transaction": "Wednesday 00:59:48",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền ngoài giờ COB - TK: 05482304374",
+        "amount": 820743.0
+    },
+    {
+        "day_transaction": "2025-06-22",
+        "time_transaction": "Sunday 12:24:00",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền có nội dung chuyển tiền đến Hoa - TK: 02999639815 - Gửi Hoa",
+        "amount": 3622736.0
+    },
+    {
+        "day_transaction": "2025-07-05",
+        "time_transaction": "Saturday 17:03:57",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền có nội dung chuyển tiền đến Linh - TK: 05637350745 - Gửi Linh",
+        "amount": 336440.0
+    },
+    {
+        "day_transaction": "2025-06-08",
+        "time_transaction": "Sunday 20:48:18",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến hoa số tiền hơn 3tr - TK: 01544982577",
+        "amount": 4030829.0
+    },
+    {
+        "day_transaction": "2025-05-14",
+        "time_transaction": "Wednesday 18:41:32",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền gửi tiết kiệm - TK: 02180589003",
+        "amount": 4967408.0
+    },
+    {
+        "day_transaction": "2025-07-07",
+        "time_transaction": "Monday 23:24:56",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản thanh toán trong MB - TK: 07553132468",
+        "amount": 570482.0
+    },
+    {
+        "day_transaction": "2025-05-19",
+        "time_transaction": "Monday 16:45:56",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản có tag Đi lại - TK: 05235986264 - Tag: Đi lại",
+        "amount": 3363452.0
+    },
+    {
+        "day_transaction": "2025-05-30",
+        "time_transaction": "Friday 18:55:18",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền với số tiền < 1tr - TK: 04502474672",
+        "amount": 615953.0
+    },
+    {
+        "day_transaction": "2025-05-29",
+        "time_transaction": "Thursday 22:38:22",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Chuyển Tiền vào ngày holiday - TK: 05261057131",
+        "amount": 3476952.0
+    },
+    {
+        "day_transaction": "2025-07-30",
+        "time_transaction": "Wednesday 08:30:04",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Học phí - TK: 05538528372",
+        "amount": 2490267.0
+    },
+    {
+        "day_transaction": "2025-05-05",
+        "time_transaction": "Monday 17:52:21",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán điện - TK: 09291196797",
+        "amount": 4336404.0
+    },
+    {
+        "day_transaction": "2025-05-31",
+        "time_transaction": "Saturday 21:36:21",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến nickname ngoài MB - TK: 05533233909",
+        "amount": 867099.0
+    },
+    {
+        "day_transaction": "2025-06-18",
+        "time_transaction": "Wednesday 07:40:16",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản có tag là Mua sắm - TK: 02318258662 - Tag: Mua sắm",
+        "amount": 4007233.0
+    },
+    {
+        "day_transaction": "2025-05-03",
+        "time_transaction": "Saturday 15:46:14",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Học phí - TK: 03531417675",
+        "amount": 4183333.0
+    },
+    {
+        "day_transaction": "2025-07-12",
+        "time_transaction": "Saturday 20:33:58",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán thuế - TK: 05776525565",
+        "amount": 1535014.0
+    },
+    {
+        "day_transaction": "2025-07-15",
+        "time_transaction": "Tuesday 17:34:45",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền có nội dung chuyển tiền đến Hoa - TK: 08768385536 - Gửi Hoa",
+        "amount": 1258279.0
+    },
+    {
+        "day_transaction": "2025-07-30",
+        "time_transaction": "Wednesday 04:17:20",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến hoa số tiền hơn 3tr - TK: 06866896983",
+        "amount": 4868976.0
+    },
+    {
+        "day_transaction": "2025-05-12",
+        "time_transaction": "Monday 07:16:29",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển tiền đến ví điện tử - TK: 06446142376",
+        "amount": 2041723.0
+    },
+    {
+        "day_transaction": "2025-07-12",
+        "time_transaction": "Saturday 12:21:17",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán nước - TK: 08113666223",
+        "amount": 1607750.0
+    },
+    {
+        "day_transaction": "2025-06-30",
+        "time_transaction": "Monday 17:44:36",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền có nội dung chuyển tiền đến Linh - TK: 05160017013 - Gửi Linh",
+        "amount": 3307969.0
+    },
+    {
+        "day_transaction": "2025-05-02",
+        "time_transaction": "Friday 22:02:53",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến thẻ tín dụng trong MB - TK: 06384963850",
+        "amount": 2935589.0
+    },
+    {
+        "day_transaction": "2025-07-14",
+        "time_transaction": "Monday 00:51:42",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản có tag là Mua sắm - TK: 01313178213 - Tag: Mua sắm",
+        "amount": 3363451.0
+    },
+    {
+        "day_transaction": "2025-05-03",
+        "time_transaction": "Saturday 14:22:43",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển tiền đến ví điện tử - TK: 05397401994",
+        "amount": 150170.0
+    },
+    {
+        "day_transaction": "2025-06-04",
+        "time_transaction": "Wednesday 15:02:46",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến thẻ tín dụng ngoài MB - TK: 02806816488",
+        "amount": 232334.0
+    },
+    {
+        "day_transaction": "2025-05-13",
+        "time_transaction": "Tuesday 18:43:54",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Học phí - TK: 05903557187",
+        "amount": 2038450.0
+    },
+    {
+        "day_transaction": "2025-06-04",
+        "time_transaction": "Wednesday 01:09:04",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản lương ngoài MB - TK: 04030731167 - Nhận lương",
+        "amount": 4294141.0
+    },
+    {
+        "day_transaction": "2025-07-17",
+        "time_transaction": "Thursday 19:55:12",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán nước - TK: 09781254431",
+        "amount": 4421585.0
+    },
+    {
+        "day_transaction": "2025-05-20",
+        "time_transaction": "Tuesday 23:52:36",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển tiền đến ví điện tử - TK: 02048235454",
+        "amount": 4664269.0
+    },
+    {
+        "day_transaction": "2025-07-05",
+        "time_transaction": "Saturday 08:38:45",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản thấu chi ngoài MB - TK: 06217163883",
+        "amount": 3426957.0
+    },
+    {
+        "day_transaction": "2025-05-27",
+        "time_transaction": "Tuesday 06:55:35",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến thẻ tín dụng trong MB - TK: 02748584322",
+        "amount": 4652005.0
+    },
+    {
+        "day_transaction": "2025-06-14",
+        "time_transaction": "Saturday 16:11:56",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến nickname trong MB - TK: 03909725191",
+        "amount": 3719837.0
+    },
+    {
+        "day_transaction": "2025-05-24",
+        "time_transaction": "Saturday 14:38:52",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Học phí - TK: 01914073329",
+        "amount": 3216742.0
+    },
+    {
+        "day_transaction": "2025-05-16",
+        "time_transaction": "Friday 06:35:27",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản thấu chi trong MB - TK: 07253129065",
+        "amount": 2436832.0
+    },
+    {
+        "day_transaction": "2025-06-26",
+        "time_transaction": "Thursday 06:09:34",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản lương trong MB - TK: 06119027820 - Nhận lương",
+        "amount": 3556306.0
+    },
+    {
+        "day_transaction": "2025-06-26",
+        "time_transaction": "Thursday 21:37:06",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản có tag Đi lại - TK: 07106294984 - Tag: Đi lại",
+        "amount": 1813040.0
+    },
+    {
+        "day_transaction": "2025-07-22",
+        "time_transaction": "Tuesday 17:26:16",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản có tag là Mua sắm - TK: 04874517912 - Tag: Mua sắm",
+        "amount": 4016607.0
+    },
+    {
+        "day_transaction": "2025-07-02",
+        "time_transaction": "Wednesday 09:25:00",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền có nội dung chuyển tiền đến Linh - TK: 04321142040 - Gửi Linh",
+        "amount": 1019975.0
+    },
+    {
+        "day_transaction": "2025-05-04",
+        "time_transaction": "Sunday 18:50:04",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản có tag là Mua sắm - TK: 06392295066 - Tag: Mua sắm",
+        "amount": 3133773.0
+    },
+    {
+        "day_transaction": "2025-07-17",
+        "time_transaction": "Thursday 22:04:28",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán thuế - TK: 08869705296",
+        "amount": 4442641.0
+    },
+    {
+        "day_transaction": "2025-05-09",
+        "time_transaction": "Friday 13:55:24",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền từ bank khác - TK: 01461411481",
+        "amount": 4523250.0
+    },
+    {
+        "day_transaction": "2025-07-05",
+        "time_transaction": "Saturday 18:54:07",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền lương - TK: 02907681066 - Nhận lương",
+        "amount": 1227150.0
+    },
+    {
+        "day_transaction": "2025-06-22",
+        "time_transaction": "Sunday 16:23:37",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền có nội dung chuyển tiền đến Hoa - TK: 04748532198 - Gửi Hoa",
+        "amount": 4148729.0
+    },
+    {
+        "day_transaction": "2025-05-09",
+        "time_transaction": "Friday 13:06:41",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán điện - TK: 07844491977",
+        "amount": 3002751.0
+    },
+    {
+        "day_transaction": "2025-05-03",
+        "time_transaction": "Saturday 17:26:27",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền lương - TK: 07247600173 - Nhận lương",
+        "amount": 2081591.0
+    },
+    {
+        "day_transaction": "2025-06-24",
+        "time_transaction": "Tuesday 19:57:07",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Chuyển Tiền vào ngày holiday - TK: 04310196635",
+        "amount": 2130409.0
+    },
+    {
+        "day_transaction": "2025-05-10",
+        "time_transaction": "Saturday 14:32:38",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển tiền đến ví điện tử - TK: 08799197696",
+        "amount": 3835950.0
+    },
+    {
+        "day_transaction": "2025-07-19",
+        "time_transaction": "Saturday 08:34:18",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến thẻ tín dụng ngoài MB - TK: 01222672644",
+        "amount": 3677695.0
+    },
+    {
+        "day_transaction": "2025-07-09",
+        "time_transaction": "Wednesday 16:06:18",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Học phí - TK: 08639655198",
+        "amount": 3280973.0
+    },
+    {
+        "day_transaction": "2025-07-22",
+        "time_transaction": "Tuesday 07:01:57",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản thấu chi ngoài MB - TK: 01152477797",
+        "amount": 143348.0
+    },
+    {
+        "day_transaction": "2025-06-29",
+        "time_transaction": "Sunday 13:39:33",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến thẻ tín dụng ngoài MB - TK: 08865787406",
+        "amount": 1570540.0
+    },
+    {
+        "day_transaction": "2025-07-22",
+        "time_transaction": "Tuesday 07:43:13",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến hoa số tiền hơn 3tr - TK: 06257893789",
+        "amount": 3640453.0
+    },
+    {
+        "day_transaction": "2025-07-02",
+        "time_transaction": "Wednesday 13:01:23",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền từ bank khác - TK: 08309468694",
+        "amount": 4571657.0
+    },
+    {
+        "day_transaction": "2025-06-11",
+        "time_transaction": "Wednesday 04:33:20",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Thanh toán VietQR - TK: 01499023420",
+        "amount": 2050856.0
+    },
+    {
+        "day_transaction": "2025-05-11",
+        "time_transaction": "Sunday 00:09:39",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền có nội dung chuyển tiền đến Linh - TK: 09431626052 - Gửi Linh",
+        "amount": 2178132.0
+    },
+    {
+        "day_transaction": "2025-06-08",
+        "time_transaction": "Sunday 05:07:34",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản thấu chi ngoài MB - TK: 02590234504",
+        "amount": 2092873.0
+    },
+    {
+        "day_transaction": "2025-05-25",
+        "time_transaction": "Sunday 19:39:10",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến nickname ngoài MB - TK: 06363810991",
+        "amount": 414470.0
+    },
+    {
+        "day_transaction": "2025-06-12",
+        "time_transaction": "Thursday 01:13:39",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Internet - TK: 04192352983",
+        "amount": 2283678.0
+    },
+    {
+        "day_transaction": "2025-05-14",
+        "time_transaction": "Wednesday 21:43:57",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến thẻ tín dụng trong MB - TK: 03163819915",
+        "amount": 3732177.0
+    },
+    {
+        "day_transaction": "2025-05-16",
+        "time_transaction": "Friday 21:24:56",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Di động trả sau - TK: 08793316615",
+        "amount": 4697222.0
+    },
+    {
+        "day_transaction": "2025-07-15",
+        "time_transaction": "Tuesday 21:03:17",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản thấu chi trong MB - TK: 03737822446",
+        "amount": 3578350.0
+    },
+    {
+        "day_transaction": "2025-07-05",
+        "time_transaction": "Saturday 10:38:33",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản lương trong MB - TK: 05543402511 - Nhận lương",
+        "amount": 606340.0
+    },
+    {
+        "day_transaction": "2025-05-14",
+        "time_transaction": "Wednesday 10:51:47",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền ngoài giờ COB - TK: 08930942370",
+        "amount": 3090201.0
+    },
+    {
+        "day_transaction": "2025-05-05",
+        "time_transaction": "Monday 10:33:32",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền với số tiền > 5tr - TK: 07948135258",
+        "amount": 6524367.0
+    },
+    {
+        "day_transaction": "2025-07-20",
+        "time_transaction": "Sunday 00:19:31",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến hoa số tiền hơn 3tr - TK: 09917784410",
+        "amount": 4564717.0
+    },
+    {
+        "day_transaction": "2025-05-24",
+        "time_transaction": "Saturday 17:37:30",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền từ bank khác - TK: 07582206878",
+        "amount": 2472043.0
+    },
+    {
+        "day_transaction": "2025-05-04",
+        "time_transaction": "Sunday 15:24:27",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản thanh toán trong MB - TK: 03292049692",
+        "amount": 2956159.0
+    },
+    {
+        "day_transaction": "2025-07-15",
+        "time_transaction": "Tuesday 15:22:22",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền với số tiền > 5tr - TK: 01786697077",
+        "amount": 7968416.0
+    },
+    {
+        "day_transaction": "2025-05-04",
+        "time_transaction": "Sunday 09:03:49",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền từ bank MB - TK: 03690991319",
+        "amount": 1199334.0
+    },
+    {
+        "day_transaction": "2025-05-11",
+        "time_transaction": "Sunday 14:19:59",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền có nội dung chuyển tiền đến Lan - TK: 01291987969 - Gửi Lan",
+        "amount": 1683715.0
+    },
+    {
+        "day_transaction": "2025-06-22",
+        "time_transaction": "Sunday 15:17:51",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản thấu chi ngoài MB - TK: 08128408788",
+        "amount": 3827836.0
+    },
+    {
+        "day_transaction": "2025-05-08",
+        "time_transaction": "Thursday 15:06:34",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Học phí - TK: 03116267057",
+        "amount": 4825431.0
+    },
+    {
+        "day_transaction": "2025-07-09",
+        "time_transaction": "Wednesday 14:47:58",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến nickname ngoài MB - TK: 04193419843",
+        "amount": 128747.0
+    },
+    {
+        "day_transaction": "2025-05-22",
+        "time_transaction": "Thursday 19:29:00",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến nickname trong MB - TK: 03470269870",
+        "amount": 4686269.0
+    },
+    {
+        "day_transaction": "2025-05-08",
+        "time_transaction": "Thursday 10:50:51",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Truyền hình cap - TK: 08313943035",
+        "amount": 2318153.0
+    },
+    {
+        "day_transaction": "2025-06-28",
+        "time_transaction": "Saturday 01:58:38",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Di động trả sau - TK: 03198836133",
+        "amount": 1102516.0
+    },
+    {
+        "day_transaction": "2025-05-03",
+        "time_transaction": "Saturday 10:31:43",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Di động trả sau - TK: 02586630960",
+        "amount": 3035541.0
+    },
+    {
+        "day_transaction": "2025-06-17",
+        "time_transaction": "Tuesday 17:33:38",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản thấu chi ngoài MB - TK: 04049764223",
+        "amount": 282550.0
+    },
+    {
+        "day_transaction": "2025-06-01",
+        "time_transaction": "Sunday 23:28:48",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản có tag là Mua nhà - TK: 09514862335 - Tag: Mua nhà",
+        "amount": 3368696.0
+    },
+    {
+        "day_transaction": "2025-05-25",
+        "time_transaction": "Sunday 15:11:04",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản thanh toán ngoài MB - TK: 08031379359",
+        "amount": 3714967.0
+    },
+    {
+        "day_transaction": "2025-06-04",
+        "time_transaction": "Wednesday 09:22:04",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán điện - TK: 01847405462",
+        "amount": 3021250.0
+    },
+    {
+        "day_transaction": "2025-06-29",
+        "time_transaction": "Sunday 22:54:06",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền từ bank MB - TK: 05410632552",
+        "amount": 4651455.0
+    },
+    {
+        "day_transaction": "2025-06-27",
+        "time_transaction": "Friday 22:34:22",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Di động trả sau - TK: 09750059921",
+        "amount": 3179655.0
+    },
+    {
+        "day_transaction": "2025-05-13",
+        "time_transaction": "Tuesday 21:39:34",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán nước - TK: 04196182074",
+        "amount": 3245275.0
+    },
+    {
+        "day_transaction": "2025-05-16",
+        "time_transaction": "Friday 05:33:15",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền từ bank khác - TK: 04147140050",
+        "amount": 4888886.0
+    },
+    {
+        "day_transaction": "2025-06-20",
+        "time_transaction": "Friday 23:08:14",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền với số tiền > 5tr - TK: 08359238386",
+        "amount": 7184596.0
+    },
+    {
+        "day_transaction": "2025-05-07",
+        "time_transaction": "Wednesday 06:06:00",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Chuyển Tiền vào ngày holiday - TK: 05894303850",
+        "amount": 1350631.0
+    },
+    {
+        "day_transaction": "2025-06-22",
+        "time_transaction": "Sunday 05:05:06",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản có tag là Mua sắm - TK: 05708027367 - Tag: Mua sắm",
+        "amount": 3347707.0
+    },
+    {
+        "day_transaction": "2025-06-20",
+        "time_transaction": "Friday 08:56:29",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản lương trong MB - TK: 09985253587 - Nhận lương",
+        "amount": 3232655.0
+    },
+    {
+        "day_transaction": "2025-05-01",
+        "time_transaction": "Thursday 20:10:03",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản lương trong MB - TK: 02503845977 - Nhận lương",
+        "amount": 430513.0
+    },
+    {
+        "day_transaction": "2025-07-30",
+        "time_transaction": "Wednesday 16:01:58",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến nickname ngoài MB - TK: 02472212390",
+        "amount": 3683913.0
+    },
+    {
+        "day_transaction": "2025-06-09",
+        "time_transaction": "Monday 23:48:33",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền từ bank MB - TK: 02203640405",
+        "amount": 4162805.0
+    },
+    {
+        "day_transaction": "2025-05-08",
+        "time_transaction": "Thursday 18:11:51",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến hoa số tiền hơn 3tr - TK: 04017411939",
+        "amount": 4187739.0
+    },
+    {
+        "day_transaction": "2025-05-29",
+        "time_transaction": "Thursday 06:46:19",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản có tag Đi lại - TK: 09800111199 - Tag: Đi lại",
+        "amount": 1209481.0
+    },
+    {
+        "day_transaction": "2025-05-05",
+        "time_transaction": "Monday 09:12:33",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền từ ví điện tử - TK: 07815714058",
+        "amount": 1281155.0
+    },
+    {
+        "day_transaction": "2025-06-18",
+        "time_transaction": "Wednesday 01:23:10",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Internet - TK: 04511460236",
+        "amount": 2398520.0
+    },
+    {
+        "day_transaction": "2025-06-29",
+        "time_transaction": "Sunday 18:08:50",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán nước - TK: 09079714133",
+        "amount": 4291327.0
+    },
+    {
+        "day_transaction": "2025-07-28",
+        "time_transaction": "Monday 06:09:39",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Chuyển Tiền vào ngày holiday - TK: 09966602964",
+        "amount": 2286664.0
+    },
+    {
+        "day_transaction": "2025-06-21",
+        "time_transaction": "Saturday 11:37:19",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền có nội dung chuyển tiền đến Hoa - TK: 09426386848 - Gửi Hoa",
+        "amount": 601744.0
+    },
+    {
+        "day_transaction": "2025-05-25",
+        "time_transaction": "Sunday 10:03:38",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến nickname trong MB - TK: 07368221427",
+        "amount": 1730857.0
+    },
+    {
+        "day_transaction": "2025-06-14",
+        "time_transaction": "Saturday 15:57:49",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến thẻ tín dụng ngoài MB - TK: 01742243016",
+        "amount": 3054732.0
+    },
+    {
+        "day_transaction": "2025-07-09",
+        "time_transaction": "Wednesday 05:45:32",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Thanh toán VietQR - TK: 01581215441",
+        "amount": 1279434.0
+    },
+    {
+        "day_transaction": "2025-07-03",
+        "time_transaction": "Thursday 12:16:33",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản thanh toán trong MB - TK: 05172797767",
+        "amount": 4191593.0
+    },
+    {
+        "day_transaction": "2025-05-29",
+        "time_transaction": "Thursday 15:39:29",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản lương ngoài MB - TK: 02148436572 - Nhận lương",
+        "amount": 2997169.0
+    },
+    {
+        "day_transaction": "2025-06-30",
+        "time_transaction": "Monday 14:52:00",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền gửi tiết kiệm - TK: 01768278650",
+        "amount": 1925109.0
+    },
+    {
+        "day_transaction": "2025-06-29",
+        "time_transaction": "Sunday 15:41:51",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Thanh toán VietQR - TK: 08982496035",
+        "amount": 3822453.0
+    },
+    {
+        "day_transaction": "2025-06-26",
+        "time_transaction": "Thursday 15:07:48",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản có nội dung là thanh toán Grab - TK: 06603662124 - Thanh toán Grab",
+        "amount": 2195667.0
+    },
+    {
+        "day_transaction": "2025-06-06",
+        "time_transaction": "Friday 04:48:00",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản lương ngoài MB - TK: 08260806643 - Nhận lương",
+        "amount": 3132300.0
+    },
+    {
+        "day_transaction": "2025-07-23",
+        "time_transaction": "Wednesday 12:59:44",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền có nội dung chuyển tiền đến Linh - TK: 05023077108 - Gửi Linh",
+        "amount": 4358505.0
+    },
+    {
+        "day_transaction": "2025-05-20",
+        "time_transaction": "Tuesday 02:35:03",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến nickname ngoài MB - TK: 02222026874",
+        "amount": 2790798.0
+    },
+    {
+        "day_transaction": "2025-07-03",
+        "time_transaction": "Thursday 00:08:19",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản có tag là Mua nhà - TK: 09792097405 - Tag: Mua nhà",
+        "amount": 1599762.0
+    },
+    {
+        "day_transaction": "2025-07-01",
+        "time_transaction": "Tuesday 15:18:10",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Internet - TK: 08639158864",
+        "amount": 989294.0
+    },
+    {
+        "day_transaction": "2025-05-03",
+        "time_transaction": "Saturday 01:47:52",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Truyền hình cap - TK: 07683081933",
+        "amount": 1264080.0
+    },
+    {
+        "day_transaction": "2025-07-30",
+        "time_transaction": "Wednesday 18:14:20",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền có nội dung chuyển tiền đến Lan - TK: 04069055351 - Gửi Lan",
+        "amount": 2492012.0
+    },
+    {
+        "day_transaction": "2025-05-29",
+        "time_transaction": "Thursday 14:54:07",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản có tag Đi lại - TK: 06034700470 - Tag: Đi lại",
+        "amount": 3671934.0
+    },
+    {
+        "day_transaction": "2025-07-10",
+        "time_transaction": "Thursday 03:35:06",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Học phí - TK: 08198148792",
+        "amount": 2887054.0
+    },
+    {
+        "day_transaction": "2025-05-28",
+        "time_transaction": "Wednesday 18:39:09",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Di động trả sau - TK: 02392345531",
+        "amount": 1617846.0
+    },
+    {
+        "day_transaction": "2025-07-16",
+        "time_transaction": "Wednesday 01:52:39",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản thanh toán ngoài MB - TK: 07650720571",
+        "amount": 3178350.0
+    },
+    {
+        "day_transaction": "2025-06-10",
+        "time_transaction": "Tuesday 14:36:49",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền gửi tiết kiệm - TK: 06965356107",
+        "amount": 1473135.0
+    },
+    {
+        "day_transaction": "2025-05-25",
+        "time_transaction": "Sunday 15:26:45",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản lương ngoài MB - TK: 03974853965 - Nhận lương",
+        "amount": 783870.0
+    },
+    {
+        "day_transaction": "2025-06-26",
+        "time_transaction": "Thursday 18:23:52",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển tiền đến ví điện tử - TK: 04050725615",
+        "amount": 2091171.0
+    },
+    {
+        "day_transaction": "2025-06-25",
+        "time_transaction": "Wednesday 03:09:49",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Chuyển Tiền vào ngày holiday - TK: 07626514394",
+        "amount": 1262681.0
+    },
+    {
+        "day_transaction": "2025-06-09",
+        "time_transaction": "Monday 16:32:37",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán điện - TK: 08848755431",
+        "amount": 2257394.0
+    },
+    {
+        "day_transaction": "2025-07-15",
+        "time_transaction": "Tuesday 18:04:32",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Internet - TK: 08433567627",
+        "amount": 2251250.0
+    },
+    {
+        "day_transaction": "2025-06-16",
+        "time_transaction": "Monday 02:39:48",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản thanh toán ngoài MB - TK: 05364829352",
+        "amount": 4235063.0
+    },
+    {
+        "day_transaction": "2025-07-16",
+        "time_transaction": "Wednesday 06:00:04",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản có tag là Mua nhà - TK: 04844914017 - Tag: Mua nhà",
+        "amount": 4755985.0
+    },
+    {
+        "day_transaction": "2025-06-24",
+        "time_transaction": "Tuesday 11:34:02",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản lương ngoài MB - TK: 04131601383 - Nhận lương",
+        "amount": 3939982.0
+    },
+    {
+        "day_transaction": "2025-06-14",
+        "time_transaction": "Saturday 00:50:14",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán thuế - TK: 08169905530",
+        "amount": 3272851.0
+    },
+    {
+        "day_transaction": "2025-06-07",
+        "time_transaction": "Saturday 14:35:22",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản thấu chi ngoài MB - TK: 09936530047",
+        "amount": 4293114.0
+    },
+    {
+        "day_transaction": "2025-06-03",
+        "time_transaction": "Tuesday 16:33:45",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến nickname trong MB - TK: 04967802083",
+        "amount": 4086023.0
+    },
+    {
+        "day_transaction": "2025-07-16",
+        "time_transaction": "Wednesday 04:42:15",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Học phí - TK: 07185220788",
+        "amount": 3432043.0
+    },
+    {
+        "day_transaction": "2025-07-24",
+        "time_transaction": "Thursday 19:18:02",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Học phí - TK: 06181324914",
+        "amount": 4147503.0
+    },
+    {
+        "day_transaction": "2025-05-26",
+        "time_transaction": "Monday 01:04:41",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền có nội dung chuyển tiền đến Hoa - TK: 04985909871 - Gửi Hoa",
+        "amount": 130463.0
+    },
+    {
+        "day_transaction": "2025-06-13",
+        "time_transaction": "Friday 09:49:29",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến nickname trong MB - TK: 09175660467",
+        "amount": 3817060.0
+    },
+    {
+        "day_transaction": "2025-06-03",
+        "time_transaction": "Tuesday 14:58:12",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản thấu chi ngoài MB - TK: 06275334092",
+        "amount": 380190.0
+    },
+    {
+        "day_transaction": "2025-07-10",
+        "time_transaction": "Thursday 21:05:40",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản thanh toán ngoài MB - TK: 07341652771",
+        "amount": 827820.0
+    },
+    {
+        "day_transaction": "2025-06-14",
+        "time_transaction": "Saturday 18:44:31",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán nước - TK: 07031430800",
+        "amount": 1901986.0
+    },
+    {
+        "day_transaction": "2025-06-13",
+        "time_transaction": "Friday 19:07:48",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Di động trả sau - TK: 06961779112",
+        "amount": 693536.0
+    },
+    {
+        "day_transaction": "2025-06-02",
+        "time_transaction": "Monday 13:03:08",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến nickname ngoài MB - TK: 03056829094",
+        "amount": 1634217.0
+    },
+    {
+        "day_transaction": "2025-06-20",
+        "time_transaction": "Friday 11:48:16",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán nước - TK: 01401285063",
+        "amount": 1084956.0
+    },
+    {
+        "day_transaction": "2025-06-27",
+        "time_transaction": "Friday 09:28:56",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản thanh toán trong MB - TK: 02291920129",
+        "amount": 3943472.0
+    },
+    {
+        "day_transaction": "2025-06-04",
+        "time_transaction": "Wednesday 21:12:41",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán điện - TK: 04082476330",
+        "amount": 2249447.0
+    },
+    {
+        "day_transaction": "2025-06-23",
+        "time_transaction": "Monday 10:42:03",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản có tag Đi lại - TK: 02737239395 - Tag: Đi lại",
+        "amount": 1506567.0
+    },
+    {
+        "day_transaction": "2025-06-14",
+        "time_transaction": "Saturday 11:56:36",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán nước - TK: 07571330328",
+        "amount": 3954573.0
+    },
+    {
+        "day_transaction": "2025-06-30",
+        "time_transaction": "Monday 18:36:56",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán điện - TK: 06305563820",
+        "amount": 2563175.0
+    },
+    {
+        "day_transaction": "2025-06-11",
+        "time_transaction": "Wednesday 17:11:27",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản thấu chi ngoài MB - TK: 07766510000",
+        "amount": 2074141.0
+    },
+    {
+        "day_transaction": "2025-07-30",
+        "time_transaction": "Wednesday 15:18:15",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản thanh toán trong MB - TK: 06091213672",
+        "amount": 2607357.0
+    },
+    {
+        "day_transaction": "2025-06-08",
+        "time_transaction": "Sunday 01:28:52",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền có nội dung chuyển tiền đến Lan - TK: 06142858055 - Gửi Lan",
+        "amount": 3559155.0
+    },
+    {
+        "day_transaction": "2025-05-19",
+        "time_transaction": "Monday 21:45:25",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển tiền đến ví điện tử - TK: 03807724337",
+        "amount": 1874123.0
+    },
+    {
+        "day_transaction": "2025-06-17",
+        "time_transaction": "Tuesday 06:25:44",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền từ bank khác - TK: 06334055705",
+        "amount": 3155409.0
+    },
+    {
+        "day_transaction": "2025-07-23",
+        "time_transaction": "Wednesday 17:41:03",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Thanh toán VietQR - TK: 07189326655",
+        "amount": 2659248.0
+    },
+    {
+        "day_transaction": "2025-06-23",
+        "time_transaction": "Monday 12:53:47",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản có tag là Mua nhà - TK: 07217151814 - Tag: Mua nhà",
+        "amount": 1535058.0
+    },
+    {
+        "day_transaction": "2025-06-17",
+        "time_transaction": "Tuesday 17:51:27",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Thanh toán VietQR - TK: 08492808188",
+        "amount": 1242001.0
+    },
+    {
+        "day_transaction": "2025-05-02",
+        "time_transaction": "Friday 19:54:46",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản lương ngoài MB - TK: 03372944901 - Nhận lương",
+        "amount": 3133956.0
+    },
+    {
+        "day_transaction": "2025-06-12",
+        "time_transaction": "Thursday 11:19:37",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển tiền đến ví điện tử - TK: 07299461073",
+        "amount": 3830785.0
+    },
+    {
+        "day_transaction": "2025-07-04",
+        "time_transaction": "Friday 04:46:04",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển tiền đến ví điện tử - TK: 03874021498",
+        "amount": 3916769.0
+    },
+    {
+        "day_transaction": "2025-06-28",
+        "time_transaction": "Saturday 17:14:10",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền từ bank khác - TK: 03242841042",
+        "amount": 173236.0
+    },
+    {
+        "day_transaction": "2025-07-28",
+        "time_transaction": "Monday 22:49:24",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền lương - TK: 05518033326 - Nhận lương",
+        "amount": 306561.0
+    },
+    {
+        "day_transaction": "2025-06-23",
+        "time_transaction": "Monday 11:20:50",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền với số tiền > 5tr - TK: 04287283679",
+        "amount": 7390403.0
+    },
+    {
+        "day_transaction": "2025-06-25",
+        "time_transaction": "Wednesday 09:52:16",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản thanh toán ngoài MB - TK: 04529781695",
+        "amount": 1173456.0
+    },
+    {
+        "day_transaction": "2025-05-10",
+        "time_transaction": "Saturday 00:11:42",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản có nội dung là thanh toán Grab - TK: 03936338725 - Thanh toán Grab",
+        "amount": 1118571.0
+    },
+    {
+        "day_transaction": "2025-06-01",
+        "time_transaction": "Sunday 17:41:30",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản có tag là Mua sắm - TK: 06504672670 - Tag: Mua sắm",
+        "amount": 1573267.0
+    },
+    {
+        "day_transaction": "2025-05-08",
+        "time_transaction": "Thursday 13:14:34",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán điện - TK: 03009948528",
+        "amount": 279811.0
+    },
+    {
+        "day_transaction": "2025-06-26",
+        "time_transaction": "Thursday 06:29:22",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán thuế - TK: 07135158718",
+        "amount": 815344.0
+    },
+    {
+        "day_transaction": "2025-05-03",
+        "time_transaction": "Saturday 09:51:46",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Thanh toán VietQR - TK: 04174131214",
+        "amount": 895883.0
+    },
+    {
+        "day_transaction": "2025-05-17",
+        "time_transaction": "Saturday 01:29:28",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền với số tiền > 5tr - TK: 02204737350",
+        "amount": 8112179.0
+    },
+    {
+        "day_transaction": "2025-05-09",
+        "time_transaction": "Friday 01:06:10",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản thanh toán ngoài MB - TK: 09883343831",
+        "amount": 4598471.0
+    },
+    {
+        "day_transaction": "2025-06-07",
+        "time_transaction": "Saturday 14:40:12",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản lương ngoài MB - TK: 04830211719 - Nhận lương",
+        "amount": 3262040.0
+    },
+    {
+        "day_transaction": "2025-06-01",
+        "time_transaction": "Sunday 19:24:52",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán nước - TK: 04024146507",
+        "amount": 1244445.0
+    },
+    {
+        "day_transaction": "2025-05-17",
+        "time_transaction": "Saturday 12:24:26",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản lương ngoài MB - TK: 02610782848 - Nhận lương",
+        "amount": 450725.0
+    },
+    {
+        "day_transaction": "2025-05-19",
+        "time_transaction": "Monday 06:43:12",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Internet - TK: 04711806661",
+        "amount": 2407155.0
+    },
+    {
+        "day_transaction": "2025-06-25",
+        "time_transaction": "Wednesday 03:04:03",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền có nội dung chuyển tiền đến Hoa - TK: 02257092664 - Gửi Hoa",
+        "amount": 1310805.0
+    },
+    {
+        "day_transaction": "2025-06-21",
+        "time_transaction": "Saturday 19:13:51",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền có nội dung chuyển tiền đến Lan - TK: 01292435461 - Gửi Lan",
+        "amount": 902171.0
+    },
+    {
+        "day_transaction": "2025-07-18",
+        "time_transaction": "Friday 09:54:50",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản có tag là Mua sắm - TK: 04434844466 - Tag: Mua sắm",
+        "amount": 184069.0
+    },
+    {
+        "day_transaction": "2025-07-15",
+        "time_transaction": "Tuesday 20:03:06",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền có nội dung chuyển tiền đến Hoa - TK: 07713427272 - Gửi Hoa",
+        "amount": 3179949.0
+    },
+    {
+        "day_transaction": "2025-07-10",
+        "time_transaction": "Thursday 03:23:04",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản lương ngoài MB - TK: 06832375307 - Nhận lương",
+        "amount": 480152.0
+    },
+    {
+        "day_transaction": "2025-05-15",
+        "time_transaction": "Thursday 15:21:11",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản lương ngoài MB - TK: 02498994959 - Nhận lương",
+        "amount": 2771115.0
+    },
+    {
+        "day_transaction": "2025-06-23",
+        "time_transaction": "Monday 12:18:49",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền từ ví điện tử - TK: 03608160024",
+        "amount": 737077.0
+    },
+    {
+        "day_transaction": "2025-07-07",
+        "time_transaction": "Monday 03:01:13",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền từ ví điện tử - TK: 05815526551",
+        "amount": 4611051.0
+    },
+    {
+        "day_transaction": "2025-05-14",
+        "time_transaction": "Wednesday 03:11:51",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản thấu chi trong MB - TK: 05977778446",
+        "amount": 2326046.0
+    },
+    {
+        "day_transaction": "2025-07-22",
+        "time_transaction": "Tuesday 17:37:17",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Internet - TK: 02457201991",
+        "amount": 3072348.0
+    },
+    {
+        "day_transaction": "2025-07-31",
+        "time_transaction": "Thursday 09:09:40",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền từ bank MB - TK: 07919487231",
+        "amount": 2660697.0
+    },
+    {
+        "day_transaction": "2025-07-19",
+        "time_transaction": "Saturday 12:34:43",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản thấu chi trong MB - TK: 03687851738",
+        "amount": 3730301.0
+    },
+    {
+        "day_transaction": "2025-07-18",
+        "time_transaction": "Friday 01:15:40",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền từ bank MB - TK: 05669838501",
+        "amount": 4794548.0
+    },
+    {
+        "day_transaction": "2025-05-02",
+        "time_transaction": "Friday 01:08:17",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản có nội dung là thanh toán Grab - TK: 06843227479 - Thanh toán Grab",
+        "amount": 3472127.0
+    },
+    {
+        "day_transaction": "2025-06-02",
+        "time_transaction": "Monday 03:22:09",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Học phí - TK: 02759627047",
+        "amount": 4123207.0
+    },
+    {
+        "day_transaction": "2025-07-11",
+        "time_transaction": "Friday 10:27:02",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền với số tiền > 5tr - TK: 02496147315",
+        "amount": 7037471.0
+    },
+    {
+        "day_transaction": "2025-06-23",
+        "time_transaction": "Monday 15:26:34",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Truyền hình cap - TK: 06701538176",
+        "amount": 3405134.0
+    },
+    {
+        "day_transaction": "2025-05-27",
+        "time_transaction": "Tuesday 01:33:35",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản lương ngoài MB - TK: 03050614182 - Nhận lương",
+        "amount": 1255239.0
+    },
+    {
+        "day_transaction": "2025-06-23",
+        "time_transaction": "Monday 17:02:20",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền từ ví điện tử - TK: 07035855323",
+        "amount": 1787114.0
+    },
+    {
+        "day_transaction": "2025-06-04",
+        "time_transaction": "Wednesday 09:48:47",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến nickname trong MB - TK: 08289127994",
+        "amount": 2800622.0
+    },
+    {
+        "day_transaction": "2025-07-16",
+        "time_transaction": "Wednesday 02:50:36",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản thanh toán ngoài MB - TK: 09754526878",
+        "amount": 2697406.0
+    },
+    {
+        "day_transaction": "2025-06-25",
+        "time_transaction": "Wednesday 00:21:46",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền với số tiền > 5tr - TK: 04114492397",
+        "amount": 6321977.0
+    },
+    {
+        "day_transaction": "2025-06-27",
+        "time_transaction": "Friday 11:42:48",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền gửi tiết kiệm - TK: 06427935256",
+        "amount": 3820383.0
+    },
+    {
+        "day_transaction": "2025-06-23",
+        "time_transaction": "Monday 06:55:56",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản thấu chi ngoài MB - TK: 04668602366",
+        "amount": 1428662.0
+    },
+    {
+        "day_transaction": "2025-07-06",
+        "time_transaction": "Sunday 05:42:09",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền có nội dung chuyển tiền đến Lan - TK: 02247105755 - Gửi Lan",
+        "amount": 3716122.0
+    },
+    {
+        "day_transaction": "2025-07-01",
+        "time_transaction": "Tuesday 17:25:16",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản có tag Đi lại - TK: 06059217338 - Tag: Đi lại",
+        "amount": 654884.0
+    },
+    {
+        "day_transaction": "2025-06-07",
+        "time_transaction": "Saturday 18:02:37",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền từ bank khác - TK: 07204873513",
+        "amount": 2757064.0
+    },
+    {
+        "day_transaction": "2025-07-09",
+        "time_transaction": "Wednesday 01:36:42",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Internet - TK: 06960639081",
+        "amount": 4557495.0
+    },
+    {
+        "day_transaction": "2025-06-21",
+        "time_transaction": "Saturday 15:54:16",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến thẻ tín dụng ngoài MB - TK: 03456606910",
+        "amount": 1118296.0
+    },
+    {
+        "day_transaction": "2025-07-10",
+        "time_transaction": "Thursday 14:55:59",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền với số tiền > 5tr - TK: 05246713780",
+        "amount": 7136100.0
+    },
+    {
+        "day_transaction": "2025-07-05",
+        "time_transaction": "Saturday 08:17:14",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền có nội dung chuyển tiền đến Hoa - TK: 04913733580 - Gửi Hoa",
+        "amount": 335148.0
+    },
+    {
+        "day_transaction": "2025-05-18",
+        "time_transaction": "Sunday 13:06:22",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản có tag Đi lại - TK: 09383622273 - Tag: Đi lại",
+        "amount": 4522505.0
+    },
+    {
+        "day_transaction": "2025-06-22",
+        "time_transaction": "Sunday 10:30:27",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền từ bank khác - TK: 08623549271",
+        "amount": 1303445.0
+    },
+    {
+        "day_transaction": "2025-07-31",
+        "time_transaction": "Thursday 18:35:42",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán điện - TK: 06384634961",
+        "amount": 2983008.0
+    },
+    {
+        "day_transaction": "2025-07-18",
+        "time_transaction": "Friday 17:55:18",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến nickname trong MB - TK: 08826731833",
+        "amount": 1769885.0
+    },
+    {
+        "day_transaction": "2025-05-27",
+        "time_transaction": "Tuesday 08:53:15",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản lương trong MB - TK: 01821457585 - Nhận lương",
+        "amount": 3343953.0
+    },
+    {
+        "day_transaction": "2025-07-17",
+        "time_transaction": "Thursday 04:20:25",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền với số tiền > 5tr - TK: 04778687716",
+        "amount": 6386070.0
+    },
+    {
+        "day_transaction": "2025-05-07",
+        "time_transaction": "Wednesday 06:24:37",
+        "type_transaction": "Tiền vào",
+        "content_transaction": "Nhận tiền gửi tiết kiệm - TK: 06224553023",
+        "amount": 2870632.0
+    },
+    {
+        "day_transaction": "2025-07-04",
+        "time_transaction": "Friday 06:54:08",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Truyền hình cap - TK: 05850705956",
+        "amount": 4793558.0
+    },
+    {
+        "day_transaction": "2025-07-29",
+        "time_transaction": "Tuesday 09:49:52",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền có nội dung chuyển tiền đến Hoa - TK: 07648349353 - Gửi Hoa",
+        "amount": 1075367.0
+    },
+    {
+        "day_transaction": "2025-07-28",
+        "time_transaction": "Monday 10:18:32",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản thấu chi trong MB - TK: 03177814629",
+        "amount": 631107.0
+    },
+    {
+        "day_transaction": "2025-06-12",
+        "time_transaction": "Thursday 23:19:33",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền ngoài giờ COB - TK: 03058702802",
+        "amount": 231698.0
+    },
+    {
+        "day_transaction": "2025-06-11",
+        "time_transaction": "Wednesday 22:43:17",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán điện - TK: 03804189992",
+        "amount": 552636.0
+    },
+    {
+        "day_transaction": "2025-06-26",
+        "time_transaction": "Thursday 08:45:40",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản thanh toán trong MB - TK: 08575055589",
+        "amount": 4269032.0
+    },
+    {
+        "day_transaction": "2025-07-25",
+        "time_transaction": "Friday 23:05:47",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển tiền đến ví điện tử - TK: 07043617043",
+        "amount": 1728229.0
+    },
+    {
+        "day_transaction": "2025-05-31",
+        "time_transaction": "Saturday 14:13:24",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản thanh toán trong MB - TK: 05685466460",
+        "amount": 4910814.0
+    },
+    {
+        "day_transaction": "2025-05-22",
+        "time_transaction": "Thursday 10:05:18",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán Internet - TK: 07001851730",
+        "amount": 4216216.0
+    },
+    {
+        "day_transaction": "2025-06-22",
+        "time_transaction": "Sunday 13:52:20",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán nước - TK: 04322224064",
+        "amount": 4700081.0
+    },
+    {
+        "day_transaction": "2025-05-25",
+        "time_transaction": "Sunday 03:05:14",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Thanh toán VietQR - TK: 07451732927",
+        "amount": 2196521.0
+    },
+    {
+        "day_transaction": "2025-06-30",
+        "time_transaction": "Monday 05:31:50",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến thẻ tín dụng ngoài MB - TK: 02814960554",
+        "amount": 3988186.0
+    },
+    {
+        "day_transaction": "2025-07-23",
+        "time_transaction": "Wednesday 13:59:22",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Tài Khoản thấu chi ngoài MB - TK: 05683649576",
+        "amount": 4737032.0
+    },
+    {
+        "day_transaction": "2025-05-11",
+        "time_transaction": "Sunday 12:34:08",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Chuyển Tiền đến Số Tài Khoản thanh toán trong MB - TK: 02359421597",
+        "amount": 3066303.0
+    },
+    {
+        "day_transaction": "2025-07-08",
+        "time_transaction": "Tuesday 02:20:27",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán thuế - TK: 01180748216",
+        "amount": 4134484.0
+    },
+    {
+        "day_transaction": "2025-07-09",
+        "time_transaction": "Wednesday 14:46:22",
+        "type_transaction": "Tiền ra",
+        "content_transaction": "Giao dịch thanh toán nước - TK: 07461378391",
+        "amount": 1371556.0
+    }
+]

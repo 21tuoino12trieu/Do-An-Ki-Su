@@ -1,0 +1,8 @@
+mcp_config:
+  jira:
+    token_enc_key: f3289NFD765&$Vr75,/df;#^$%!lkmVS
+    jira_base_url: https://jira.mbbank.com.vn
+    jira_mcp_url: http://beegen-mcp-api.tanzu-dev.mbbank.com.vn/sse
+
+  hr_info:
+    mcp_url: http://beegen-mcp-api.tanzu-dev.mbbank.com.vn/sse

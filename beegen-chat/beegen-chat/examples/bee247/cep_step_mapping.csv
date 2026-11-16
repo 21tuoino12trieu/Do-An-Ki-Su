@@ -1,0 +1,25 @@
+﻿nhóm,tên,step
+2.1,"Các giao dịch thu chi hộ cho Payoo thu hộ, IRIS, EVN HCM, VNPAY QR, VIETTEL","- Tạo phiếu trên hệ thống CEP
+o	Với Yêu cầu Kiểm tra trạng thái GD: 
+	Chọn Form: Tra soát/ Đối soát qua tài khoản/ Kiểm tra trạng thái GD - Payoo thu hộ, IRIS, EVN HCM, VNPAY QR
+	Dán dữ liệu 360 từ giao dịch KH yêu cầu tra soát
+	Lưu phiếu tại user tạo (tác vụ tự động gửi Phòng Đối soát). Kết quả yêu cầu sẽ được nhân sự thuộc team tuyến 2 Xuất dữ liệu xử lý, SMS báo KQ cho KH theo lô.
+o	Với Yêu cầu Cung cấp chứng từ GD
+	Chọn Form: Tra soát/ Đối soát qua tài khoản/ Cung cấp chứng từ GD - Payoo thu hộ, IRIS, EVN HCM, VNPAY QR	
+	Dán dữ liệu 360
+	Lưu phiếu và chuyển phiếu của MB247back. Kết quả yêu cầu sẽ được nhân sự thuộc team tuyến 2 lấy KQ từ Phòng đối soát và thông báo KQ tới KH.
+-	Lưu ý: SLA phản hồi kết quả cho từng nhóm như sau: (không kể thứ 7, CN, ngày lễ)
+o	Kiểm tra trạng thái: 5 ngày làm việc (không kể T7, CN, ngày lễ)
+o	Cung cấp chứng từ GD: 7 ngày LV"
+2.2,"Các giao dịch thanh toán, thu chi hộ khác (Payoo (ví, cổng), Moca, Momo, VNPay, Zalopay…)","-Tạo phiếu trên hệ thống CEP:
+o	Yêu cầu Kiểm tra trạng thái GD:
+	Chọn Form: Tra soát/ Đối soát qua tài khoản/ Kiểm tra trạng thái GD - Payoo (ví, cổng), Moca, Momo, VNPay, Zalopay,…
+	Dán dữ liệu 360
+	Lưu phiếu tại user tạo (tác vụ tự động gửi Phòng Đối soát). Kết quả yêu cầu sẽ được nhân sự thuộc team tuyến 2 Xuất dữ liệu xử lý, SMS báo KQ cho KH theo lô.
+o	Yêu cầu Cung cấp chứng từ GD:
+	Chọn Form: Tra soát/ Đối soát qua tài khoản/ Cung cấp chứng từ GD - Payoo (ví, cổng), Moca, Momo, VNPay, Zalopay,…
+	Dán dữ liệu 360
+	Lưu phiếu và chuyển phiếu cho MB247back. Kết quả yêu cầu sẽ được nhân sự thuộc team tuyến 2 lấy KQ từ Phòng đối soát và thông báo KQ tới KH.
+-	Lưu ý: SLA phản hồi kết quả cho từng nhóm  như sau: (không kể thứ 7, CN, ngày lễ)
+o	Kiểm tra trạng thái: 4 ngày làm việc
+o	Cung cấp chứng từ GD: 7 ngày làm việc"

@@ -1,0 +1,14 @@
+secret_key: REPLACE_WITH_LOCAL_SECRET
+public_key: pk-lf-93d8aa5d-424b-4e31-96f3-d09fc5b2b24f
+host: https://ai-langfuse-dev.mbbank.com.vn
+no_proxy: "NO_PROXY"
+debug: false
+timeout: 20
+
+langfuse_beegen_chat:
+  secret_key: REPLACE_WITH_LOCAL_SECRET
+  public_key: pk-lf-93d8aa5d-424b-4e31-96f3-d09fc5b2b24f
+  host: https://ai-langfuse-dev.mbbank.com.vn
+  no_proxy: "*.mbbank.com.vn"
+  debug: false
+  timeout: 20

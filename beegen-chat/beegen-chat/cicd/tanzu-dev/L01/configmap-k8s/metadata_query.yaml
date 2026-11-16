@@ -1,0 +1,6 @@
+database:
+  schema: meta_poc   # dev
+  # schema: meta     # live
+
+tables:
+  tables_with_columns: v_tables_with_columns

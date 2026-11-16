@@ -431,7 +431,7 @@ if __name__ == "__main__":
     # Initialize with Langfuse connection parameters
     bee_langfuse = BeeLangfuse(
         public_key="pk-lf-93d8aa5d-424b-4e31-96f3-d09fc5b2b24f",
-        secret_key="sk-lf-fd1619a2-fd78-4060-b49b-58b0476f1be6",
+        secret_key="REPLACE_WITH_LOCAL_SECRET",
         host="http://ai-platform-langfuse.tanzu-dev.mbbank.com.vn",
     )
     

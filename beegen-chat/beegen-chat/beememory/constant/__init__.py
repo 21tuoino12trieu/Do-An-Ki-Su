@@ -1,0 +1,1 @@
+from .app_constant import db, model, milvus_client, embedding_model

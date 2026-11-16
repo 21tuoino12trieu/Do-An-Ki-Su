@@ -1,0 +1,15 @@
+alias: default
+uri: http://10.216.66.53:19530
+db_name: ai_nlp_db
+username: ai_nlp_user
+password: Milvus@123
+connection_pool_size: 100
+enable_ssl: false
+timeout: 10.0
+index_params:
+  index_type: IVF_FLAT
+  metric_type: COSINE
+  params:
+    nlist: 1024
+search_params:
+  nprobe: 10

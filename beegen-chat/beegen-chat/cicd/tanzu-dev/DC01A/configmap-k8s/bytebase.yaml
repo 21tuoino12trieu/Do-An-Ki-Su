@@ -1,0 +1,7 @@
+domain: "https://10.215.105.81"
+email: "ai_beegen@service.bytebase.com"
+password: "REPLACE_WITH_LOCAL_SECRET"
+data_source_id: "475998c5-b552-4be6-ad10-1d3d4fa55b91"
+instance: "dev-tckt---10u1u39u155"
+database: "APPS"
+limit: 10

@@ -66,3 +66,10 @@ MongoDB thử nghiệm dùng Atlas theo cấu hình hiện tại. Schema Postgre
 - [Sơ đồ Use Case và cách chỉnh sửa](docs/use-cases/README.md).
 
 Mã nguồn tham khảo nằm trong `beegen-ingestion/`, `beegen-portal-api/`, `beegen-chat/`, `beedoc/` và `beeflow/`. Điểm kế thừa/thay đổi được dẫn trực tiếp trong thiết kế; các nhánh nghiệp vụ khác không tự thuộc phạm vi đồ án.
+
+## Cấu hình sau khi clone
+
+- Các module được lưu trực tiếp trong repository; không cần khởi tạo Git submodule.
+- Sao chép `config/beeflow.example.yaml` thành `config/beeflow.yaml`, rồi điền kết nối MongoDB của môi trường.
+- File `.env`, khóa riêng và cấu hình resource chứa thông tin đăng nhập được giữ ở local, không đưa lên Git.
+- Các giá trị `REPLACE_WITH_LOCAL_SECRET`, `REPLACE_WITH_LOCAL_TOKEN` và `LOCAL_PASSWORD` trong code tham khảo là chỗ trống cần cấu hình trước khi chạy nhánh tương ứng.

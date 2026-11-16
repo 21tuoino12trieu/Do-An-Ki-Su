@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+ 
+[tool.setuptools.packages.find]
+# Include all packages you want
+include = ["beedoc*","config*"]
+# Or exclude unwanted ones
+exclude = ["tests*", "assets*", "**/__pycache__", "__pycache__/*", "*.py[cod]"]
+
+[project]
+name = "beedoc"
+version = "0.2.0"
+description = "init"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "beeflow>=1.0.5.dev20260513164258",
+    "docx2pdf>=0.1.8,<0.2.0",
+    "numpy>=1.26.0,<3.0.0",
+    "openpyxl>=3.1.2,<4.0.0",
+    "pandas>=2.2.0,<3.0.0",
+    "Pillow>11.3.0",
+    "PyMuPDF>=1.24.0,<2.0.0",
+    "python-dotenv>=1.0.1,<2.0.0",
+    "rapidfuzz>=3.9.0,<4.0.0"
+]
+
+[[tool.uv.index]]
+url = "http://beegen-core_dev:LOCAL_PASSWORD@10.1.12.177:8445/repository/repo-pypi-host-beegen-core/simple"
+default = true
+
+[tool.pytest.ini_options]
+addopts = "-ra"
+filterwarnings = [
+  "ignore::DeprecationWarning",
+  "ignore:.*SwigPy.*:DeprecationWarning",
+  "ignore:.*swigvarlink.*:DeprecationWarning",
+  "ignore:.*utcnow\\(\\) is deprecated.*:DeprecationWarning:botocore\\..*",
+]

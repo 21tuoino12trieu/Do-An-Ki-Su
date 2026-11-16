@@ -1,0 +1,31 @@
+vault.hashicorp.com/tls-skip-verify: "true"
+traffic.sidecar.istio.io/excludeOutboundPorts: "8200,8203"
+vault.hashicorp.com/service: https://vault-dev.mbbank.com.vn:8203
+vault.hashicorp.com/agent-inject: 'true'
+vault.hashicorp.com/role: 'r-c0-134-f-2nfonce1'
+vault.hashicorp.com/auth-path: 'auth/kubernetes-tanzu-mb-dev-ai-cluster'
+vault.hashicorp.com/agent-pre-populate-only: 'true'
+vault.hashicorp.com/agent-requests-cpu: '50m'
+vault.hashicorp.com/agent-limits-cpu: '100m'
+vault-hashicorp-com-agent-requests-mem: '50Mi'
+vault.hashicorp.com/agent-limits-mem: '100Mi'
+vault.hashicorp.com/agent-cache-enable: 'true'
+vault.hashicorp.com/agent-revoke-on-shutdown: 'true'
+vault.hashicorp.com/secret-volume-path: /deployment/sc
+vault.hashicorp.com/agent-inject-secret-service-account.json: 'kv/c0/dev-l01/i-02-10/dev-chatbot-beegen/F-2NFOnce1Tlw_lYG9zfXearf6id_2VAIRFEu0p8LWTMEy257sNPVyloLO3lfkBD97oIxFUFYzaChrEa63iMPuWCgGxVEvmO2bchpkLCj_iepUhINg4qHapjo9kpWXF-k86czql4PTKjTcjNacEjsN-JFq4As09mqCMGmWgB0gk='
+vault.hashicorp.com/agent-inject-template-service-account.json: |
+  {{ with secret "kv/c0/dev-l01/i-02-10/dev-chatbot-beegen/F-2NFOnce1Tlw_lYG9zfXearf6id_2VAIRFEu0p8LWTMEy257sNPVyloLO3lfkBD97oIxFUFYzaChrEa63iMPuWCgGxVEvmO2bchpkLCj_iepUhINg4qHapjo9kpWXF-k86czql4PTKjTcjNacEjsN-JFq4As09mqCMGmWgB0gk=" -}}
+  {
+    "type": "{{ .Data.data.type }}",
+    "project_id": "{{ .Data.data.project_id }}",
+    "private_key_id": "{{ .Data.data.private_key_id }}",
+    "private_key": {{ printf "%q" .Data.data.private_key }},
+    "client_email": "{{ .Data.data.client_email }}",
+    "client_id": "{{ .Data.data.client_id }}",
+    "auth_uri": "{{ .Data.data.auth_uri }}",
+    "token_uri": "{{ .Data.data.token_uri }}",
+    "auth_provider_x509_cert_url": "{{ .Data.data.auth_provider_x509_cert_url }}",
+    "client_x509_cert_url": "{{ .Data.data.client_x509_cert_url }}",
+    "universe_domain": "{{ .Data.data.universe_domain }}"
+  }
+  {{- end }}

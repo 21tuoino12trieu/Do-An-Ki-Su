@@ -1,0 +1,347 @@
+import asyncio
+import sys
+from typing import List, Optional, Dict, Any
+
+from beegen.tools.schema.param import ParamSet
+# Force use of SelectorEventLoop on Windows
+if sys.platform == 'win32':
+    asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+
+from beeflow.configs.node_config import NodeType
+from beeflow.configs.graph_config import GraphNodeConfig
+from beeflow.nodes.graph.graph_node import GraphNode
+    
+    
+class BasicChainNode(GraphNode):
+    """A basic chain that combines prompt formatting, LLM generation, and optional parsing.
+    
+    This node creates a complete LLM processing pipeline that can handle:
+    - Simple text generation (prompt → LLM)
+    - Structured output generation (prompt → LLM → parser)
+    
+    The pipeline automatically detects the processing mode based on output_schema:
+    - If output_schema is provided: Creates a 3-stage pipeline (Prompt → LLM → Parser)
+    - If output_schema is empty: Creates a 2-stage pipeline (Prompt → LLM) 
+    
+    1. **Text Generation Mode** (when output_schema is empty):
+       ```
+       Input → PromptNode → LLMNode → Output
+       ```
+       - Takes input variables and formats them into prompts
+       - Generates text using the specified LLM model
+       - Returns raw LLM output (content, role, etc.)
+    
+    2. **Structured Output Mode** (when output_schema is provided):
+       ```
+       Input → PromptNode → LLMNode → ParserNode → Output
+       ```
+       - Takes input variables and formats them into prompts
+       - Generates text using the specified LLM model
+       - Parses the LLM output into structured data based on output_schema
+       - Returns parsed structured data
+    
+    Features:
+    - **Auto-variable detection**: Automatically extracts variables from prompt templates
+    - **Flexible prompting**: Supports both system and user prompts
+    - **Thinking mode**: Can enable/disable LLM thinking process
+    - **Streaming support**: Supports real-time output streaming
+    - **Parser integration**: Automatic parsing of structured outputs
+    
+    Args:
+        model: LLM model identifier to use for generation
+        user_prompt: User prompt template with {variable} placeholders
+        system_prompt: Optional system prompt template
+        output_schema: List of output variables for structured parsing (e.g. ["result: str", "confidence: float"])
+        parser: Parser format for structured output ("xml", "json", etc.)
+        llm_configs: forwards it directly (after filtering out None and invalid keys) to the LLMNode.
+    
+    Example Usage:
+        ```python
+        # Simple text generation
+        pipeline = BasicChainNode(
+            name="summarizer",
+            model="gpt-4",
+            user_prompt="Summarize this text: {text}",
+            system_prompt="You are a helpful summarization assistant."
+        )
+        
+        # Structured output generation
+        pipeline = BasicChainNode(
+            name="classifier",
+            model="gpt-4", 
+            user_prompt="Classify this text: {text}",
+            output_schema=["category: str", "confidence: float"],
+            parser="xml"
+        )
+        ```
+    """
+        # Allowed keys (aligned with LLMNode.input_schema)
+    _LLM_ALLOWED_KEYS = {
+        # Special: "messages" is assigned internally, not accepted from llm_config
+        # IO & context
+        "response",
+        # Generation controls
+        "temperature", "max_tokens", "top_p", "top_k",
+        "frequency_penalty", "presence_penalty", "repetition_penalty",
+        # Chat/template/behavior
+        "chat_template_kwargs", "stream_options", "system_prompt",
+        "stop_sequences", "seed",
+        # Response format
+        "response_format", "json_schema",
+        # Safety
+        "safety_settings", "content_filter_level",
+        # Context & memory
+        "context_window", "conversation_id", "memory_key",
+        # Retry/error handling
+        "max_retries", "retry_delay", "timeout",
+        # Tools
+        "tools", "tool_choice",
+        # Reasoning
+        "reasoning_effort"
+    }
+    
+    input_schema: ParamSet = (
+        ParamSet.new()
+        .var("customdata: Dict[str, Any] = {}")
+        .var("status_code: int = 200")
+        .build()
+    )
+
+    def __init__(
+        self,
+        resource_key: Optional[str] = None,
+        user_prompt: Optional[str] = None,
+        system_prompt: Optional[str] = None,
+        messages_template: Optional[List[Dict[str, Any]]] = None,
+        extract_schema: Optional[List[str]] = None,
+        parser: str = "xml",
+        llm_configs: Optional[Dict[str, Any]] = None,
+        **kwargs
+    ):
+        """Initialize LLMPipelineNode from either config or kwargs.
+        
+        Args:
+            config: Optional LLMPipelineNodeConfig object. If provided, other args are ignored.
+            name: Node name
+            model: LLM model identifier
+            user_prompt: User prompt template with {variable} placeholders  
+            system_prompt: Optional system prompt template
+            output_schema: List of output variables for structured parsing
+            output_response_format: A dictionary where each key is a top-level field defined in output_schema, and each value is the parent path (which may be nested) used to locate that field in the output.
+            parser: Parser format ("xml", "json", etc.)
+            description: Node description
+            inputs: Input variable mappings
+            stream: Whether to enable streaming
+            **kwargs: Additional keyword arguments
+        """
+        super().__init__(**kwargs)
+        
+        self.resource_key = resource_key
+        self.user_prompt = user_prompt
+        self.system_prompt = system_prompt
+        self.messages_template = messages_template
+        self.extract_schema = extract_schema
+        self.parser = parser
+        self.llm_configs = llm_configs or {}
+        
+        self._build_graph()
+
+    @classmethod
+    def _filter_llm_config(cls, cfg: Optional[Dict[str, Any]]) -> Dict[str, Any]:
+        """
+        Keep only allowed keys and values that are not None.
+        Do not allow overriding 'messages' from outside.
+        """
+        if not cfg:
+            return {}
+        filtered: Dict[str, Any] = {}
+        for k, v in cfg.items():
+            if k == "messages":
+                # 'messages' is handled internally by BasicChain
+                continue
+            if k in cls._LLM_ALLOWED_KEYS and v is not None:
+                filtered[k] = v
+        return filtered
+    
+    def _build_graph(self):
+        """Build the internal processing graph based on configuration."""
+        from beeflow.nodes import PromptNode, LLMNode, ParserNode, INPUT, START, END, INPUT, OUTPUT
+        
+        def sub(suffix: str) -> str:
+            """Generate sub-node name with namespace."""
+            return suffix
+        
+        # Build the pipeline graph
+        with self:
+            # Step 1: Create prompt formatting node
+            _prompt = PromptNode(
+                name=sub("prompt"),
+                system_prompt=self.system_prompt,
+                user_prompt=self.user_prompt,
+                messages_template=self.messages_template,
+                inputs=INPUT
+            )
+            llm_overrides = self._filter_llm_config(self.llm_configs)
+            llm_inputs: Dict[str, Any] = {
+                    "messages": _prompt,
+                    "docs": INPUT,
+                    "custom_data": INPUT,
+                    "status_code": INPUT
+                }
+            llm_inputs.update(llm_overrides)  # Only override when value != None
+            
+            if self.extract_schema:
+                # Mode 1: Structured output pipeline (Prompt → LLM → Parser)
+                _llm = LLMNode(
+                    name=sub("llm"),
+                    resource_key=self.resource_key,
+                    inputs=llm_inputs,
+                    stream=getattr(self, 'stream', False)
+                )
+                
+                _parser = ParserNode(
+                    name=sub("parser"),
+                    format=self.parser,
+                    extract_schema=self.extract_schema,
+                    inputs={"text": _llm["content"]},
+                    outputs=OUTPUT
+                )
+                
+                # Connect the pipeline
+                START >> _prompt >> _llm >> _parser >> END
+                
+            else:
+                # Mode 2: Simple text generation pipeline (Prompt → LLM)            
+                _llm = LLMNode(
+                    name=sub("llm"),
+                    resource_key=self.resource_key,
+                    inputs=llm_inputs,
+                    outputs=OUTPUT,
+                    stream=getattr(self, 'stream', False)
+                )
+                
+                # Connect the pipeline
+                START >> _prompt >> _llm >> END
+            
+        # Build the internal graph
+        self.build()
+
+
+async def example1():
+    """Example usage of LLMPipelineNode."""
+    from beeflow.states.workflow_indexer import WorkflowIndexer
+    from beeflow.states.workflow_state import WorkflowState
+    from beeflow.nodes.base_node import INPUT, OUTPUT
+    from beegen.prompts.beeapp import CONTENT_FILTER_PROMPT
+
+    # Example 1: Structured output pipeline
+    print("=== Example 1: Content Filter with Structured Output ===")
+    
+    filter_pipeline = BasicChainNode(
+        name="content_filter",
+        description="Pipeline for filtering inappropriate content",
+        resource_key="qwen-instruct",
+        user_prompt=CONTENT_FILTER_PROMPT,
+        extract_schema=["filter_type: str", "confidence: float"],
+        inputs=INPUT,
+        outputs=OUTPUT,
+        parser="xml",
+        llm_configs={"custom_data": {"env": "production"}},
+        stream=True
+    )
+    
+    indexer = WorkflowIndexer(name="workflow01").add_node(filter_pipeline).build()
+        
+    state = WorkflowState(
+        indexer=indexer, 
+        inputs={"query": "thằng khốn, tao kill mày"}
+    )
+    
+    await filter_pipeline.run(state=state)
+    
+    print(filter_pipeline.get_result(state))
+    
+
+async def example2():
+    
+    from beeflow.states.workflow_indexer import WorkflowIndexer
+    from beeflow.states.workflow_state import WorkflowState
+    from beeflow.nodes.base_node import INPUT, OUTPUT
+    
+    print("\n=== Example 2: Simple Text Generation ===")
+    
+    # Example 2: Simple text generation pipeline
+    summarizer = BasicChainNode(
+        name="summarizer",
+        description="Pipeline for text summarization",
+        resource_key="qwen-instruct",
+        system_prompt="You are a helpful summarization assistant.",
+        user_prompt="Please summarize the following text in 2-3 sentences: {text}",
+        inputs={("text", "docs", "status_code"): INPUT},
+        outputs=OUTPUT,
+        stream=True
+    )
+        
+    indexer = WorkflowIndexer(name="workflow01").add_node(summarizer).build()
+    
+    state = WorkflowState(
+        indexer=indexer, 
+        inputs={
+            "text": "Artificial intelligence (AI) is intelligence demonstrated by machines, in contrast to the natural intelligence displayed by humans and animals. Leading AI textbooks define the field as the study of 'intelligent agents': any device that perceives its environment and takes actions that maximize its chance of successfully achieving its goals.",
+            "docs": [],
+            "status_code": 200
+        }
+    )
+    
+    await summarizer.run(state=state)
+    
+    print(summarizer.get_result(state))
+        
+    
+async def vlm_test():
+    
+    from beeflow.states.workflow_indexer import WorkflowIndexer
+    from beeflow.states.workflow_state import WorkflowState
+    from beeflow.nodes.base_node import INPUT, OUTPUT
+    
+    vlm_node = BasicChainNode(
+        name="ocr",
+        resource_key="qwen-vl",
+        messages_template=[
+            {
+                "role": "system",
+                "content": "Bạn là chuyên gia bóc tách thông tin trong ảnh",
+            },
+            {
+                "role": "user",
+                "content": [
+                    {"type": "text", "text": "Trích xuất toàn bộ thông tin có trong ảnh, chỉ trả thông tin đã bóc tách. Không giải thích hay yêu cầu gì thêm."},
+                    {
+                        "type": "image_url", 
+                        "image_url": {"url": "data:image/png;base64,{image_data}"}
+                    }
+                ]
+            }        
+        ],
+        inputs=INPUT,
+        outputs=OUTPUT,
+        stream=True
+    )
+    
+    indexer = WorkflowIndexer(name="workflow01").add_node(vlm_node).build()
+    
+    state = WorkflowState(
+        indexer=indexer, 
+        inputs={
+            "image_data": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVR4nGP4//8/AAX+Av4N70a4AAAAAElFTkSuQmCC"
+        }
+    )
+    
+    await vlm_node.run(state=state)
+    
+    print(vlm_node.get_result(state))
+
+
+if __name__ == "__main__":
+    import asyncio
+    asyncio.run(example1())

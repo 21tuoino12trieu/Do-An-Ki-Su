@@ -1,0 +1,6 @@
+api_key: REPLACE_WITH_LOCAL_SECRET
+api_type: vllm
+base_url: https://llm-gateway-dev.mbbank.com.vn/v1
+#model: Qwen3-235B-A22B-Instruct-2507-FP8
+#model: beegen-model-v1
+model: gpt-4.1

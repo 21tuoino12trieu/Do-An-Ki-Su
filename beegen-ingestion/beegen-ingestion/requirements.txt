@@ -1,0 +1,14 @@
+--extra-index-url http://beegen-core_dev:LOCAL_PASSWORD@10.1.12.177:8445/repository/repo-pypi-host-beegen-core/simple
+--trusted-host 10.1.12.177
+# Beeflow
+beeflow==1.0.5.dev20260603162415
+
+# Confluence API
+atlassian-python-api==4.0.7
+
+# Encryption
+pycryptodome==3.23.0
+ 
+# HTML Processing
+beautifulsoup4==4.13.4
+pyotp==2.9.0

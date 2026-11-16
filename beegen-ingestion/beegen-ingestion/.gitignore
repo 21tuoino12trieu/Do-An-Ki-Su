@@ -1,0 +1,26 @@
+.env.*
+.venv
+env/
+venv
+**/__pycache__/
+*.pyc
+volumes/
+**/.ipynb_checkpoints
+*.docx
+.vscode/
+# Python cache
+__pycache__/
+*.pyc
+
+# Jupyter Notebook
+.ipynb_checkpoints
+.log
+system-logs/
+logs/
+confluence_syncing/logs/
+.idea
+config/**/*.json
+config/*.json
+beegen_venv/
+uv.lock
+.claude

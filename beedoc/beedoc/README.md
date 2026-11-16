@@ -1,0 +1,252 @@
+# Beedoc SDK - Thiết Kế Kiến Trúc Toàn Diện
+
+## 1. Tầm nhìn (Vision)
+
+**Beedoc** được thiết kế như một SDK độc lập (standalone) và đa phương thức (multi-modal), đóng vai trò là một lớp "Ingestion & Reconstruction" toàn diện. Sứ mệnh cốt lõi của Beedoc là chuyển đổi mọi loại dữ liệu phi cấu trúc và bán cấu trúc từ các file cục bộ thành một định dạng tri thức có cấu trúc duy nhất (Markdown), được tối ưu hóa cho các hệ thống RAG (Retrieval-Augmented Generation).
+
+SDK này trừu tượng hóa sự phức tạp của việc xử lý các định dạng file khác nhau, cho phép các nhà phát triển tập trung vào việc xây dựng các ứng dụng AI thông minh thay vì phải lo lắng về việc trích xuất và làm sạch dữ liệu.
+
+## 2. Nguyên tắc thiết kế (Core Principles)
+
+Kiến trúc của Beedoc được xây dựng dựa trên các nguyên tắc nền tảng sau:
+
+*   **Kiến trúc Pipeline (Reader -> Renderer -> Markdown):** Luồng xử lý được tổ chức theo các giai đoạn rõ ràng: ingestion bằng `Reader`, reconstruction bằng `Renderer`, và luôn trả về Markdown trực tiếp từ `Engine`.
+*   **`Document` là Intermediate Model chuẩn:** Toàn bộ trạng thái xử lý đi qua một object trung tâm `Document`, giúp các thành phần tách rời nhưng vẫn đồng bộ dữ liệu.
+*   **Ưu tiên Thị giác Máy tính (Visual-first Strategy):** Đối với các tài liệu có layout phức tạp (PDF, DOCX), Beedoc ưu tiên sử dụng các mô hình thị giác ngôn ngữ đa phương thức (VLM) để "nhìn" và tái cấu trúc tài liệu, thay vì chỉ dựa vào việc trích xuất text thô.
+*   **Điều phối bằng Beeflow (Beeflow Orchestration):** Mọi quy trình xử lý phức tạp, đặc biệt là các bước liên quan đến AI, được mô hình hóa thành các workflow của **Beeflow SDK**.
+*   **Workflow Tách rời (Decoupled Workflow):** Các Node trong workflow của Beeflow chỉ trao đổi dữ liệu nguyên thủy (primitive data types: string, number, list). Việc cập nhật trạng thái vào `Document` được thực hiện ở lớp orchestration (`BeedocEngine`) hoặc lớp stage tương ứng.
+*   **Ưu tiên Cục bộ & Độc lập (Local-first & Standalone):** Beedoc được thiết kế để hoạt động hoàn toàn trên máy cục bộ mà không yêu cầu dịch vụ cloud trung gian để lưu trữ file. SDK không tự ý upload file lên S3.
+
+---
+
+## 3. Phân loại và Chiến lược Xử lý Tài liệu
+
+Beedoc phân loại tài liệu đầu vào thành 3 nhóm chính, mỗi nhóm có một chiến lược xử lý riêng biệt để đạt hiệu quả tối ưu:
+
+| Nhóm | Định dạng Ví dụ | Chiến lược Xử lý (Intuition) |
+| :--- | :--- | :--- |
+| **VISUAL** | `PDF`, `DOCX`, `XLSX` | **Render-then-Reconstruct**: Chuyển từng đơn vị nội dung (page/sheet/region) thành biểu diễn phù hợp, sau đó dùng VLM/LLM để tái tạo Markdown theo cấu trúc tài liệu. |
+| **IMAGE** | `PNG`, `JPG`, `WEBP` | **Direct Reconstruction**: Đọc ảnh trực tiếp, dùng VLM để mô tả nội dung ảnh hoặc trích xuất văn bản thành Markdown. |
+| **STRUCTURED** | `CSV`, `JSON` | **Format-as-Markdown**: Đọc dữ liệu có cấu trúc và chuẩn hóa thành Markdown có ngữ nghĩa (bảng, heading, list). |
+
+---
+
+## 4. Phân rã Kiến trúc Module (Module Breakdown)
+
+Kiến trúc của Beedoc được chia thành các thành phần theo pipeline.
+
+### 4.1. `Document` Intermediate Model (`beedoc_v3/models/`)
+
+Đây là lớp dữ liệu trung tâm, định nghĩa cấu trúc của các đối tượng cốt lõi.
+
+*   **`Document`**: Object trạng thái duy nhất đi xuyên suốt vòng đời xử lý của một file.
+    *   `file_path`, `file_name`, `extension`, `category`
+    *   `document_id`, `file_hash`, `file_size_bytes`
+    *   `pages` (danh sách `Page`)
+    *   `reconstructed_content` (Markdown sau reconstruction)
+    *   `status`, `error_message`, `processing_time_ms`
+*   **`Page`**: Đại diện cho một đơn vị con của tài liệu.
+    *   `page_number`
+    *   `image_list` / `image_data` (khi có)
+    *   `content` (danh sách `Zone`)
+*   **`Zone`**: Đơn vị nội dung nhỏ nhất có thể chứa metadata cục bộ.
+
+### 4.2. Engine Orchestration (`beedoc_v3/engine.py`)
+
+`BeedocEngine` là bộ điều phối pipeline:
+
+1. Nhận `file_path` từ người dùng.
+2. Khởi tạo `Document` với trạng thái `PENDING`.
+3. Dùng `ReaderFactory` để chọn `Reader` phù hợp theo extension.
+4. Chạy `Reader` để cập nhật metadata/content vào `Document`.
+5. Dùng `RendererFactory` để chọn `Renderer` phù hợp theo extension.
+6. Chạy `Renderer` để tái tạo `reconstructed_content`.
+7. Cập nhật trạng thái hoàn tất hoặc thất bại.
+8. Xuất kết quả trực tiếp dưới dạng chuỗi Markdown — **không qua View layer**.
+
+### 4.3. Readers (`beedoc_v3/readers/`) - Giai đoạn Ingestion
+
+Nhiệm vụ của lớp này là đọc file, xác thực, và trích xuất thông tin ban đầu.
+
+*   **`ReaderFactory`**: Chọn reader cụ thể (`PdfReader`, `DocxReader`, `CsvReader`,...).
+*   **`BaseReader`**: Chuẩn interface và workflow ingestion cơ bản.
+*   **Logic chính**:
+    *   Kiểm tra đầu vào.
+    *   Tính toán hash/kích thước/metadata kỹ thuật.
+    *   Chuẩn bị dữ liệu đầu vào cho reconstruction.
+*   **Output stage**: cập nhật object `Document`.
+
+### 4.4. Renders (`beedoc_v3/renders/`) - Giai đoạn Reconstruction
+
+Đây là nơi xử lý chính để tái tạo nội dung Markdown.
+
+*   **`RendererFactory`**: Chọn renderer theo extension.
+*   **`BaseRenderer`**: Chuẩn interface cho mọi renderer.
+*   **Renderer theo nhóm**:
+    *   Document renderers: `pdf_render`, `docx_render`, `excel_render`
+    *   Image renderer: `image_render`
+    *   Structured renderers: `csv_renderer`, `json_renderer`
+*   **Output stage**: cập nhật `document.reconstructed_content`.
+
+### 4.5. Core Contracts (`beedoc_v3/core/`)
+
+*   **Interfaces**: `IReader`, `IRenderer` (đã loại bỏ `IView`).
+*   **Constants**: `DocumentStatus`, `DocumentCategory`, mapping extension.
+*   **Exceptions**: phân loại lỗi theo stage để engine xử lý thống nhất.
+
+---
+
+## 5. Chi tiết Luồng Xử lý theo Định dạng
+
+### 5.1. Nhóm VISUAL (PDF, DOCX, XLSX)
+
+Chiến lược chung: **Render-then-Reconstruct**.
+
+#### 5.1.1. PDF (`.pdf`)
+*   **Reader (`PdfReader`)**: xác thực file, đọc metadata cơ bản.
+*   **Renderer (`PdfRenderer`)**:
+    1. Trích xuất/chuẩn hóa dữ liệu trang.
+    2. Chạy luồng reconstruction theo trang bằng workflow.
+    3. Ghép kết quả thành Markdown cuối.
+
+#### 5.1.2. DOCX (`.docx`)
+*   **Reader (`DocxReader`)**: xác thực định dạng và metadata đầu vào.
+*   **Renderer (`DocxRenderer`)**:
+    1. Duyệt các block nội dung (paragraph, table, image references).
+    2. Chuẩn hóa nội dung theo thứ tự tài liệu.
+    3. Tái tạo markdown có cấu trúc.
+
+#### 5.1.3. XLSX (`.xlsx`, `.xls`)
+*   **Reader (`ExcelReader`)**: đọc workbook/sheet metadata.
+*   **Renderer (`ExcelRenderer`)**:
+    1. Chuẩn hóa dữ liệu sheet.
+    2. Tái cấu trúc bảng/cell semantics.
+    3. Xuất Markdown theo cấu trúc dễ chunk.
+
+### 5.2. Nhóm IMAGE (PNG, JPG, WEBP)
+
+*   **Reader (`ImageReader`)**: xác thực và đọc metadata ảnh.
+*   **Renderer (`ImageRenderer`)**:
+    1. Chuẩn hóa ảnh đầu vào.
+    2. Gọi luồng multimodal để OCR/description.
+    3. Trả về markdown mô tả hoặc nội dung trích xuất.
+
+### 5.3. Nhóm STRUCTURED (CSV, JSON)
+
+Chiến lược chung: **Format-as-Markdown**.
+
+#### 5.3.1. CSV (`.csv`)
+*   **Reader (`CsvReader`)**: xác thực file CSV.
+*   **Renderer (`CsvRenderer`)**: chuẩn hóa dữ liệu bảng thành Markdown.
+
+#### 5.3.2. JSON (`.json`)
+*   **Reader (`JsonReader`)**: parse/validate JSON hợp lệ.
+*   **Renderer (`JsonRenderer`)**: chuyển cấu trúc JSON thành biểu diễn Markdown có ngữ nghĩa.
+
+---
+
+## 6. Luồng dữ liệu chi tiết (Detailed Data Flow)
+
+```mermaid
+graph TD
+    subgraph User Input
+        A[File Path]
+    end
+
+    subgraph Engine
+        B(BeedocEngine)
+    end
+
+    subgraph Ingestion Phase
+        C(ReaderFactory)
+        D{Specific Reader}
+        E[Document Updated: Metadata/Input]
+    end
+
+    subgraph Reconstruction Phase
+        F(RendererFactory)
+        G{Specific Renderer}
+        H(Beeflow / Internal Workflow)
+        I[Document Updated: reconstructed_content]
+    end
+
+    subgraph Output Phase
+        J[Markdown String]
+    end
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> B
+    B --> F
+    F --> G
+    G --> H
+    H --> I
+    I --> B
+    B --> J
+```
+
+**Diễn giải luồng:**
+
+1. User cung cấp `file_path` cho `BeedocEngine`.
+2. Engine chọn `Reader` qua `ReaderFactory`.
+3. Reader xử lý ingestion và cập nhật `Document`.
+4. Engine chọn `Renderer` qua `RendererFactory`.
+5. Renderer chạy reconstruction workflow và cập nhật `document.reconstructed_content`.
+6. Engine luôn trả về kết quả cuối dưới dạng Markdown (không có View layer).
+
+---
+
+## 7. Hướng dẫn cho Nhà phát triển (Developer Guidelines)
+
+### 7.1. Giao thức Beeflow Node
+
+Mọi `CodeNode` trong workflow nên tuân thủ quy tắc trao đổi dữ liệu nguyên thủy qua `inputs` và `return_keys`.
+
+```python
+node = CodeNode(
+    name="extract_text_from_page",
+    code_fn=self.logic_func,
+    inputs={"image_base64": "base64_string_placeholder"},
+    return_keys=["extracted_markdown: str"]
+)
+```
+
+**Lý do**: Giảm side effects, tăng khả năng kiểm thử và tái sử dụng node.
+
+### 7.2. Mở rộng định dạng mới (1-1 Mapping)
+
+Khi cần hỗ trợ định dạng mới (ví dụ: `.pptx`):
+
+1. Tạo Reader trong `beedoc_v3/readers/...` kế thừa `BaseReader`.
+2. Tạo Renderer trong `beedoc_v3/renders/...` kế thừa `BaseRenderer`.
+3. Cập nhật `beedoc_v3/core/constants.py` cho extension/category.
+4. Đăng ký vào `ReaderFactory` và `RendererFactory`.
+5. Xác nhận output markdown đúng chuẩn từ engine.
+
+### 7.3. Xử lý lỗi (Error Handling)
+
+*   Mọi logic có khả năng thất bại (đọc file, parse, workflow call) cần có `try...except` phù hợp.
+*   Sử dụng exception tùy chỉnh (`ReaderError`, `RendererError`, `BeedocError`, ...).
+*   Engine phải cập nhật trạng thái `FAILED` và `error_message` trong `Document` khi có lỗi.
+
+### 7.4. Cấu hình (Configuration)
+
+Cấu hình model/API/workflow được quản lý tập trung trong cấu hình dự án hiện tại. Không hard-code secrets trong mã nguồn.
+
+### 7.5. Kiểm thử (Testing)
+
+*   Mỗi `Reader` và `Renderer` cần có test phù hợp.
+*   Có integration test cho pipeline end-to-end qua `BeedocEngine`.
+*   Dùng fixture nhất quán để kiểm tra chất lượng markdown output.
+
+---
+
+## 8. Tối ưu hóa cho RAG (RAG Readiness)
+
+Nội dung Markdown đầu ra của Beedoc được thiết kế để tối ưu cho các bước tiếp theo trong pipeline RAG (Chunking, Embedding, Retrieval):
+
+*   **Giữ cấu trúc ngữ nghĩa**: heading/list/table/code blocks được bảo toàn tối đa.
+*   **Chuẩn hóa bảng biểu**: dữ liệu structured được biểu diễn dưới dạng markdown dễ parse.
+*   **Khai thác nội dung hình ảnh**: thông tin thị giác được chuyển thành text có thể tìm kiếm ngữ nghĩa.

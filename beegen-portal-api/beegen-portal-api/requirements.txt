@@ -1,0 +1,38 @@
+--extra-index-url http://beegen-core_dev:LOCAL_PASSWORD@10.1.12.177:8445/repository/repo-pypi-host-beegen-core/simple
+--trusted-host 10.1.12.177
+
+beedoc==0.2.0.dev20260824163257
+beeflow==1.0.5.dev20260721173154
+
+# API Stack
+fastapi==0.136.1
+uvicorn[standard]>=0.30,<1.0
+supervisor>=4.2,<5.0
+python-multipart>=0.0.18,<1.0
+pydantic>=2.11,<3.0
+
+# Auth
+python-jose>=3.3,<4.0
+python-keycloak>=5,<8
+requests>=2.32,<3.0
+requests-toolbelt>=1.0.0
+
+# Logging / Messaging
+kafka-python-ng==2.2.3
+
+# Document conversion / storage
+openpyxl>=3.1,<4.0
+pymongo>=4.6,<5.0
+
+# AI / LLM
+langchain-text-splitters>=0.2,<0.4
+
+# Google Cloud Storage (document ingestion Phase 2)
+google-cloud-storage>=2.19,<3.0
+
+# Vertex AI Search / Discovery Engine (document ingestion "synced to Vertex" tab)
+# Pinned to 0.20.0 (not the latest 0.20.2) because 0.20.2 pulls in protobuf 7.x,
+# which conflicts with google-cloud-aiplatform (<6.0) and mem0ai (<7.0) already
+# in this project — 0.20.0 resolves cleanly with protobuf 5.29.6.
+google-cloud-discoveryengine==0.20.0
+protobuf>=5.29.6,<6.0

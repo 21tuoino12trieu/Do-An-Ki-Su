@@ -1,0 +1,297 @@
+from typing import Dict, Any
+from beeflow.nodes.graph.graph_node import GraphNode
+from beeflow.nodes.base_node import BaseNode
+from beeflow.states.workflow_state import WorkflowState
+from beeflow.states.workflow_indexer import WorkflowIndexer
+from beeflow.utils.streaming import STREAM_SERVICE
+from beegen.registry.resource_hub import ResourceHub
+from beegen.loggings import LOGGER
+import uuid
+import asyncio
+
+from beegen.utils.common import verify_data
+
+
+
+class WorkflowEngine:
+
+    def __init__(self,
+                 name: str,
+                 description: str = "",
+                 langfuse: str = "beegen",
+                 **kwargs):
+        self.name = f"{name}:workflow"
+        self.graph_name = name
+        self._graph = GraphNode(
+            name=self.graph_name,
+            description=description,
+            **kwargs
+        )
+        self.LANGFUSE_CLIENT = ResourceHub.self().langfuse(langfuse)
+        self.indexer = None
+        
+    def __enter__(self):
+        self._graph.__enter__()
+        return self
+    
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        self._graph.__exit__(exc_type, exc_val, exc_tb)
+        
+    def compile(self):
+        
+        from beeflow.nodes import INPUT
+        
+        self._graph.build()
+        
+        for var in self._graph.get_input_variables():
+            self._graph.inputs[var] = {INPUT: var}
+                    
+        self.indexer = WorkflowIndexer(name=self.name).add_node(self._graph).build()
+                
+    def _create_node_trace(self, langfuse_obj, node: BaseNode, data: Dict[str, Any]):
+        """
+        Create appropriate Langfuse trace primitive based on node characteristics.
+        
+        This helper method determines whether to create a generation (for LLM nodes)
+        or a span (for all other node types) based on the node's capabilities.
+        
+        Args:
+            parent: The parent Langfuse trace object
+            node: The workflow node to create a trace for
+            data (Dict[str, Any]): Metadata and metrics for the trace
+            
+        Returns:
+            Langfuse trace object (either generation or span)
+            
+        Note:
+            - Nodes with contain_generation=True are LLM nodes that generate text
+            - All other nodes (retrievers, code blocks, etc.) are treated as spans
+        """
+        if node.contain_generation:
+            # LLM nodes: Create generation trace for token usage and model metrics
+            return langfuse_obj.generation(**data)
+        else:
+            # Non-LLM nodes: Create span trace for execution time and general metrics
+            return langfuse_obj.span(**data)
+        
+    async def run(self,
+                  inputs: Dict[str, Any],
+                  user_id: str = None,
+                  session_id: str = None,
+                  request_id: str = None) -> Dict[str, Any]:
+        
+        if not request_id: request_id = str(uuid.uuid4())
+        state = WorkflowState(
+            indexer=self.indexer,
+            inputs=inputs,
+            user_id=user_id or str(uuid.uuid4()),  # Generate UUID if not provided
+            request_id=request_id,
+            session_id=session_id or str(uuid.uuid4())
+        )
+        
+        result = await self._graph.run(state)
+        await STREAM_SERVICE.end_request(request_id)
+        
+        # Fire-and-forget background task
+        asyncio.create_task(self.flush(state=state))
+        
+        return result
+    
+    async def flush(self, state: WorkflowState) -> None:
+        """Flush traces to Langfuse asynchronously with error handling."""
+        try:
+            # Extract execution context for logging and tracing
+            req_id = state.request_id
+            user_id = state.user_id
+            session_id = state.session_id
+            
+            LOGGER.info("Workflow: %s, Request ID: %s, Creating Langfuse trace hierarchy...", 
+                    self.name, req_id)
+
+            langfuse_objects = {}
+            parent_object = self.LANGFUSE_CLIENT
+            
+            for execution in state.execution_order:
+                node_id = execution["node"]
+                parent_id = execution["parent"]
+                context_id = execution["context_id"]
+                node = state._indexer._nodes[node_id]
+                trace_data = node.trace_data(state, context_id)
+                
+                verify_data(trace_data)
+                
+                if context_id:
+                    node_id = f"{node_id}:{context_id}"
+                                
+                context_parent_id = f"{parent_id}:{context_id}"
+                if context_parent_id in langfuse_objects:
+                    parent_id = context_parent_id
+                                        
+                if parent_id is None:
+                    # root node, create trace
+                    trace_data.pop("name", None)
+                    
+                    langfuse_objects[node_id] = parent_object.trace(
+                        id=req_id,
+                        name=self.name,
+                        user_id=user_id,
+                        session_id=session_id,
+                        **trace_data
+                    )
+                else:
+                    parent = langfuse_objects[parent_id]
+
+                    langfuse_objects[node_id] = self._create_node_trace(
+                        langfuse_obj=parent,
+                        node=node,
+                        data=trace_data
+                    )
+            
+            # non-blocking flush with timeout        
+            await asyncio.wait_for(
+                asyncio.get_running_loop().run_in_executor(None, self.LANGFUSE_CLIENT.flush),
+                timeout=60
+            )
+
+            LOGGER.info("Workflow: %s, Request ID: %s, Langfuse trace hierarchy created successfully", 
+                    self.name, req_id)
+            
+        except Exception as e:
+            import traceback
+            LOGGER.error(
+                "Workflow: %s, Request ID: %s, Failed to flush traces: %s\nTraceback:\n%s",
+                self.name,
+                state.request_id,
+                str(e),
+                traceback.format_exc()
+            )
+    
+async def test_with_for_loop():
+    from typing import List
+    from beeflow.nodes import (
+        PromptNode, ParserNode, LLMNode, BasicChainNode, 
+        ForLoopNode, CodeNode,
+        START, END, INPUT, OUTPUT
+    )
+    
+    REWRITTEN_QUERY_PROMPT = """Mục tiêu: 
+- Viết lại đoạn hội thoại của người dùng thành một câu, vẫn mang đủ ý của khách hàng.
+
+Đầu ra định dạng (xml format):
+<rewrite>câu query ngắn gọn được viết lại cho đủ ý của khách hàng</rewrite>
+
+Example:
+Input:
+- lịch sử trò chuyện:
+['Người dùng: chủ tịch của MB là ai ?', 'BOT: chủ tịch của MB là anh Lưu Trung Thái']
+- câu chat gần nhất: anh ấy tại vị được bao lâu rồi?
+
+Output (xml format):
+<rewrite>Chủ tịch Lưu Trung Thái đã tại vị được bao lâu?</rewrite>
+
+Các thông tin đầu vào:
+- lịch sử trò chuyện: 
+{history}
+- câu chat gần nhất: {query}"""
+
+
+    def preprocess(batch_messages: List[List[Dict]]) -> Dict[str, Any]:
+        batch_data = []
+        
+        for messages in batch_messages:
+            if messages:
+                query = messages[-1]["content"]
+                history = messages[:-1]
+                batch_data.append({
+                    "query": query,
+                    "history": history
+                })
+        
+        return {"batch_data": batch_data}
+
+
+    with WorkflowEngine(
+        name="basic-chain",
+        description="đây là luồng test của workflow"
+    ) as basic_chain:
+        
+        preprocess_node = CodeNode(
+            name="preprocess",
+            code_fn=preprocess,
+            return_keys=["batch_data: List"],
+            inputs={"batch_messages": INPUT}
+        )
+        
+        with ForLoopNode(
+            name="batch_process",
+            description="đây là node để chạy batch",
+            inputs={"batch_data": preprocess_node},
+            outputs={"batch_result": OUTPUT}
+        ) as batch_process:
+            prompt_node = PromptNode(
+                name="prompt",
+                user_prompt=REWRITTEN_QUERY_PROMPT,
+                inputs=INPUT,
+            )
+            
+            llm_node = LLMNode(
+                name="llm",
+                resource_key="Qwen3-30B-A3B",
+                inputs={
+                    "messages": prompt_node,
+                    "chat_template_kwargs": {"enable_thinking": False}
+                },
+                stream=True
+            )
+            
+            parser_node = ParserNode(
+                name="parser",
+                extract_schema=["rewrite: str"],
+                inputs={"text": llm_node["content"]}
+            )
+            
+            final_answer = BasicChainNode(
+                name="final",
+                resource_key="Qwen3-30B-A3B",
+                system_prompt="Bạn là trợ lý ảo ngân hàng MB, hãy trả lời tất cả câu hỏi của khách hàng, cấm được từ chối.",
+                user_prompt="{query}",
+                inputs={"query": parser_node["rewrite"]},
+                outputs={"content": OUTPUT["final-content"]},
+                stream=True
+            )
+            
+            START >> prompt_node >> llm_node >> parser_node >> final_answer >> END
+        
+        START >> preprocess_node >> batch_process >> END
+        
+    basic_chain.compile()
+    
+    inputs={
+        "batch_messages": [
+            [
+                {"role": "user", "content": "tổng giám đốc MB là ai ?"},
+                {"role": "assistant", "content": "là anh Phạm Như Ánh đấy."},
+                {"role": "user", "content": "anh ấy có đẹp trai không ?"},
+            ],
+            [
+                {"role": "user", "content": "MB có có vay tín dụng không ?"},
+                {"role": "assistant", "content": "bạn hỏi vay mua nhà hay mua ôtô"},
+                {"role": "user", "content": "cái thứ 2 đi ?"}
+            ]
+        ]
+    }
+        
+    asyncio.create_task(basic_chain.run(inputs=inputs, request_id="123"))
+    
+    async for channel_name in STREAM_SERVICE.get_channels("123"):
+        print(f"\nChannel: {channel_name}")
+        async for chunk in STREAM_SERVICE.get("123", channel_name):
+            print(chunk.choices[0].delta.content, end="", flush=True)
+        print()
+    
+    # print(result)
+    
+
+if __name__ == "__main__":
+    import asyncio
+    asyncio.run(test_with_for_loop())

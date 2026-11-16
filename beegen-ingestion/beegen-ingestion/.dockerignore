@@ -1,0 +1,27 @@
+# Git
+.git/
+.gitignore
+
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Local environments
+.venv/
+venv/
+env/
+
+# Local runtime data
+tmp/
+logs/
+*.log
+
+# Local environment file
+.env
+.env.*
+
+# IDE
+.idea/
+.vscode/

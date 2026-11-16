@@ -1,0 +1,11 @@
+# api_type: tei
+# api_key: mb123456789
+# base_url: http://10.1.87.71:30044/embed
+# embed_batch_size: 32
+# model: BAAI/bge-m3
+# dimensions: 1024
+api_type: vllm
+api_key: mb123456789
+base_url: http://10.1.87.71:30044/v1/embeddings
+model: model/bge-m3
+dimensions: 1024

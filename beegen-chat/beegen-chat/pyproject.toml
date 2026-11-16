@@ -1,0 +1,102 @@
+[tool.uv.pip]
+index-url = "http://esbadmin:LOCAL_PASSWORD@10.1.12.177:8445/repository/pypi-public/simple"
+
+[[tool.uv.index]]
+name = "internal"
+url = "http://esbadmin:LOCAL_PASSWORD@10.1.12.177:8445/repository/pypi-public/simple"
+
+[project]
+name = "beegen-chat"
+version = "0.1.0"
+description = "Beegen Chat Platform"
+authors = [{name = "Beegen Team"}]
+license = "MIT"
+readme = "README.md"
+requires-python = ">=3.9"
+
+dependencies = [
+    "aiohappyeyeballs ==2.4.6",
+    "aiohttp ==3.11.13",
+    "urllib3 ==1.26.15",
+    "python-dotenv ==1.0.1",
+    "pydantic ==2.11.7",
+    "pydantic-settings >=2.9.1",
+    "pydantic-core ==2.33.2",
+    "openai ==1.88.0",
+    "requests ==2.32.3",
+    "pytest ==8.3.2",
+    "pymilvus ==2.4.10",
+    "fastapi ==0.115.12",
+    "uvicorn ==0.30.5",
+    "jsonschema ==4.23.0",
+    "docstring-parser ==0.16",
+    "bs4 ==0.0.2",
+    "colorama",
+    "slowapi ==0.1.9",
+    "kafka-python-ng ==2.2.3",
+    "PyJWT ==2.10.1",
+    "python-jose ==3.3.0",
+    "python-keycloak ==5.5.1",
+    "redis ==5.2.0",
+    "pymongo",
+    "PyYAML",
+    "motor",
+    "openpyxl",
+    "prometheus-client",
+    "backoff ==2.2.1",
+    "pymupdf",
+    "cachetools ==5.5.1",
+    "asyncio ==3.4.3",
+    "typing-extensions >=4.0.0",
+    "aiocache ==0.12.3",
+    "aiofiles ==24.1.0",
+    "typeguard ==4.4.2",
+    "Unidecode",
+    "networkx",
+    "vertexai",
+    "jsonpath_ng",
+    "google-auth",
+    "jsonpath-ng ==1.7.0",
+    "pillow",
+    "lxml >=4.9.2",
+    "langfuse ==2.60.8",
+    "openai-agents ==0.1.0",
+    "logfire ==3.24.2",
+    "litellm ==1.72.6",
+    "multidict ==6.1.0",
+    "pluggy ==1.5.0",
+    "requests-toolbelt ==0.10.1",
+    "yarl ==1.18.3",
+    "nest-asyncio",
+    "starlette >=0.46.0",
+    "pycryptodome",
+    "aioboto3 ==13.2.0",
+    "opencv-python",
+    "line-profiler >=5.0.0",
+    "pyinstrument >=5.0.0",
+    "sqlglot >=27.6.0",
+    "psycopg2-binary==2.9.10",
+    "neo4j ==5.28.2",
+    "ag-ui-protocol>=0.1.8",
+    "httpx>=0.27.0",
+    "pandas>=2.0.0",
+    "numpy>=1.24.0",
+    "tiktoken>=0.7.0",
+    "tqdm>=4.66.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest ==8.3.2",
+]
+
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["beegen*", "bee247*", "beeflow*", "entrypoints*", "external*", "config*", "scripts*", "examples*", "test*", "cicd*"]
+
+[tool.uv]
+# Additional uv-specific configurations can go here

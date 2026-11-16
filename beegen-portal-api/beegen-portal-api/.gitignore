@@ -1,0 +1,30 @@
+.env
+.env.*
+*.env
+.venv
+env/
+venv
+**/__pycache__/
+*.pyc
+volumes/
+**/.ipynb_checkpoints
+.vscode/
+*.pyc
+config/** 
+
+# Jupyter Notebook
+.ipynb_checkpoints
+.log
+system-logs/
+.idea
+beegen_venv/
+uv.lock
+.claude
+.env
+assets/*
+!assets/.gitkeep
+CLAUDE.md
+
+# GCP service account keys — never commit
+secrets/
+*.json.key

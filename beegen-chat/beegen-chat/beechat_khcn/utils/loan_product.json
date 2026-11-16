@@ -1,0 +1,200 @@
+[
+  {
+    "category": "21064",
+    "sub_productid": "387",
+    "description": "Vay tiêu dùng CBNV Công ty thành viên",
+    "loan_group": "Vay tiêu dùng"
+  },
+  {
+    "category": "21057",
+    "sub_productid": "467",
+    "description": "Vay tín chấp không TSĐB",
+    "loan_group": "Vay tiêu dùng"
+  },
+  {
+    "category": "21053",
+    "sub_productid": "335",
+    "description": "Vay tiêu dùng ô tô Pre Approved",
+    "loan_group": "Vay ô tô"
+  },
+  {
+    "category": "21053",
+    "sub_productid": "469",
+    "description": "Vay tiểu thương KiotViet",
+    "loan_group": "Vay tiêu dùng"
+  },
+  {
+    "category": "21053",
+    "sub_productid": "472",
+    "description": "Vay không TSBĐ cho chủ phương tiện ô tô/xe máy",
+    "loan_group": "Vay tiêu dùng"
+  },
+  {
+    "category": "21057",
+    "sub_productid": "470",
+    "description": "Vay cầm cố trái phiếu TBond",
+    "loan_group": "Vay tiêu dùng"
+  },
+  {
+    "category": "21061",
+    "sub_productid": "363",
+    "description": "Giải ngân bất động sản",
+    "loan_group": "Nhà đất"
+  },
+  {
+    "category": "21057",
+    "sub_productid": "467",
+    "description": "Vay tiêu dùng không TSBĐ quân nhân",
+    "loan_group": "Vay tiêu dùng"
+  },
+  {
+    "category": "21053",
+    "sub_productid": "371",
+    "description": "Cho vay tiết kiệm quầy trên số",
+    "loan_group": "Vay tiêu dùng"
+  },
+  {
+    "category": "21057",
+    "sub_productid": "410",
+    "description": "Tín dụng VietQR",
+    "loan_group": "Vay sản xuất kinh doanh"
+  },
+  {
+    "category": "21053",
+    "sub_productid": "384",
+    "description": "Cho vay giấy tờ có giá trên kênh số",
+    "loan_group": "Vay tiêu dùng"
+  },
+  {
+    "category": "21057",
+    "sub_productid": "409",
+    "description": "Vay tiêu dùng không TSĐB",
+    "loan_group": "Vay tiêu dùng"
+  },
+  {
+    "category": "21057",
+    "sub_productid": "409",
+    "description": "Tín chấp quân nhân",
+    "loan_group": "Vay tiêu dùng"
+  },
+  {
+    "category": "21057",
+    "sub_productid": "412",
+    "description": "Vay sản xuất kinh doanh KHCN",
+    "loan_group": "Vay sản xuất kinh doanh"
+  },
+  {
+    "category": "21064",
+    "sub_productid": "386",
+    "description": "Vay tiêu dùng CBNV MB",
+    "loan_group": "Vay tiêu dùng"
+  },
+  {
+    "category": "21057",
+    "sub_productid": "389",
+    "description": "Topup tự động khoản vay BĐS",
+    "loan_group": "Vay tiêu dùng"
+  },
+  {
+    "category": "21057",
+    "sub_productid": "458",
+    "description": "Vay tiêu dùng cho khách hàng Private",
+    "loan_group": "Vay tiêu dùng"
+  },
+  {
+    "category": "21057",
+    "sub_productid": "411",
+    "description": "Vay ưu đãi hộ nông dân Agris",
+    "loan_group": "Vay sản xuất kinh doanh"
+  },
+  {
+    "category": "1005",
+    "sub_productid": "770",
+    "description": "Vay topup SXKD",
+    "loan_group": "Vay tiêu dùng"
+  },
+  {
+    "category": "1005",
+    "sub_productid": "383",
+    "description": "Vay thấu chi thẻ",
+    "loan_group": "Vay tiêu dùng"
+  },
+  {
+    "category": "1005",
+    "sub_productid": "385",
+    "description": "Vay siêu nhanh không TSĐB",
+    "loan_group": "Vay tiêu dùng"
+  },
+  {
+    "category": "1005",
+    "sub_productid": "378",
+    "description": "Vay cầm cố STK",
+    "loan_group": "Vay tiêu dùng"
+  },
+  {
+    "category": "1005",
+    "sub_productid": "380",
+    "description": "Vay tín chấp cán bộ nhân viên",
+    "loan_group": "Vay tiêu dùng"
+  },
+  {
+    "category": "21064",
+    "sub_productid": "460",
+    "description": "Vay tín chấp CBNV MB (kênh quầy)",
+    "loan_group": "Vay món"
+  },
+  {
+    "category": "21054",
+    "sub_productid": "373",
+    "description": "Vay cầm cố STK (kênh quầy)",
+    "loan_group": "Vay cầm cố"
+  },
+  {
+    "category": "21056",
+    "sub_productid": null,
+    "description": "Vay SXKD KHCN",
+    "loan_group": "Vay sản xuất kinh doanh"
+  },
+  {
+    "category": "21060",
+    "sub_productid": null,
+    "description": "Vay tiêu dùng có TSĐB (kênh quầy)",
+    "loan_group": "Vay tiêu dùng"
+  },
+  {
+    "category": "21061",
+    "sub_productid": null,
+    "description": "Vay Nhà đất (kênh quầy)",
+    "loan_group": "Nhà đất"
+  },
+  {
+    "category": "21063",
+    "sub_productid": null,
+    "description": "Vay ô tô (kênh quầy)",
+    "loan_group": "Vay ô tô"
+  },
+  {
+    "category": "21064",
+    "sub_productid": "",
+    "description": "Vay tín chấp (kênh quầy)",
+    "loan_group": "Vay tiêu dùng"
+  },
+  {
+    "category": "1005",
+    "sub_productid": "704",
+    "description": "Vay thấu chi (kênh quầy)",
+    "loan_group": "Vay thấu chi"
+  },
+    {
+    "category": "1005",
+    "sub_productid": "705",
+    "description": "Vay thấu chi (kênh quầy)",
+    "loan_group": "Vay thấu chi"
+  },
+    {
+    "category": "1005",
+    "sub_productid": "708",
+    "description": "Vay thấu chi (kênh quầy)",
+    "loan_group": "Vay thấu chi"
+  }
+]

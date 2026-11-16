@@ -9,7 +9,7 @@ def main():
     confluence = ConfluenceV2(
         url="https://doantotnghiep2026.atlassian.net/wiki",
         username=os.getenv("CONFLUENCE_EMAIL", "dangnamcuong29112003@gmail.com"),
-        password="ATATT3xFfGF05eOZ8SCvRWhzTiF0B9JUxwmNcm_wPlroL_UO9v60HGo9qToigwj_aob-CIZCbACPaS_Og79A1moSUXuAFAzguj4ug_xoVWggjIOa7IMLxdl34P2afpMWYcKX8TdsOjGfH7c6D-Rak1PoNiSIyrBONR6P5EwYyolDFVFxYaimsn8=EB9EB997",
+        password="REPLACE_WITH_LOCAL_SECRET",
         timeout=30,
     )
 

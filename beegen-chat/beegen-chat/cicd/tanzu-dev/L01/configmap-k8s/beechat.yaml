@@ -1,0 +1,12 @@
+kb_vector_prj_number: "598796242609"
+kb_engine_id: "ai-khcn-beeapp_1785750796442"
+kb_vector_engine_id: "ai-khcn-beeapp_1785750796442"
+kb_qna_engine_id: "ai-khcn-beeapp_1785750796442"
+kb_api_version: "v1alpha"
+kb_atm_prj_number: "901045532135"
+kb_atm_engine_id: "dc-atm-pgd_1778856348641"
+kb_atm_api_version: "v1alpha"
+kb_qna_relevance_threshold: 0.8
+openai_base_url: "https://llm-gateway-dev.mbbank.com.vn/"
+openai_api_key: "REPLACE_WITH_LOCAL_SECRET"
+

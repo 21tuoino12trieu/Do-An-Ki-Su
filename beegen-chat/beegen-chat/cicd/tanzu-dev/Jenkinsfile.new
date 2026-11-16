@@ -1,0 +1,92 @@
+#!/usr/bin/env groovy
+library('cicd-shared-lib-dev@tanzu') _
+
+import java.text.SimpleDateFormat
+
+node("${NODE_INTEGRATION_TEAM_MGT}") {
+    // =================================================================================
+    /**
+     * TODO: Chi thay doi 2 thong tin tren tuong ung voi project
+     *
+     * project_name: Name of project
+     * kubernetes_namespace: namespace of K8S
+     */
+    def project_name = "beegen-chat-api"
+    def kubernetes_namespace = "dev-chatbot-beegen"
+
+    // ===================================================================================
+    def image_version = "1.0.2"
+    def chart_version = "0.2.${BUILD_NUMBER}"
+    def environment = "DC01A"
+    //def harbor_host = "${harbor_uat}"
+    def secret_key = "${project_name}".split("-canary")[0]
+    def secret_value = GlobalVar.getSecretValue(secret_key)
+    def harbor_host = GlobalVar.getHarborHost()
+    def helm_template = GlobalVar.getHelmTemplate()
+    def helm_host_argocd_dc01a = GlobalVar.getHelmHostDC01A()
+    def docker_prefix = "${harbor_host}/${kubernetes_namespace}"
+    //def helm_template ="helm-template-mbbank-argocd-prod"
+    // ===================================================================================
+
+    /**
+     * TODO: Chon luong deploy
+     * Deploy theo luong argocd : CICD-ARGOCD
+     * Deploy theo luong helm : CICD-HELM
+     */
+    def Options = "CICD-HELM"
+    def sub_path = "tanzu-dev"
+    //def capslock = ""
+    //def LowerCaseChannel = "${capslock}".toLowerCase()
+    //def ChanNel = "${LowerCaseChannel}"
+
+    // ===================================================================================
+
+    ci_common(project_name, docker_prefix, image_version, harbor_host, helm_template, Options, sub_path)
+    try {
+        def arrProject = environment.split(' ')
+        def stages = [failFast: true]
+        if(arrProject.length > 0 ){
+            for (int i = 0; i < arrProject.length; i++) {
+                def env = arrProject[i];
+                switch(env) {
+                    case "DC01A":
+                        helm_host = "${helm_host_argocd_dc01a}"
+                        /*
+                        * TODO : Thong tin cum tanzu-k8s moi truong DEV Internal
+                        */
+                        env_argocd = "i01066"
+                        break
+                    }
+                stage("Start ${arrProject[i]} Environment"){
+                    script {
+                        service_account_common(project_name, env, secret_key, secret_value, sub_path)
+                        helm_pack_common(project_name, env, helm_host, helm_template, docker_prefix, image_version, Options, chart_version, sub_path)
+                        cd_common(project_name, helm_host, arrProject, stages, docker_prefix, image_version, env, Options, kubernetes_namespace, env_argocd, chart_version) 
+                    }
+                }
+            }
+        }
+        //parallel stages
+    } catch (Exception ex) {
+        currentBuild.result = "Failed"
+        throw ex
+    }
+}
+def ci_common(def project_name, def docker_prefix, def image_version, def harbor_host, def helm_template, def Options, def sub_path) {
+    stage(' Git Clone ') {
+        script { ci_common_java () }
+    }
+
+    stage('Docker build') {
+        def nexus_python_index_url="${nexus_python_index_url_12_177}"
+        def nexus_python_trusted_host="${nexus_python_trusted_host_12_177}"
+        withCredentials([usernamePassword(credentialsId: 'nexus_ocr', usernameVariable: 'username', passwordVariable: 'password')]) {
+            app = docker.build("${docker_prefix}/${project_name}:${image_version}", "-f ./cicd/${sub_path}/Dockerfile \
+            --build-arg NEXUS_USER=$username \
+            --build-arg NEXUS_PASSWORD=$password \
+            --build-arg NEXUS_PYTHON_INDEX_URL=$nexus_python_index_url \
+            --build-arg NEXUS_PYTHON_TRUSTED_HOST=$nexus_python_trusted_host .")
+        }
+        sh "docker push ${docker_prefix}/${project_name}:${image_version}"
+    }
+}

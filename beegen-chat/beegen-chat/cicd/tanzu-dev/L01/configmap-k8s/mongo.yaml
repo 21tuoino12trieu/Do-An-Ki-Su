@@ -1,0 +1,20 @@
+# authen_source: aicenter_chatbot
+# cluster:
+# - 10.215.107.53:27017
+# password: REPLACE_WITH_LOCAL_SECRET
+# username: nlpdev
+# readPreference: primary
+# appname: MongoDBCompass
+# ssl: false
+# directConnection: true
+# authen_source: search_semantic
+# cluster:
+# - 10.215.107.53:27017
+# password: REPLACE_WITH_LOCAL_SECRET
+# username: nlpdev
+# readPreference: primary
+# appname: MongoDBCompass
+# ssl: false
+# directConnection: true
+authen_source: aicenter_chatbot
+uri: mongodb://nlpdev:LOCAL_PASSWORD@10.215.107.53:27017/?authSource=aicenter_chatbot&readPreference=primary&appname=MongoDB%20Compass&ssl=false&directConnection=true

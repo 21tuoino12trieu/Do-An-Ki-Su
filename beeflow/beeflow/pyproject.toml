@@ -1,0 +1,86 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+ 
+[tool.setuptools.packages.find]
+# Include all packages you want
+include = ["beeflow*", "beeapp*", "beegen*", "config*", "experimental*", "beedoc*", "mem0*", "langfuse*"]
+# Or exclude unwanted ones
+exclude = ["tests*", "docs*", "**/__pycache__", "__pycache__/*", "*.py[cod]"]
+
+[project]
+name = "beeflow"
+version = "1.0.5"
+description = "62319"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "aioboto3~=13.1.0",
+    "aiocache~=0.12.3",
+    "aiofiles~=24.1.0",
+    "aiohttp~=3.13.5",
+    "aiokafka~=0.14.0",
+    "asyncio~=3.4.3",
+    "asyncpg~=0.30.0",
+    "bidict~=0.23.1",
+    "cachetools~=5.5.1",
+    "docstring-parser~=0.18.0",
+    "fastapi~=0.136.1",
+    "google-auth~=2.40.3",
+    "haikunator~=2.1.0",
+    "jsonpath-ng~=1.7.0",
+    "jsonschema~=4.23.0",
+    "kafka-python-ng~=2.2.3",
+    "line-profiler~=5.0.0",
+    "litellm~=1.83.7",
+    "logfire~=4.32.1",
+    "langfuse==4.7.1",
+    "opentelemetry-sdk==1.40.0",
+    "opentelemetry-exporter-otlp-proto-http==1.40.0",
+    "lxml~=6.0.1",
+    "motor~=3.7.1",
+    "openai~=2.30.0",
+    "opencv-python-headless~=4.13.0.92",
+    "openpyxl~=3.1.5",
+    "pillow~=11.3.0",
+    "pre-commit~=4.6.0",
+    "pydantic~=2.12.5",
+    "pyjwt~=2.10.1",
+    "pymilvus~=3.0.0",
+    "pymongo~=4.15.0",
+    "pymupdf~=1.26.4",
+    "pytest~=9.0.3",
+    "pytest-asyncio~=1.3.0",
+    "python-docx~=1.2.0",
+    "python-jose~=3.5.0",
+    "python-keycloak~=5.5.1",
+    "pyyaml~=6.0.2",
+    "rapidfuzz~=3.14.5",
+    "redis~=7.4.0",
+    "requests~=2.34.0",
+    "scipy~=1.16.2",
+    "slowapi~=0.1.9",
+    "sqlglot~=27.14.0",
+    "typeguard~=4.5.1",
+    "typing-extensions~=4.15.0",
+    "unidecode~=1.4.0",
+    "urllib3~=2.6.3",
+    "uvicorn~=0.46.0",
+    "vertexai~=1.71.1",
+    "qdrant-client~=1.15.1",
+    "posthog~=6.7.9",
+    "oracledb~=3.4.0",
+    "pytz~=2025.2",
+]
+
+[[tool.uv.index]]
+url = "http://quanta:LOCAL_PASSWORD@10.1.12.177:8445/repository/pypi-proxy/simple"
+
+[tool.pytest.ini_options]
+addopts = "-ra"
+filterwarnings = [
+  "ignore::DeprecationWarning",
+  "ignore:.*SwigPy.*:DeprecationWarning",
+  "ignore:.*swigvarlink.*:DeprecationWarning",
+  "ignore:.*utcnow\\(\\) is deprecated.*:DeprecationWarning:botocore\\..*",
+]

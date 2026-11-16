@@ -1,0 +1,5 @@
+keycloak_base: http://10.1.27.43:8831/auth/
+realm_name: ms-core
+client_id: ai_center
+client_secret_key: REPLACE_WITH_LOCAL_SECRET
+jwt_secret_key: REPLACE_WITH_LOCAL_SECRET

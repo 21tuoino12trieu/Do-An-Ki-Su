@@ -1,0 +1,2 @@
+authen_source: aicenter_chatbot
+uri: mongodb://nlpdev:LOCAL_PASSWORD@10.215.107.53:27017/?authSource=aicenter_chatbot&readPreference=primary&appname=MongoDB%20Compass&ssl=false&directConnection=true
