@@ -94,7 +94,7 @@ Chi tiết địa chỉ Windows/Docker và cách kiểm tra: [danh sách resourc
 
 Tài liệu hiện hành: [đặc tả yêu cầu](../requirements.md), [thiết kế chung](../architecture.md) và [thiết kế chi tiết](../detailed-design.md). Căn cứ code tham khảo được dẫn trực tiếp trong các tài liệu thiết kế.
 
-Các đợt review 05–06/11/2026 đã bổ sung tài khoản khách hàng, ma trận quyền hai Space và sơ đồ UML tác nhân hình người. Ngày 07/11/2026, nội dung được tổng hợp vào bộ ba tài liệu mới; tài liệu thiết kế cũ cùng bản xuất Word/PDF/draw.io và ảnh QA đã được dọn khỏi `docs`. Bốn sơ đồ Use Case hiện hành cùng mã chỉnh sửa được giữ trong [tài nguyên đặc tả](../use-cases/README.md). Đây là tiến độ tài liệu, không chứng minh đăng nhập/phân quyền/pipeline nghiệp vụ đã được triển khai.
+Các đợt review 05–06/11/2026 đã bổ sung tài khoản khách hàng, ma trận quyền hai Space và sơ đồ UML tác nhân hình người. Ngày 07/11/2026, nội dung được tổng hợp vào bộ ba tài liệu mới; tài liệu thiết kế cũ cùng bản xuất Word/PDF/draw.io và ảnh QA đã được dọn khỏi `docs`. Ba sơ đồ Use Case theo tác nhân hiện hành cùng mã chỉnh sửa được giữ trong [tài nguyên đặc tả](../use-cases/README.md). Đây là tiến độ tài liệu, không chứng minh đăng nhập/phân quyền/pipeline nghiệp vụ đã được triển khai.
 
 ## 6. Chạy lại các phép kiểm tra
 

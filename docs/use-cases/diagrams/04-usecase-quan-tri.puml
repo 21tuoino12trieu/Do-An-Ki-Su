@@ -15,7 +15,7 @@ skinparam usecaseBorderColor #253746
 skinparam rectangleBorderColor #253746
 skinparam actorBorderColor #253746
 actor "Quản trị kho tri thức" as QT
-rectangle "Chức năng quản trị sau xác thực" as ADMIN {
+rectangle "Chức năng quản trị kho tri thức" as ADMIN {
   usecase "UC10\nĐăng nhập và kết thúc phiên" as A10
   usecase "UC01\nTìm kiếm cả hai Space" as A01
   usecase "UC02\nHỏi đáp chính sách" as A02
@@ -23,16 +23,18 @@ rectangle "Chức năng quản trị sau xác thực" as ADMIN {
   usecase "UC03\nXem nguồn cả hai Space" as A03
   usecase "UC04\nCấu hình hai Space và ánh xạ phạm vi" as A04
   usecase "UC05\nChạy thu thập và đồng bộ" as A05
-  usecase "UC08\nTheo dõi trạng thái xử lý" as A08
+  usecase "UC08\nTheo dõi trạng thái và nhận thông báo" as A08
   usecase "UC09\nYêu cầu xử lý lại lỗi" as A09
 }
 QT --> A10
 QT --> A01
 QT --> A02
 QT --> A11
-QT --> A03
 QT --> A04
 QT --> A05
 QT --> A08
-QT --> A09
+A03 ..> A01 : <<extend>>
+A03 ..> A02 : <<extend>>
+A03 ..> A11 : <<extend>>
+A09 ..> A08 : <<extend>>
 @enduml

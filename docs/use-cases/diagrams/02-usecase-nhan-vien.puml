@@ -26,5 +26,7 @@ NV --> N10
 NV --> N01
 NV --> N02
 NV --> N11
-NV --> N03
+N03 ..> N01 : <<extend>>
+N03 ..> N02 : <<extend>>
+N03 ..> N11 : <<extend>>
 @enduml

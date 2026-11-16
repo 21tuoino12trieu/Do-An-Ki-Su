@@ -2,9 +2,10 @@
 
 [← Đặc tả yêu cầu](../requirements.md)
 
-- Bộ sơ đồ gồm tổng quan, nhân viên, khách hàng và quản trị.
-- Tác nhân dùng hình người; quan hệ sử dụng dùng mũi tên thẳng.
-- Hình tổng quan đặt nhân viên/khách hàng bên trái, quản trị bên phải.
+- Bộ sơ đồ gồm ba góc nhìn theo tác nhân: nhân viên, khách hàng và quản trị.
+- Tác nhân dùng hình người; liên kết tác nhân–Use Case thể hiện quyền tham gia chức năng.
+- Mỗi quan hệ `«extend»` được vẽ bằng một mũi tên nét đứt riêng nối trực tiếp hai elip; không dùng đoạn đường chung hoặc điểm rẽ nhánh. Sơ đồ chỉ ghi `«extend»`; điểm mở rộng (Extension Point, viết tắt EP) và điều kiện kích hoạt được mô tả tại mục 6.4 và 7 của đặc tả.
+- UC03 mở rộng UC01, UC02 và UC11 khi người dùng chọn nguồn; UC09 mở rộng UC08 khi quản trị chọn xử lý lại công việc lỗi đủ điều kiện.
 - UC05: đồng bộ và cập nhật kho; UC08: trạng thái/thông báo; UC09: xử lý lại thủ công.
 - Đặc tả chức năng và luồng nghiệp vụ nằm trong [SRS](../requirements.md), mục 7–8.
 - Sửa mã PlantUML trong tài liệu này rồi xuất SVG; `.puml` được script sinh từ Markdown.
@@ -17,68 +18,15 @@ Tiện ích cần PlantUML `1.2026.9` trong cache hoặc truyền `--jar <path>`
 
 Cần Java + Graphviz local hoặc Docker Desktop. Nếu dùng Docker, tiện ích dựng image renderer từ [Dockerfile](renderer/Dockerfile) khi chưa có, rồi xuất hình trong container tạm. Lần build đầu cần mạng tải dependency; không khởi động Kafka broker. Font Arial Windows được sao vào cache để chữ tiếng Việt nhất quán. Jar/font không đưa vào repo.
 
-- Script giữ bố cục PlantUML/Graphviz và dựng liên kết SVG thành mũi tên thẳng tới cạnh elip.
-- Dùng script để tái tạo sơ đồ nhất quán với mã nguồn.
+Nếu có Java nhưng không có Graphviz, dùng bộ bố trí Smetana tích hợp trong PlantUML. Java phải có trong `PATH`; có thể truyền vị trí jar bằng `--jar`:
 
-## Tổng quan
-
-![Tổng quan](diagrams/01-usecase-tong-the.svg)
-
-<details>
-<summary>Mã PlantUML</summary>
-
-```plantuml
-@startuml 01-usecase-tong-the
-
-left to right direction
-skinparam shadowing false
-skinparam linetype polyline
-skinparam nodesep 45
-skinparam ranksep 95
-skinparam defaultFontName Arial
-skinparam defaultFontSize 17
-skinparam actorStyle stickman
-skinparam BackgroundColor white
-skinparam ArrowColor #253746
-skinparam usecaseBackgroundColor #F7FAFC
-skinparam usecaseBorderColor #253746
-skinparam rectangleBorderColor #253746
-skinparam actorBorderColor #253746
-actor "Nhân viên nội bộ" as NV
-actor "Khách hàng có tài khoản" as KH
-actor "Quản trị kho tri thức" as QT
-rectangle "Hệ thống kho tri thức doanh nghiệp" as HT {
-  usecase "UC10\nĐăng nhập và kết thúc phiên" as LOGIN
-  usecase "UC01\nTìm kiếm cả hai Space" as SEARCH
-  usecase "UC02\nHỏi đáp chính sách công ty" as POLICY
-  usecase "UC11\nHỏi đáp chương trình khuyến mãi" as PROMO
-  usecase "UC03\nXem và kiểm chứng nguồn được phép" as SOURCE
-  usecase "UC04\nCấu hình nguồn và phạm vi" as CONFIG
-  usecase "UC05\nThu thập và đồng bộ" as SYNC
-  usecase "UC08\nTheo dõi trạng thái và lịch sử xử lý" as STATUS
-  usecase "UC09\nXử lý lại công việc lỗi" as RETRY
-}
-NV --> LOGIN
-NV --> SEARCH
-NV --> POLICY
-NV --> PROMO
-NV --> SOURCE
-KH --> LOGIN
-KH --> PROMO
-KH --> SOURCE
-LOGIN <-- QT
-SEARCH <-- QT
-POLICY <-- QT
-PROMO <-- QT
-SOURCE <-- QT
-CONFIG <-- QT
-SYNC <-- QT
-STATUS <-- QT
-RETRY <-- QT
-@enduml
+```powershell
+python docs/use-cases/render_usecases.py --smetana --jar <path-to-plantuml.jar>
 ```
 
-</details>
+- Tác nhân ở bên trái; chức năng chính xếp thành cột; UC03 và UC09 nằm ở cột bên phải. Đường tham gia dùng mũi tên nét liền từ tác nhân tới chức năng; quan hệ `«extend»` dùng nét đứt và đầu mũi tên mở.
+- Tiện ích giữ tác nhân, elip và nhãn từ PlantUML, sắp lại vị trí và định tuyến đường nối theo từng tác nhân; không kéo đường xuyên qua elip. UC03 và UC09 được kích hoạt qua điểm mở rộng của UC gốc; không lặp lại liên kết trực tiếp từ tác nhân tới hai UC này. Quyền sử dụng vẫn theo ma trận tại mục 4 của SRS.
+- Dùng script để tái tạo sơ đồ nhất quán với mã nguồn.
 
 ## Nhân viên nội bộ
 
@@ -116,7 +64,9 @@ NV --> N10
 NV --> N01
 NV --> N02
 NV --> N11
-NV --> N03
+N03 ..> N01 : <<extend>>
+N03 ..> N02 : <<extend>>
+N03 ..> N11 : <<extend>>
 @enduml
 ```
 
@@ -148,13 +98,13 @@ skinparam rectangleBorderColor #253746
 skinparam actorBorderColor #253746
 actor "Khách hàng" as KH
 rectangle "Phạm vi khách hàng · Space khuyến mãi" as CUSTOMER {
-  usecase "UC10\nĐăng nhập bằng tài khoản khách hàng" as K10
+  usecase "UC10\nĐăng nhập và đăng xuất" as K10
   usecase "UC11\nHỏi đáp chương trình khuyến mãi" as K11
   usecase "UC03\nXem nguồn khuyến mãi được phép" as K03
 }
 KH --> K10
 KH --> K11
-KH --> K03
+K03 ..> K11 : <<extend>>
 @enduml
 ```
 
@@ -185,7 +135,7 @@ skinparam usecaseBorderColor #253746
 skinparam rectangleBorderColor #253746
 skinparam actorBorderColor #253746
 actor "Quản trị kho tri thức" as QT
-rectangle "Chức năng quản trị sau xác thực" as ADMIN {
+rectangle "Chức năng quản trị kho tri thức" as ADMIN {
   usecase "UC10\nĐăng nhập và kết thúc phiên" as A10
   usecase "UC01\nTìm kiếm cả hai Space" as A01
   usecase "UC02\nHỏi đáp chính sách" as A02
@@ -193,18 +143,20 @@ rectangle "Chức năng quản trị sau xác thực" as ADMIN {
   usecase "UC03\nXem nguồn cả hai Space" as A03
   usecase "UC04\nCấu hình hai Space và ánh xạ phạm vi" as A04
   usecase "UC05\nChạy thu thập và đồng bộ" as A05
-  usecase "UC08\nTheo dõi trạng thái xử lý" as A08
+  usecase "UC08\nTheo dõi trạng thái và nhận thông báo" as A08
   usecase "UC09\nYêu cầu xử lý lại lỗi" as A09
 }
 QT --> A10
 QT --> A01
 QT --> A02
 QT --> A11
-QT --> A03
 QT --> A04
 QT --> A05
 QT --> A08
-QT --> A09
+A03 ..> A01 : <<extend>>
+A03 ..> A02 : <<extend>>
+A03 ..> A11 : <<extend>>
+A09 ..> A08 : <<extend>>
 @enduml
 ```
 
