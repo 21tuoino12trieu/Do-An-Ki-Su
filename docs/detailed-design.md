@@ -8,12 +8,12 @@
 | Phiên bản | 2.0 |
 | Ngày cập nhật | 10/11/2026 |
 | Trạng thái | Dự thảo để thẩm định |
-| Căn cứ yêu cầu | [Đặc tả yêu cầu](../requirements/README.md) |
-| Căn cứ kiến trúc | [Thiết kế chung](../architecture/README.md) |
+| Căn cứ yêu cầu | [Đặc tả yêu cầu](requirements.md) |
+| Căn cứ kiến trúc | [Thiết kế chung](architecture.md) |
 
 - **Mục đích:** xác định schema, contract, interface, thuật toán, trạng thái và cách kiểm chứng để triển khai.
 - **Nguồn kỹ thuật:** code ingestion/Portal/Chat/Beeflow và DDL PostgreSQL local.
-- **Trạng thái thực hiện:** theo [báo cáo tiến độ](../progress/README.md).
+- **Trạng thái thực hiện:** theo [báo cáo tiến độ](progress/README.md).
 
 ## 1. Phạm vi triển khai
 
@@ -41,12 +41,12 @@
 
 | Tài liệu | Nội dung chính |
 | --- | --- |
-| [01 — Database và lưu trữ](01-data-storage.md) | Schema SQL/Mongo, key/index, raw/version và Milvus |
-| [02 — API và Kafka](02-api-events.md) | Request/response, validation, status API và notification contract |
-| [03 — Module và thuật toán](03-modules-code-mapping.md) | Interface, task graph, thứ tự I/O và điểm tích hợp |
-| [04 — Trạng thái và completion](04-state-transitions.md) | Transition, predicate hoàn tất, lỗi và xử lý lại |
-| [05 — Runtime và kiểm chứng](05-runtime-validation.md) | Profile, rollout, contract/integration/AI tests và nghiệm thu |
-| [06 — ACL và RAG](06-space-access-control.md) | Quyền Space, policy, retrieval, evidence và trích dẫn |
+| [01 — Database và lưu trữ](detailed-design/01-data-storage.md) | Schema SQL/Mongo, key/index, raw/version và Milvus |
+| [02 — API và Kafka](detailed-design/02-api-events.md) | Request/response, validation, status API và notification contract |
+| [03 — Module và thuật toán](detailed-design/03-modules-code-mapping.md) | Interface, task graph, thứ tự I/O và điểm tích hợp |
+| [04 — Trạng thái và completion](detailed-design/04-state-transitions.md) | Transition, predicate hoàn tất, lỗi và xử lý lại |
+| [05 — Runtime và kiểm chứng](detailed-design/05-runtime-validation.md) | Profile, rollout, contract/integration/AI tests và nghiệm thu |
+| [06 — ACL và RAG](detailed-design/06-space-access-control.md) | Quyền Space, policy, retrieval, evidence và trích dẫn |
 
 ## 4. Luồng xử lý
 

@@ -1,6 +1,6 @@
 # 02. API và Kafka thông báo
 
-[← Mục lục](README.md) · LLD v2.0 — 10/11/2026.
+[← Mục lục](../detailed-design.md) · LLD v2.0 — 10/11/2026.
 
 ## 1. Phân loại contract
 

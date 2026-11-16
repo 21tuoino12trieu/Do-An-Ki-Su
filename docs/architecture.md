@@ -8,13 +8,13 @@
 | Phiên bản | 2.0 |
 | Ngày cập nhật | 10/11/2026 |
 | Trạng thái | Dự thảo để thẩm định |
-| Căn cứ | [Đặc tả yêu cầu](../requirements/README.md): FR01–FR15, NFR01–NFR13, AC01–AC21, AS01–AS03 |
-| Tài liệu triển khai | [Thiết kế chi tiết](../detailed-design/README.md) |
+| Căn cứ | [Đặc tả yêu cầu](requirements.md): FR01–FR15, NFR01–NFR13, AC01–AC21, AS01–AS03 |
+| Tài liệu triển khai | [Thiết kế chi tiết](detailed-design.md) |
 
 - **Mục đích:** xác định cấu trúc hệ thống, trách nhiệm module, quyền sở hữu dữ liệu và tương tác giữa các thành phần.
 - **Mức mô tả:** kiến trúc logic, luồng dữ liệu, tổ chức runtime và ràng buộc triển khai.
 - **Chi tiết vật lý:** schema, endpoint, payload và thuật toán được mô tả tại thiết kế chi tiết.
-- **Bằng chứng triển khai:** theo [báo cáo tiến độ](../progress/README.md); sơ đồ kiến trúc không tự chứng minh hệ thống đã tích hợp hoàn chỉnh.
+- **Bằng chứng triển khai:** theo [báo cáo tiến độ](progress/README.md); sơ đồ kiến trúc không tự chứng minh hệ thống đã tích hợp hoàn chỉnh.
 
 ## Mục lục
 
@@ -79,7 +79,7 @@ flowchart LR
 ```
 
 - Mũi tên thể hiện quan hệ sử dụng/kết nối, không biểu diễn thứ tự xử lý.
-- Ma trận chức năng và sơ đồ Use Case nằm tại [SRS, mục 4–7](../requirements/README.md#4-người-sử-dụng-và-phân-quyền).
+- Ma trận chức năng và sơ đồ Use Case nằm tại [SRS, mục 4–7](requirements.md#4-người-sử-dụng-và-phân-quyền).
 
 ### 2.2. Ranh giới logic và vật lý
 
@@ -222,7 +222,7 @@ flowchart TB
 - Snapshot PostgreSQL không tự chứa lịch sử đầy đủ mọi phiên bản.
 - MinIO giữ phiên bản đã thực tế thu thập, không mọi chỉnh sửa giữa hai kỳ.
 - Score vector và sự kiện Kafka không quyết định quyền đọc tài liệu.
-- Schema và index chi tiết: [Database và lưu trữ](../detailed-design/01-data-storage.md).
+- Schema và index chi tiết: [Database và lưu trữ](detailed-design/01-data-storage.md).
 
 ### 6.2. Định danh và truy vết nguồn
 
@@ -388,7 +388,7 @@ sequenceDiagram
 | Trạng thái dữ liệu | Lỗi gửi thông báo không tự biến dữ liệu đã hoàn tất thành chưa embedding |
 | Giao nhận qua sự cố | Theo giới hạn AS02; không yêu cầu replay/exactly-once |
 
-- Topic, group và schema sự kiện: [API và Kafka](../detailed-design/02-api-events.md).
+- Topic, group và schema sự kiện: [API và Kafka](detailed-design/02-api-events.md).
 
 ## 9. Luồng tìm kiếm và hỏi đáp RAG
 
@@ -515,7 +515,7 @@ sequenceDiagram
 
 - Role/Space do client gửi không là căn cứ cấp quyền.
 - Middleware kiểm tra client ID chưa đủ chứng minh có quyền ba tác nhân.
-- Chi tiết predicate và source policy: [ACL và RAG](../detailed-design/06-space-access-control.md).
+- Chi tiết predicate và source policy: [ACL và RAG](detailed-design/06-space-access-control.md).
 
 ## 11. Trạng thái và giả định nhất quán
 
@@ -530,7 +530,7 @@ sequenceDiagram
 | Airflow runtime | DAG/task/run | Phải liên hệ đúng giai đoạn nghiệp vụ |
 | Notification | Kết quả backend đã nhận/hiển thị | Không là nguồn chân lý của dữ liệu |
 
-- Tên field/enum vật lý và projection: [Trạng thái và completion](../detailed-design/04-state-transitions.md).
+- Tên field/enum vật lý và projection: [Trạng thái và completion](detailed-design/04-state-transitions.md).
 
 ### 11.2. Điều kiện hoàn tất
 
@@ -615,12 +615,12 @@ flowchart TB
 
 | Thành phần | Endpoint từ Windows theo cấu hình | Căn cứ |
 | --- | --- | --- |
-| PostgreSQL ingestion | `127.0.0.1:5432`, database `ingestion` | [Hướng dẫn PostgreSQL](../../infra/postgres/README.md) |
-| Airflow | `127.0.0.1:8080` | [Hướng dẫn Airflow](../../infra/airflow/README.md) |
+| PostgreSQL ingestion | `127.0.0.1:5432`, database `ingestion` | [Hướng dẫn PostgreSQL](../infra/postgres/README.md) |
+| Airflow | `127.0.0.1:8080` | [Hướng dẫn Airflow](../infra/airflow/README.md) |
 | PostgreSQL Airflow | Mạng Docker riêng, không publish ra host | Compose Airflow |
-| Kafka | `127.0.0.1:9092` | [Compose Kafka](../../infra/kafka/compose.yaml) |
-| MinIO nghiệp vụ | `127.0.0.1:9000`, console `9001` | [Compose MinIO](../../infra/minio/compose.yaml) |
-| Milvus/Attu | `127.0.0.1:19530` / `127.0.0.1:8000` | [Compose Milvus](../../infra/milvus/compose.yaml) |
+| Kafka | `127.0.0.1:9092` | [Compose Kafka](../infra/kafka/compose.yaml) |
+| MinIO nghiệp vụ | `127.0.0.1:9000`, console `9001` | [Compose MinIO](../infra/minio/compose.yaml) |
+| Milvus/Attu | `127.0.0.1:19530` / `127.0.0.1:8000` | [Compose Milvus](../infra/milvus/compose.yaml) |
 | API/Streamlit | Đề xuất `8001` / `8501` | Tránh xung đột cổng Attu; cần cấu hình khi triển khai |
 | MongoDB/AI/Langfuse | Theo resource/secret môi trường | Không đưa credentials vào tài liệu |
 
@@ -679,7 +679,7 @@ flowchart TB
 - PostgreSQL container sẵn sàng không chứng minh SQLNode đã được nối đúng.
 - `authen_source` của loader phải được phân biệt với MongoDB `authSource`.
 - Không ghi đè resource có sẵn hoặc tự chuyển provider trả phí.
-- Danh sách resource và cấu hình setup: [resource keys](../resource-keys.md).
+- Danh sách resource và cấu hình setup: [resource keys](resource-keys.md).
 
 ## 14. Quan sát, chất lượng và quota AI
 
@@ -704,7 +704,7 @@ flowchart TB
 - Tính tổng tài nguyên gồm Windows/WSL2, hai PostgreSQL, Kafka và bộ Milvus.
 - Tải pilot đề xuất: 1–3 người hỏi đồng thời.
 - Đo capacity Airflow để tránh task cha chờ trong khi task con thiếu slot.
-- Ngưỡng RAM/latency/chất lượng cần được chốt theo [SRS, mục 11.3](../requirements/README.md#113-đánh-giá-chất-lượng-và-hiệu-quả--đề-xuất).
+- Ngưỡng RAM/latency/chất lượng cần được chốt theo [SRS, mục 11.3](requirements.md#113-đánh-giá-chất-lượng-và-hiệu-quả--đề-xuất).
 
 ### 14.3. Chất lượng RAG
 
@@ -792,7 +792,7 @@ flowchart TB
 | RAG/source | CUSTOMER không truy xuất nội bộ qua chunk/node/tool/nguồn |
 | Persistence | Dữ liệu đã xác nhận còn sau restart có volume |
 
-- Contract/unit/integration tests nằm tại [kế hoạch kiểm chứng](../detailed-design/05-runtime-validation.md).
+- Contract/unit/integration tests nằm tại [kế hoạch kiểm chứng](detailed-design/05-runtime-validation.md).
 - Kết quả giả lập và dịch vụ thật phải được ghi riêng.
 - Thiết lập thành công một container không thay kiểm chứng chức năng end-to-end.
 
@@ -802,13 +802,13 @@ flowchart TB
 
 | Nhóm | Nội dung cần cụ thể hóa | Tài liệu chính |
 | --- | --- | --- |
-| Dữ liệu | Schema/index, identity, version và raw references | [01 — Database](../detailed-design/01-data-storage.md) |
-| API | Auth, input/output, state conflict và theo dõi job | [02 — API/Kafka](../detailed-design/02-api-events.md) |
-| Thông báo | Completion owner, event tài liệu/toàn lượt và consumer | [02 — API/Kafka](../detailed-design/02-api-events.md) |
-| Module | Preparation contract, job/task boundary và adapters | [03 — Module](../detailed-design/03-modules-code-mapping.md) |
-| Trạng thái | Transition, completion predicate, lỗi và xử lý lại | [04 — Trạng thái](../detailed-design/04-state-transitions.md) |
-| Runtime | Network, resource, secrets, rollout và test | [05 — Runtime](../detailed-design/05-runtime-validation.md) |
-| Quyền/RAG | Policy, eligibility, evidence và citation | [06 — ACL/RAG](../detailed-design/06-space-access-control.md) |
+| Dữ liệu | Schema/index, identity, version và raw references | [01 — Database](detailed-design/01-data-storage.md) |
+| API | Auth, input/output, state conflict và theo dõi job | [02 — API/Kafka](detailed-design/02-api-events.md) |
+| Thông báo | Completion owner, event tài liệu/toàn lượt và consumer | [02 — API/Kafka](detailed-design/02-api-events.md) |
+| Module | Preparation contract, job/task boundary và adapters | [03 — Module](detailed-design/03-modules-code-mapping.md) |
+| Trạng thái | Transition, completion predicate, lỗi và xử lý lại | [04 — Trạng thái](detailed-design/04-state-transitions.md) |
+| Runtime | Network, resource, secrets, rollout và test | [05 — Runtime](detailed-design/05-runtime-validation.md) |
+| Quyền/RAG | Policy, eligibility, evidence và citation | [06 — ACL/RAG](detailed-design/06-space-access-control.md) |
 
 - Tên trường, API và contract phải dựa code hoặc được ghi nhãn đề xuất.
 - Không tự bổ sung bảng, chức năng hoặc cơ chế phục hồi ngoài phạm vi.
@@ -832,8 +832,8 @@ flowchart TB
 
 ### 18.2. Tài liệu tham chiếu
 
-- [Đặc tả yêu cầu](../requirements/README.md).
-- [Thiết kế chi tiết](../detailed-design/README.md).
-- [Báo cáo tiến độ](../progress/README.md).
-- [Resource keys](../resource-keys.md).
-- [Hướng dẫn PostgreSQL nghiệp vụ](../../infra/postgres/README.md).
+- [Đặc tả yêu cầu](requirements.md).
+- [Thiết kế chi tiết](detailed-design.md).
+- [Báo cáo tiến độ](progress/README.md).
+- [Resource keys](resource-keys.md).
+- [Hướng dẫn PostgreSQL nghiệp vụ](../infra/postgres/README.md).

@@ -1,6 +1,6 @@
 # 04. Trạng thái, completion và xử lý lỗi
 
-[← Mục lục](README.md) · LLD v2.0 — 10/11/2026.
+[← Mục lục](../detailed-design.md) · LLD v2.0 — 10/11/2026.
 
 ## 1. Phạm vi
 

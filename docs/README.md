@@ -4,9 +4,9 @@
 
 | Thứ tự | Tài liệu | Nội dung |
 | --- | --- | --- |
-| 1 | [Đặc tả yêu cầu](requirements/README.md) | Bài toán, phạm vi, quyền, Use Case, chức năng và nghiệm thu. |
-| 2 | [Thiết kế chung](architecture/README.md) | Kiến trúc, trách nhiệm module, luồng tổng quan và triển khai. |
-| 3 | [Thiết kế chi tiết](detailed-design/README.md) | Schema, API/Kafka, module/code, trạng thái, lỗi và kiểm thử. |
+| 1 | [Đặc tả yêu cầu](requirements.md) | Bài toán, phạm vi, quyền, Use Case, chức năng và nghiệm thu. |
+| 2 | [Thiết kế chung](architecture.md) | Kiến trúc, trách nhiệm module, luồng tổng quan và triển khai. |
+| 3 | [Thiết kế chi tiết](detailed-design.md) | Schema, API/Kafka, module/code, trạng thái, lỗi và kiểm thử. |
 
 Các tài liệu đang ở trạng thái dự thảo để review; thiết kế không thay kết quả chạy thực tế.
 
@@ -14,7 +14,7 @@ Các tài liệu đang ở trạng thái dự thảo để review; thiết kế 
 
 ## Tài nguyên còn sử dụng
 
-- [Sơ đồ Use Case và mã chỉnh sửa](requirements/use-cases/README.md).
+- [Sơ đồ Use Case và mã chỉnh sửa](use-cases/README.md).
 - [Báo cáo tiến độ](progress/README.md).
 - [Resource key và cấu hình kết nối](resource-keys.md).
 - [Setup Langfuse](setup-langfuse.md).

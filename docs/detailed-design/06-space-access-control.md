@@ -1,6 +1,6 @@
 # 06. ACL theo Space và thiết kế RAG
 
-[← Mục lục](README.md) · LLD v2.0 — 10/11/2026.
+[← Mục lục](../detailed-design.md) · LLD v2.0 — 10/11/2026.
 
 ## 1. Quyết định và phạm vi
 

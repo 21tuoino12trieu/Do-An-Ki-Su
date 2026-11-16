@@ -33,9 +33,9 @@ HTTP tiếp nhận train khác hoàn tất job. Kafka chỉ thông báo kết qu
 
 | Tài liệu | Nội dung |
 | --- | --- |
-| [Đặc tả yêu cầu v2.0](docs/requirements/README.md) | Bài toán, phạm vi, quyền, Use Case, FR/NFR và nghiệm thu. |
-| [Thiết kế chung v2.0](docs/architecture/README.md) | Kiến trúc, module, dữ liệu, luồng xử lý và triển khai. |
-| [Thiết kế chi tiết v2.0](docs/detailed-design/README.md) | Schema, API, Kafka notification, trạng thái, ACL/RAG và kế hoạch kiểm chứng. |
+| [Đặc tả yêu cầu v2.0](docs/requirements.md) | Bài toán, phạm vi, quyền, Use Case, FR/NFR và nghiệm thu. |
+| [Thiết kế chung v2.0](docs/architecture.md) | Kiến trúc, module, dữ liệu, luồng xử lý và triển khai. |
+| [Thiết kế chi tiết v2.0](docs/detailed-design.md) | Schema, API, Kafka notification, trạng thái, ACL/RAG và kế hoạch kiểm chứng. |
 
 Các tài liệu đang ở trạng thái dự thảo để review. Contract có nhãn mới/đề xuất chưa đồng nghĩa đã được triển khai. [Báo cáo tiến độ](docs/progress/README.md) ghi riêng các phần đã kiểm chứng. Xem [mục lục docs](docs/README.md) để điều hướng.
 
@@ -63,6 +63,6 @@ MongoDB thử nghiệm dùng Atlas theo cấu hình hiện tại. Schema Postgre
 - [MinIO nghiệp vụ](infra/minio/README.md).
 - [Milvus và Attu](infra/milvus/README.md).
 - [Resource keys](docs/resource-keys.md), [Langfuse](docs/setup-langfuse.md).
-- [Sơ đồ Use Case và cách chỉnh sửa](docs/requirements/use-cases/README.md).
+- [Sơ đồ Use Case và cách chỉnh sửa](docs/use-cases/README.md).
 
 Mã nguồn tham khảo nằm trong `beegen-ingestion/`, `beegen-portal-api/`, `beegen-chat/`, `beedoc/` và `beeflow/`. Điểm kế thừa/thay đổi được dẫn trực tiếp trong thiết kế; các nhánh nghiệp vụ khác không tự thuộc phạm vi đồ án.

@@ -1,6 +1,6 @@
 """Xuất bốn khối PlantUML trong README.md thành SVG.
 
-Chạy từ thư mục gốc: python docs/requirements/use-cases/render_usecases.py
+Chạy từ thư mục gốc: python docs/use-cases/render_usecases.py
 Mã nguồn luôn lấy từ Markdown, không sửa tay các file .puml đã trích xuất.
 """
 import argparse

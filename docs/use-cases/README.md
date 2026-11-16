@@ -1,16 +1,16 @@
 # Sơ đồ Use Case và hướng dẫn chỉnh sửa
 
-[← Đặc tả yêu cầu](../README.md)
+[← Đặc tả yêu cầu](../requirements.md)
 
 - Bộ sơ đồ gồm tổng quan, nhân viên, khách hàng và quản trị.
 - Tác nhân dùng hình người; quan hệ sử dụng dùng mũi tên thẳng.
 - Hình tổng quan đặt nhân viên/khách hàng bên trái, quản trị bên phải.
 - UC05: đồng bộ và cập nhật kho; UC08: trạng thái/thông báo; UC09: xử lý lại thủ công.
-- Đặc tả chức năng và luồng nghiệp vụ nằm trong [SRS](../README.md), mục 7–8.
+- Đặc tả chức năng và luồng nghiệp vụ nằm trong [SRS](../requirements.md), mục 7–8.
 - Sửa mã PlantUML trong tài liệu này rồi xuất SVG; `.puml` được script sinh từ Markdown.
 
 ```powershell
-python docs/requirements/use-cases/render_usecases.py
+python docs/use-cases/render_usecases.py
 ```
 
 Tiện ích cần PlantUML `1.2026.9` trong cache hoặc truyền `--jar <path>`. Mặc định là `%USERPROFILE%/.codex/tmp/usecase-plantuml/plantuml-1.2026.9.jar`. Có thể tải jar từ [release chính thức](https://github.com/plantuml/plantuml/releases/tag/v1.2026.9).

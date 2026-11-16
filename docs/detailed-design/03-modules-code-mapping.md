@@ -1,6 +1,6 @@
 # 03. Module, interface và thuật toán xử lý
 
-[← Mục lục](README.md) · LLD v2.0 — 10/11/2026.
+[← Mục lục](../detailed-design.md) · LLD v2.0 — 10/11/2026.
 
 ## 1. Dependency và module ownership
 
