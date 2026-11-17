@@ -16,17 +16,12 @@ skinparam rectangleBorderColor #253746
 skinparam actorBorderColor #253746
 actor "Nhân viên nội bộ" as NV
 rectangle "Phạm vi nhân viên · Cả hai Space" as INTERNAL {
-  usecase "UC10\nĐăng nhập và kết thúc phiên" as N10
-  usecase "UC01\nTìm kiếm tài liệu ở cả hai Space" as N01
-  usecase "UC02\nHỏi đáp chính sách công ty" as N02
-  usecase "UC11\nHỏi đáp khuyến mãi" as N11
-  usecase "UC03\nXem nguồn ở cả hai Space" as N03
+  usecase "UC01\nHỏi đáp chính sách công ty" as N01
+  usecase "UC02\nHỏi đáp chương trình khuyến mãi" as N02
+  usecase "UC03\nXem và kiểm chứng nguồn" as N03
 }
-NV --> N10
 NV --> N01
 NV --> N02
-NV --> N11
 N03 ..> N01 : <<extend>>
 N03 ..> N02 : <<extend>>
-N03 ..> N11 : <<extend>>
 @enduml

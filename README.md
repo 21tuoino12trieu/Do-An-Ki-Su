@@ -25,16 +25,16 @@ Giá trị hướng tới: kiểm soát chính sách khai thác tài liệu; gi�
 
 **Cập nhật kho:** Airflow → Confluence → PostgreSQL đối soát → bản gốc/metadata/quyền → chunk → API train trực tiếp → embedding và ghi MongoDB/Milvus → Kafka thông báo → backend → FE quản trị.
 
-**Hỏi đáp:** xác thực → xác định quyền → vector retrieval → join nội dung MongoDB → lọc quyền/trạng thái → LLM → trả lời và trích dẫn.
+**Hỏi đáp:** lấy tài khoản/role từ database → vector retrieval → đọc nội dung MongoDB → lọc quyền/trạng thái → LLM → trả lời và trích dẫn.
 
-HTTP tiếp nhận train khác hoàn tất job. Kafka chỉ thông báo kết quả, không điều phối train. Bản cốt lõi giữ giả định vận hành tuần tự theo đặc tả, chưa yêu cầu phục hồi phân tán nâng cao.
+HTTP tiếp nhận train khác hoàn tất job. Kafka chỉ thông báo kết quả, không điều phối train. Việc chạy lại task/DAG khi cần được thực hiện trên Airflow, không có nút đồng bộ hoặc xử lý lại trong chatbot.
 
 ## Bộ tài liệu hiện hành
 
 | Tài liệu | Nội dung |
 | --- | --- |
-| [Đặc tả yêu cầu v2.0](docs/requirements.md) | Bài toán, phạm vi, quyền, Use Case, FR/NFR và nghiệm thu. |
-| [Thiết kế chung v2.0](docs/architecture.md) | Kiến trúc, module, dữ liệu, luồng xử lý và triển khai. |
+| [Đặc tả yêu cầu v2.0](docs/requirements.md) | Bài toán, phạm vi, role, 5 Use Case và luồng chính. |
+| [Thiết kế chung v2.0](docs/architecture.md) | Thành phần, dữ liệu, luồng cập nhật/hỏi đáp và triển khai. |
 | [Thiết kế chi tiết v2.0](docs/detailed-design.md) | Schema, API, Kafka notification, trạng thái, ACL/RAG và kế hoạch kiểm chứng. |
 
 Các tài liệu đang ở trạng thái dự thảo để review. Contract có nhãn mới/đề xuất chưa đồng nghĩa đã được triển khai. [Báo cáo tiến độ](docs/progress/README.md) ghi riêng các phần đã kiểm chứng. Xem [mục lục docs](docs/README.md) để điều hướng.
@@ -52,7 +52,14 @@ Các tài liệu đang ở trạng thái dự thảo để review. Contract có 
 | Thông báo/quan sát | Kafka, Redis theo dependency runtime và Langfuse |
 | Triển khai | Docker Compose, máy 32 GB RAM, không GPU; chưa dùng Kubernetes |
 
-MongoDB thử nghiệm dùng Atlas theo cấu hình hiện tại. Schema PostgreSQL local được dựng theo SQL caller tham khảo, không phải bản sao DDL production. Model/profile AI và identity provider còn cần chốt khi triển khai.
+MongoDB thử nghiệm dùng Atlas theo cấu hình hiện tại. Schema PostgreSQL local được dựng theo SQL caller tham khảo, không phải bản sao DDL production. Model/profile AI, schema tài khoản/role và cách truyền định danh tài khoản còn cần cụ thể hóa khi triển khai.
+
+## Tiến độ hiện tại — 17/11/2026
+
+- Phần chuẩn bị đã gần hoàn tất: hạ tầng được dựng, có thử nghiệm thành phần và bộ code tham khảo trong repository.
+- Đặc tả và thiết kế chung đã review theo 5 Use Case; các sơ đồ đã được đồng bộ.
+- Tiếp theo: chỉnh thiết kế chi tiết, tích hợp Confluence/PostgreSQL, embedding thật, thông báo và hỏi đáp đúng role.
+- Chưa có bằng chứng nghiệm thu luồng Confluence → lập chỉ mục → hỏi đáp xuyên suốt. Chi tiết tại [báo cáo tiến độ](docs/progress/README.md).
 
 ## Hướng dẫn và tiến độ
 

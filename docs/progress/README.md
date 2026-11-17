@@ -1,70 +1,115 @@
 # Báo cáo tiến độ thực hiện đồ án
 
-## Bổ sung ngày 08/11/2026 — PostgreSQL nghiệp vụ ingestion
+| Thông tin | Nội dung |
+| --- | --- |
+| Đề tài | Nghiên cứu và xây dựng hệ thống kho tri thức doanh nghiệp thông minh từ Confluence |
+| Học viên | Đặng Nam Cường |
+| Ngày cập nhật | 17/11/2026 |
+| Giai đoạn | Hoàn thiện tài liệu thiết kế và chuẩn bị tích hợp luồng nghiệp vụ |
 
-- Đã dựng container riêng `doan-ingestion-postgres`, PostgreSQL 16.11, local `127.0.0.1:5432`, database/user `ingestion`, volume `doan-ingestion_postgres-data`; tách PostgreSQL Airflow.
-- Đã khởi tạo `knowledge_base.documents`, `knowledge_base.sync_jobs` và procedure tương thích caller AUTO/PARTIAL. DDL được viết theo SQL tham khảo vì không có DDL gốc trong repository.
-- Đã kiểm tra health, cổng local và smoke SQL insert/update/hash/version/unique identity/job; dữ liệu thử đã rollback, hai bảng chưa có dữ liệu nghiệp vụ.
-- Chưa cấu hình ResourceHub `anapp` hoặc chạy workflow ingestion end-to-end. Giữ PostgreSQL cho đối soát nội dung/metadata; không tạo thêm Mongo `sync_runs`.
-- Cấu hình, cách kết nối và giới hạn kiểm chứng: [infra/postgres/README.md](../../infra/postgres/README.md).
+- Phần chuẩn bị đã gần hoàn tất: hạ tầng được dựng, có các phép thử thành phần, đặc tả và thiết kế chung đã được review về nội dung.
+- Phần sản phẩm còn cần hoàn thiện: đồng bộ thiết kế chi tiết, tích hợp nguồn Confluence thật, embedding/LLM và hỏi đáp theo role.
+- Các kết quả hạ tầng bên dưới là kết quả đã được ghi nhận trong các lần thử trước; lần cập nhật báo cáo này không chạy lại dịch vụ hoặc kiểm thử end-to-end.
+- Chưa quy đổi tiến độ thành phần trăm vì chưa có kết quả nghiệm thu toàn hệ thống.
 
-- **Đề tài:** Nghiên cứu và xây dựng hệ thống kho tri thức doanh nghiệp thông minh từ Confluence.
-- **Học viên:** Đặng Nam Cường.
-- **Ngày cập nhật:** 03/11/2026.
-- **Giai đoạn hiện tại:** đã dựng hạ tầng thử nghiệm, kiểm chứng một số workflow; chuẩn bị tích hợp dữ liệu Confluence.
+## 1. Phạm vi hiện tại
 
-**Đã hoàn thành nền hạ tầng local/cloud và các phép thử thành phần, bao gồm DAG Airflow gửi/đọc Kafka. Chưa hoàn thành pipeline Confluence → lập chỉ mục → hỏi đáp RAG.**
+- Một chatbot dùng chung cho hai Space: chính sách nội bộ và chương trình khuyến mãi.
+- Tổng 100–300 trang tiếng Việt, HTML đơn giản; chuyển sang Markdown và giữ tham chiếu ảnh.
+- Tài khoản ứng dụng được lưu trong database, kèm role để lọc nội dung khi retrieve; không bổ sung chức năng đăng nhập/quản lý phiên chatbot.
+- Nhân viên đọc cả hai Space; khách hàng chỉ đọc khuyến mãi; quản trị được cấu hình nguồn và xem trạng thái.
+- Thu thập lần đầu và cập nhật tự động mỗi 60 phút.
+- Chạy lại task/DAG khi cần là thao tác vận hành trên Airflow, không phải chức năng của giao diện chatbot.
 
-Báo cáo tổng hợp các lần kiểm thử đã thực hiện, không phải kết quả kiểm tra lại toàn bộ dịch vụ trong lần sửa tài liệu này. Không quy đổi số dịch vụ đã dựng thành phần trăm hoàn thành đồ án.
+**Luồng cập nhật:** PostgreSQL đối soát → HTML/Markdown và chia đoạn → API train trực tiếp → embedding và ghi MongoDB/Milvus thành công → Kafka → backend → giao diện quản trị.
 
-## 1. Bài toán và đầu ra hướng tới
+**Luồng hỏi đáp:** lấy tài khoản/role từ database → retrieve → lọc đúng quyền và trạng thái → LLM → câu trả lời kèm trích dẫn.
 
-- **Bài toán:** tài liệu Confluence thường xuyên được thêm, sửa, xóa; cần đồng bộ và quản lý phiên bản để nhân viên tra cứu, hỏi đáp có nguồn, tránh dùng nội dung hết hiệu lực.
-- **Đầu vào:** hai Confluence Space thử nghiệm, dự kiến 100–300 trang; ưu tiên HTML đơn giản và nội dung tiếng Việt.
-- **Đầu ra:** kho tri thức lưu được phiên bản, pipeline đồng bộ mỗi 60 phút, ứng dụng tìm kiếm/hỏi đáp RAG có liên kết và phiên bản nguồn, cùng báo cáo đánh giá.
-- **Giới hạn cập nhật 05/11/2026:** dữ liệu giả lập hoặc công khai được phép sử dụng. Thiết kế mới tách nhân viên/Space chính sách và khách hàng/Space khuyến mãi; khách hàng phải đăng nhập. Chức năng xác thực/phân quyền này chưa có code.
+## 2. Tiến độ tài liệu
 
-## 2. Công việc đã hoàn thành
-
-| Hạng mục | Kết quả đã xác nhận | Giới hạn hiện tại |
+| Tài liệu | Kết quả hiện tại | Việc còn lại |
 | --- | --- | --- |
-| Thiết kế | Có tài liệu yêu cầu, kiến trúc, dữ liệu, đồng bộ, phiên bản, RAG và trách nhiệm module | Cần cập nhật theo triển khai và tiếp tục review |
-| Conda | Môi trường `namcuong`, Python 3.12.15; đã cài requirements và từng chạy `pip check` đạt | Không khẳng định mọi node thư viện đều chạy được |
-| WSL2/Docker Desktop | Đã chạy các stack local bằng Compose | Chưa đánh giá tải khi toàn bộ pipeline chạy đồng thời |
-| MongoDB Atlas | ResourceHub truy cập database `cuong`; MongoNode FIND_ONE qua graph thật đạt | Chưa triển khai dữ liệu nghiệp vụ Confluence |
-| Redis | Container `doan-redis`, ping qua engine đạt, phục vụ stream service | Chưa kiểm thử streaming câu trả lời LLM hoàn chỉnh |
-| Langfuse Cloud | Xác thực, gửi/đọc lại trace, workflow thật có root/child observation | Chưa kiểm thử toàn bộ loại node hoặc model thật |
-| Beedoc | HTML → Markdown qua BeedocEngine và workflow thật; 10 tiêu chí nội dung và metadata đạt; 25 test sẵn có đạt | Chưa thử trang Confluence thật hoặc mọi dạng HTML |
-| Milvus + Attu | Thêm/query/search 3 vector giả lập, dữ liệu còn sau tạo lại container, giao diện trả HTTP 200 | Vector demo 4 chiều, chưa phải embedding/collection RAG |
-| MilvusNode | QUERY và SEARCH qua hai graph Beeflow thật đạt | Chưa thử operation ghi, retry hoặc chuyển phiên bản chỉ mục |
-| MinIO tài liệu | Hai bucket có versioning; ghi/đọc HTML và Markdown, kiểm tra SHA-256 và metadata; dữ liệu còn sau tạo lại container | Chưa nối ingestion hoặc chốt object key nghiệp vụ |
-| Kafka | KRaft một broker; gửi/đọc JSON và commit offset; sự kiện/offset còn sau tạo lại container | Chưa thử KafkaNode, xử lý lỗi nghiệp vụ hoặc trực tiếp kết nối Offset Explorer |
-| Airflow | LocalExecutor + PostgreSQL; đăng nhập API; DAG thật gửi/đọc Kafka, hai task success; lịch sử còn sau tạo lại container | DAG demo paused, chưa kiểm tra lần chạy tự động theo lịch hoặc DAG Confluence |
-| ResourceHub | Có 7 key; Kafka/S3 tải lại trong tiến trình mới, kết nối và kiểm tra metadata/versioning đạt | Endpoint hiện dành cho chương trình trên Windows |
+| [Đặc tả yêu cầu](../requirements.md) | Đã review và thống nhất 5 Use Case; dùng bảng điều kiện/đầu vào/đầu ra và luồng chính; đã bỏ đăng nhập, tìm kiếm riêng, đồng bộ/xử lý lại thủ công trên ứng dụng | Tiếp tục điều chỉnh khi có thay đổi nghiệp vụ được thống nhất |
+| [Thiết kế chung](../architecture.md) | Đã chỉnh theo 5 Use Case, role trong database, cập nhật tự động và API train; sơ đồ có số thứ tự, mô tả rõ các kho dữ liệu và triển khai | Đối chiếu khi tích hợp code thực tế |
+| [Thiết kế chi tiết](../detailed-design.md) | Có bản thiết kế schema, API, Kafka, module, trạng thái và RAG dựa trên code tham khảo | Rà soát theo đặc tả/thiết kế chung hiện tại; bỏ contract đăng nhập, tìm kiếm, đồng bộ và retry thủ công không còn thuộc ứng dụng |
+| [Sơ đồ Use Case](../use-cases/README.md) | Ba sơ đồ theo nhân viên, khách hàng, quản trị; đã xuất SVG và đồng bộ tên/mã UC01–UC05 | Giữ đồng nhất khi sửa chức năng |
 
-## 3. Hạ tầng hiện có
+### Bộ Use Case hiện hành
 
-| Thành phần | Triển khai | Điểm truy cập |
+| Mã | Chức năng |
+| --- | --- |
+| UC01 | Hỏi đáp chính sách công ty |
+| UC02 | Hỏi đáp chương trình khuyến mãi |
+| UC03 | Xem và kiểm chứng nguồn |
+| UC04 | Cấu hình nguồn và phạm vi |
+| UC05 | Theo dõi trạng thái xử lý |
+
+- UC03 mở rộng UC01/UC02 khi người dùng chọn nguồn; UC04 và UC05 là chức năng quản trị độc lập.
+- Mục 9–13 của đặc tả và mục 15–16 của thiết kế chung đang được comment theo phạm vi review.
+- Bản Markdown là bản để đọc và chỉnh sửa. Các bản PDF đã xuất trước đó chưa mặc định đồng bộ với nội dung Markdown hiện tại.
+
+## 3. Hạ tầng và thử nghiệm đã thực hiện
+
+| Hạng mục | Kết quả đã ghi nhận | Phần chưa kiểm chứng |
 | --- | --- | --- |
-| MongoDB | Atlas cloud, quản trị bằng Compass | Database `cuong` |
-| Langfuse | Cloud US | Project đã cấu hình |
-| Redis | Docker local | `127.0.0.1:6379` |
-| Milvus | Docker Standalone, có etcd/MinIO phụ thuộc | `127.0.0.1:19530`; Attu: http://localhost:8000 |
-| MinIO tài liệu | Container/volume riêng với MinIO nội bộ Milvus | S3: `127.0.0.1:9000`; Console: http://localhost:9001 |
-| Kafka | Broker kiêm controller KRaft | Windows: `127.0.0.1:9092`; network `doan-backend`: `kafka:29092` |
-| Airflow | API server, scheduler/LocalExecutor, DAG processor và PostgreSQL | http://localhost:8080 |
+| Conda | Môi trường `namcuong`, Python 3.12.15; đã cài requirements và từng chạy `pip check` đạt | Mọi module/node đều chạy được trong runtime đích |
+| WSL2/Docker Desktop | Đã chạy các stack local bằng Compose | Tổng tải khi toàn pipeline cùng hoạt động |
+| MongoDB Atlas | ResourceHub truy cập database `cuong`; MongoNode FIND_ONE qua graph đạt | Tài khoản/role và dữ liệu Confluence nghiệp vụ xuyên suốt |
+| Redis | Container `doan-redis`; ping qua engine đạt | Streaming câu trả lời LLM hoàn chỉnh |
+| Langfuse Cloud | Đã gửi/đọc trace và chạy workflow có root/child observation | Toàn bộ luồng AI thật của đồ án |
+| Beedoc | HTML → Markdown qua engine/workflow; 10 tiêu chí nội dung/metadata và 25 test sẵn có đã ghi nhận đạt | Nội dung Confluence thật và mọi định dạng HTML |
+| Milvus/Attu | Ghi/query/search 3 vector demo, dữ liệu còn sau tạo lại container; MilvusNode QUERY/SEARCH qua graph đạt | Vector thật từ Cloudflare, collection và chất lượng retrieve nghiệp vụ |
+| MinIO nghiệp vụ | Hai bucket có versioning; ghi/đọc HTML/Markdown, kiểm tra hash/metadata; giữ dữ liệu sau tạo lại container | Nối với ingestion thật và quy ước lưu bản gốc theo phiên bản |
+| Kafka | Một broker KRaft; gửi/đọc JSON, commit offset và giữ dữ liệu qua tạo lại container | Sự kiện hoàn tất thật của tài liệu/toàn lượt và hiển thị trên giao diện |
+| Airflow | LocalExecutor + PostgreSQL; DAG demo gửi/đọc Kafka có hai task success và lịch sử còn sau tạo lại container | DAG Confluence, job train và lịch nghiệp vụ tự động 60 phút |
+| PostgreSQL nghiệp vụ | Container riêng `doan-ingestion-postgres`; đã tạo hai bảng và procedure, thử insert/update/hash/version/unique/job | Resource SQL `anapp`, dependency adapter và ingestion end-to-end |
+| ResourceHub | Đã ghi nhận 7 resource; Kafka/S3 tải lại cấu hình và kiểm tra kết nối đạt | Cấu hình phù hợp cho cả Windows và container Airflow |
 
-- Máy phát triển 32 GB RAM, không GPU; Docker tại lần kiểm tra được cấp khoảng 15,5 GB RAM và 8 CPU.
-- Các stack có volume lưu bền dữ liệu. Đã thử tạo lại container cho Milvus, MinIO, Kafka và Airflow; chưa thử backup/restore hoặc mất máy.
-- PostgreSQL lưu vận hành Airflow, tách biệt MongoDB nghiệp vụ.
-- DAG demo khai báo cron `0 * * * *` (đầu mỗi giờ), `catchup=False`; test trigger thủ công và khôi phục paused.
-- Không ghi mật khẩu/token trong báo cáo; xem hướng dẫn stack để tìm file cấu hình cục bộ.
+- PostgreSQL nghiệp vụ có `knowledge_base.documents`, `knowledge_base.sync_jobs` và procedure tương thích SQL caller; tách PostgreSQL metadata Airflow.
+- DDL local được viết theo code tham khảo, không có căn cứ xác nhận là DDL production gốc.
+- Dữ liệu thử SQL đã rollback tại lần smoke test; chưa có kết quả chạy dữ liệu Confluence nghiệp vụ được xác nhận trong báo cáo.
+- Manifest thử Airflow/Kafka/MinIO và Markdown Beedoc nằm trong `tests/output`.
 
-Hướng dẫn: [Milvus/Attu](../../infra/milvus/README.md), [MinIO](../../infra/minio/README.md), [Kafka/Offset Explorer](../../infra/kafka/README.md), [Airflow](../../infra/airflow/README.md), [Langfuse](../setup-langfuse.md).
+### Điểm truy cập theo cấu hình
 
-## 4. Các resource đã đăng ký trong MongoDB
+| Thành phần | Vị trí/địa chỉ |
+| --- | --- |
+| MongoDB | Atlas, database `cuong`, quản trị bằng Compass |
+| Langfuse | Cloud US, project theo cấu hình |
+| Redis | `127.0.0.1:6379` |
+| PostgreSQL nghiệp vụ | `127.0.0.1:5432`, database `ingestion` |
+| Milvus / Attu | `127.0.0.1:19530` / `127.0.0.1:8000` |
+| MinIO nghiệp vụ | API `127.0.0.1:9000`, console `127.0.0.1:9001` |
+| Kafka | Windows `127.0.0.1:9092`; mạng Docker `kafka:29092` |
+| Airflow | `127.0.0.1:8080`, LocalExecutor và PostgreSQL metadata riêng |
 
-Collection **`cuong.beegen_resource_configs`** có:
+- Các stack đã cấu hình volume; đã thử giữ dữ liệu demo qua tạo lại container cho Milvus, MinIO, Kafka và Airflow.
+- Chưa có kết quả backup/restore toàn hệ thống hoặc tự tiếp tục pipeline đang dở.
+- DAG demo đã thử trigger thủ công, không phải bằng chứng DAG nghiệp vụ chạy đúng lịch 60 phút.
+- Danh sách địa chỉ không xác nhận các dịch vụ đang chạy ở thời điểm đọc báo cáo.
+
+Hướng dẫn: [PostgreSQL](../../infra/postgres/README.md), [Milvus/Attu](../../infra/milvus/README.md), [MinIO](../../infra/minio/README.md), [Kafka](../../infra/kafka/README.md), [Airflow](../../infra/airflow/README.md), [Langfuse](../setup-langfuse.md).
+
+## 4. Mã nguồn và quản lý Git
+
+- Đã đưa các module Beedoc, Beeflow, Beegen Chat, Ingestion và Portal API vào repository đồ án dưới dạng code thông thường; không còn con trỏ submodule.
+- Đã đẩy bộ mã nguồn lên nhánh `main`; lịch sử Git riêng của các module được sao lưu ngoài workspace.
+- Đã bỏ theo dõi cấu hình MongoDB local, thêm file mẫu `config/beeflow.example.yaml` và quy tắc bỏ qua cấu hình bí mật.
+- Đã loại các giá trị bí mật phát hiện trong phần mã chuẩn bị đẩy; snapshot được quét bằng Gitleaks tại lần nhập module không có phát hiện còn lại.
+- Các thay đổi review tài liệu hiện tại đang ở working tree, chưa được coi là đã commit/push trong lần cập nhật báo cáo này.
+- Cấu hình từng được commit vẫn có thể còn trong lịch sử cũ; cần đổi các thông tin đăng nhập đã lộ.
+
+### Thư viện đã điều chỉnh trong các lần thử thành phần
+
+- Beedoc: giữ nhánh HTML → Markdown và tham chiếu ảnh; sửa đầu ra hashing node để giữ metadata.
+- Redis: điều chỉnh config/connection pool cho kết nối local.
+- Langfuse: bổ sung adapter tương thích SDK đã dùng trong thử nghiệm và đợi flush trace.
+- MilvusEngine: điều chỉnh cách nhận tham số SEARCH để graph QUERY/SEARCH chạy được.
+- Các bản `replica/` là bản tham khảo; không tự đồng bộ với thư viện runtime trong `beeflow/beeflow`.
+
+## 5. Resource và cấu hình kết nối
+
+Các resource đã được ghi nhận tại **`cuong.beegen_resource_configs`**:
 
 | Resource key | Config | Mục đích |
 | --- | --- | --- |
@@ -81,20 +126,6 @@ Collection **`cuong.beegen_resource_configs`** có:
 `config/beeflow.yaml` khởi tạo ResourceHub; theo mã hiện tại, `authen_source` chọn database cấu hình, không đồng nghĩa tham số chuẩn MongoDB `authSource`. MongoDB thực tế dùng Atlas thay cho dự kiến local ban đầu.
 
 Chi tiết địa chỉ Windows/Docker và cách kiểm tra: [danh sách resource key](../resource-keys.md).
-
-## 5. Thư viện và các chỉnh sửa đã thực hiện
-
-- [Beedoc replica](../../replica/beedoc/README.md) giữ engine, interface/model, reader, renderer, factory và tiện ích nhánh HTML. Phạm vi: **HTML → Markdown, giữ nguyên thẻ ảnh**, không tải ảnh/OCR hoặc gọi model phân tích ảnh.
-- HTML mẫu kiểm tra tiếng Việt, heading, danh sách lồng, bảng đơn giản, liên kết, ảnh, code và blockquote; loại comment/script/style. Đã sửa HTML reader khai báo output của hashing node để trả metadata vào Document.
-- [Beeflow replica](../../replica/beeflow/README.md) là bản tham khảo 40 tệp Beeflow và 139 tệp Beegen tại thời điểm sao chép. Runtime hiện dùng repo gốc `beeflow/beeflow`; hai cây mã không tự đồng bộ.
-- Đã sửa RedisConfig/connection pool để kết nối Redis local.
-- Langfuse dùng SDK chính thức 4.7.1, có adapter và đợi flush trong workflow; SDK cũ giữ tại `_legacy` để không che package pip. Adapter dùng API nội bộ nên cần kiểm tra khi nâng SDK.
-- Đã sửa MilvusEngine SEARCH nhận cả config phẳng và mapping có `params`, tránh bọc thừa tham số.
-- MilvusEngine dùng ORM API của PyMilvus 3.0.2, có cảnh báo deprecated; cần chuyển sang MilvusClient trước khi nâng lên 3.1.
-
-Tài liệu hiện hành: [đặc tả yêu cầu](../requirements.md), [thiết kế chung](../architecture.md) và [thiết kế chi tiết](../detailed-design.md). Căn cứ code tham khảo được dẫn trực tiếp trong các tài liệu thiết kế.
-
-Các đợt review 05–06/11/2026 đã bổ sung tài khoản khách hàng, ma trận quyền hai Space và sơ đồ UML tác nhân hình người. Ngày 07/11/2026, nội dung được tổng hợp vào bộ ba tài liệu mới; tài liệu thiết kế cũ cùng bản xuất Word/PDF/draw.io và ảnh QA đã được dọn khỏi `docs`. Ba sơ đồ Use Case theo tác nhân hiện hành cùng mã chỉnh sửa được giữ trong [tài nguyên đặc tả](../use-cases/README.md). Đây là tiến độ tài liệu, không chứng minh đăng nhập/phân quyền/pipeline nghiệp vụ đã được triển khai.
 
 ## 6. Chạy lại các phép kiểm tra
 
@@ -120,26 +151,18 @@ Chạy từ thư mục gốc trong Conda `namcuong`. Cần các dịch vụ tư�
 
 Các script `test_milvus.py`, `test_minio.py`, `test_kafka.py`, `test_airflow.py` có chế độ `--read-only` để kiểm tra dữ liệu/lịch sử cũ sau restart mà không ghi lại dữ liệu hoặc tạo run mới. Manifest gần nhất và Markdown đầu ra nằm trong `tests/output`. Một số test chế độ ghi thêm dữ liệu demo mỗi lần chạy.
 
-## 7. Công việc còn lại và thứ tự triển khai
+## 7. Công việc cần hoàn thiện
 
-| Thứ tự | Công việc | Tiêu chí hoàn thành |
+| Thứ tự | Công việc | Kết quả cần có |
 | --- | --- | --- |
-| 1 | Connector Confluence | Đọc một trang thật và metadata/version, xác nhận phạm vi hai Space |
-| 2 | Lưu tài liệu và metadata nghiệp vụ | HTML/Markdown vào MinIO, định danh/trạng thái vào MongoDB; chạy lại cùng phiên bản không tạo trùng |
-| 3 | Worker và vòng đời đồng bộ | Thêm/sửa/xóa/mất quyền, cơ chế gửi lại sự kiện, retry, idempotency và sự kiện sai thứ tự; tích hợp KafkaNode nếu dùng |
-| 4 | Chunking, Cloudflare embedding và collection RAG | Chunk có nguồn/version; chốt model, quota, số chiều và metric; lập chỉ mục bộ dữ liệu nhỏ |
-| 5 | Airflow đồng bộ thực tế mỗi 60 phút | DAG nghiệp vụ, cập nhật mốc đồng bộ đúng và theo dõi trạng thái sẵn sàng hỏi đáp |
-| 6 | FastAPI, luồng chat và Streamlit | Hỏi đáp tiếng Việt có URL/phiên bản, chỉ dùng nội dung hiệu lực, báo thiếu căn cứ |
-| 7 | Đánh giá và đóng gói | Recall@k, chất lượng trả lời/nguồn, độ mới, độ trễ, chi phí và các kịch bản phục hồi |
+| 1 | Đồng bộ thiết kế chi tiết | Dữ liệu, API, trạng thái và RAG phù hợp 5 Use Case; làm rõ schema tài khoản/role và cách truyền định danh tài khoản |
+| 2 | Nối PostgreSQL nghiệp vụ và Confluence | Resource SQL/dependency đúng; đọc được tài liệu thật từ đủ hai Space và so sánh với dữ liệu đã lưu |
+| 3 | Tích hợp thu thập và chuẩn bị nội dung | Bản gốc theo phiên bản vào MinIO; metadata/quyền và các đoạn vào MongoDB; xử lý thêm/sửa/xóa đúng phạm vi |
+| 4 | Tích hợp embedding và train | Chốt model/kích thước vector theo quota; API train nhận đoạn đã chuẩn bị; ghi MongoDB/Milvus và xác nhận kết quả thật |
+| 5 | Nối DAG và thông báo nghiệp vụ | Airflow chạy luồng cập nhật 60 phút; Kafka chỉ phát sau hoàn tất; backend/giao diện hiển thị đúng tài liệu và toàn lượt |
+| 6 | Hoàn thiện hỏi đáp và giao diện | Lấy role từ database, retrieve đúng quyền; trả lời tiếng Việt, có trích dẫn và xem nguồn; cấu hình/theo dõi cho quản trị |
+| 7 | Kiểm thử và bàn giao | Chạy xuyên suốt từ thay đổi Confluence đến câu trả lời; đo chất lượng, độ trễ và tài nguyên; có hướng dẫn, cấu hình mẫu và minh chứng |
 
-Cloudflare embedding/LLM chưa có kết quả tích hợp đầu cuối được xác nhận trong giai đoạn này. Việc từng gọi API embedding thành công không thay thế đánh giá truy xuất hoặc quota của pipeline.
-
-## 8. Các điểm cần hoàn thiện trước bàn giao
-
-- README tổng quan và thiết kế còn mô tả dự kiến cần đồng bộ với thực tế: MongoDB Atlas, lịch 60 phút, hai Space/100–300 trang và hạ tầng đã dựng.
-- Git đang nhận năm thư mục nguồn dưới dạng repository lồng nhau; cần chốt submodule hoặc đưa code vào repo đồ án để bản clone có đủ nguồn và các sửa runtime.
-- Theo lần kiểm tra Git gần nhất, `config/beeflow.yaml` đã vào vùng chờ commit trong khi có thông tin kết nối; cần bỏ theo dõi và thêm ignore trước commit/push. Lần cập nhật báo cáo này không thay đổi index hoặc cấu trúc repo.
-- Chưa kiểm thử phân quyền ingestion trên MinIO, backup/restore, quota Cloudflare, sự kiện trùng/sai thứ tự, cập nhật/xóa tài liệu hoặc tải đồng thời toàn hệ thống.
-- Restart thành công với dữ liệu demo chưa chứng minh phục hồi pipeline nghiệp vụ đang xử lý dở.
-
-**Đánh giá tiến độ:** nền hạ tầng và các phép thử tích hợp nhỏ đã có bằng chứng hoạt động. Công việc trọng tâm tiếp theo là pipeline với tài liệu Confluence thật, lập chỉ mục và hỏi đáp có nguồn.
+- Ưu tiên một luồng nhỏ chạy hoàn chỉnh trước khi mở lên bộ 100–300 trang.
+- Không bổ sung yêu cầu xác thực, tìm kiếm riêng, nút đồng bộ/retry hoặc phục hồi phân tán ngoài phạm vi đã thống nhất.
+- Báo cáo chưa có bằng chứng xác nhận pipeline Confluence → embedding thật → RAG đúng role đã hoàn tất.

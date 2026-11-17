@@ -16,11 +16,9 @@ skinparam rectangleBorderColor #253746
 skinparam actorBorderColor #253746
 actor "Khách hàng" as KH
 rectangle "Phạm vi khách hàng · Space khuyến mãi" as CUSTOMER {
-  usecase "UC10\nĐăng nhập và đăng xuất" as K10
-  usecase "UC11\nHỏi đáp chương trình khuyến mãi" as K11
-  usecase "UC03\nXem nguồn khuyến mãi được phép" as K03
+  usecase "UC02\nHỏi đáp chương trình khuyến mãi" as K02
+  usecase "UC03\nXem và kiểm chứng nguồn" as K03
 }
-KH --> K10
-KH --> K11
-K03 ..> K11 : <<extend>>
+KH --> K02
+K03 ..> K02 : <<extend>>
 @enduml

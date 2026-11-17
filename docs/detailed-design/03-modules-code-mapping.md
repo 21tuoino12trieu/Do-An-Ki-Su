@@ -93,7 +93,7 @@ flowchart TD
 6. Finalize phạm vi ingestion theo cơ chế SQL hiện có, giữ correlation trong logs. Parent pipeline vẫn còn preparation/train; không publish toàn lượt xong ở đây.
 
 - Đây là thứ tự triển khai đề xuất; giới hạn giao dịch và xử lý lỗi tại [04](04-state-transitions.md).
-- UC09 có thể yêu cầu chạy lại thủ công bằng raw/manifest/đầu vào hiện hành sau kiểm tra.
+- Người vận hành kiểm tra raw/manifest/đầu vào hiện hành trước khi chạy lại task/DAG phù hợp trên Airflow.
 
 ### 3.3. Metadata/ACL và xóa
 

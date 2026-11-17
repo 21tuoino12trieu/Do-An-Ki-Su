@@ -37,12 +37,10 @@ def layout_actor_diagram(root, block):
         code = first.text if first is not None else ''
         if re.fullmatch(r'UC\d+', code or ''):
             cases[code] = node
-    order = [code for code in ('UC10','UC01','UC02','UC11','UC04','UC05','UC08') if code in cases]
-    ys = {code: 150 + 120 * index + (60 if code in ('UC04','UC05','UC08') else 0)
+    order = [code for code in ('UC01','UC02','UC04','UC05') if code in cases]
+    ys = {code: 150 + 120 * index + (60 if code in ('UC04','UC05') else 0)
           for index, code in enumerate(order)}
-    ys['UC03'] = ys.get('UC02', ys['UC11'])
-    if 'UC09' in cases:
-        ys['UC09'] = ys['UC08']
+    ys['UC03'] = ys.get('UC01', ys['UC02'])
     height = max(ys.values()) + 130
     result = ET.Element(tag('svg'), {
         'width': '1320', 'height': str(height), 'viewBox': f'0 0 1320 {height}',
@@ -56,7 +54,7 @@ def layout_actor_diagram(root, block):
     centers = {}
     for code, node in cases.items():
         ellipse = node.find(tag('ellipse'))
-        x = 1030 if code in ('UC03','UC09') else 550
+        x = 1030 if code == 'UC03' else 550
         y = ys[code]
         cx, cy, rx, ry = (float(ellipse.get(k)) for k in ('cx','cy','rx','ry'))
         node.set('transform',f'translate({x-cx:.3f},{y-cy:.3f})')
@@ -89,7 +87,6 @@ def layout_actor_diagram(root, block):
     for source_alias,target_alias in re.findall(
         r'(\w+) \.\.> (\w+) : <<extend>>\s*$',block,re.M):
         source_code,target_code = alias_codes[source_alias],alias_codes[target_alias]
-        point = {'UC01':'EP01','UC02':'EP02','UC11':'EP11','UC08':'EP08'}[target_code]
         sx,sy,srx,sry = centers[source_code]
         tx,ty,trx,try_ = centers[target_code]
         # Cắt từng đường thẳng theo biên hai elip. Mỗi quan hệ có điểm ra
@@ -100,7 +97,7 @@ def layout_actor_diagram(root, block):
         start_x, start_y = sx+dx*source_scale, sy+dy*source_scale
         end_x, end_y = tx-dx*target_scale, ty-dy*target_scale
         path = f'M {start_x:.3f} {start_y:.3f} L {end_x:.3f} {end_y:.3f}'
-        link = add(relation_layer,'g',{'class':'extend','data-source':source_code,'data-target':target_code,'data-extension-point':point})
+        link = add(relation_layer,'g',{'class':'extend','data-source':source_code,'data-target':target_code})
         add(link,'path',{'d':path,'fill':'none','stroke':'#253746','stroke-width':1.2,'stroke-dasharray':'6 5'})
         length = math.hypot(end_x-start_x, end_y-start_y)
         ux, uy = (end_x-start_x)/length, (end_y-start_y)/length
